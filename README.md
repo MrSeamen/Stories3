@@ -2,5 +2,3 @@
 # CWRU: Austin, Lizzie, Paige, Simon, Morris, Oliver
 # CIA: Sadie, Jen, Aiden, Sam, Caterina
 
-
-
