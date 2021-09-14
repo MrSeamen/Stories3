@@ -11,13 +11,6 @@ public class TitleButtons : MonoBehaviour
     public string credits;
     public string titlescreen;
 
-    private void Start()
-    {
-
-        Button btn = GameObject.Find("Button").GetComponent<Button>();
-        btn.onClick.AddListener(() => Play());
-    }
-
     public void Play()
     {
         Debug.Log("You have clicked the button!");
