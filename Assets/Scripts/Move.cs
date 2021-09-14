@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 0.02f;
     [SerializeField] float jumpForce = 2.0f;
 
-    public Vector3 jump;
+    public Vector3 _direction;
+    private Vector3 jump;
     public bool isGrounded;
     Rigidbody rb;
 
@@ -19,33 +21,31 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        CheckPosition();
+        Movement();
+    }
 
-        float xDir = Input.GetAxis("Horizontal");
-        float zDir = Input.GetAxis("Vertical");
+    public void Movement()
+    {
+        transform.Translate(_direction * moveSpeed * Time.deltaTime);
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (isGrounded)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+    }
 
-        Vector3 moveDir = new Vector3(xDir, 0.0f, zDir);
-        transform.position += moveDir * moveSpeed;
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        Vector2 _inputVector = context.ReadValue<Vector2>();
+        _direction = new Vector3(_inputVector.x, 0, _inputVector.y);
     }
 
     void OnCollisionStay()
     {
         isGrounded = true;
-    }
-
-    void CheckPosition()
-    {
-        float horizontal = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        float vertical = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-        Vector3 pos = transform.position;
-        pos.x = Mathf.Clamp(pos.x + horizontal, -8, 8);
-        pos.z = Mathf.Clamp(pos.z + vertical, -8, 8);
-        transform.position = pos;
     }
 }
