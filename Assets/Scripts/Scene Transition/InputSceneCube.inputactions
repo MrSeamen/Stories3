@@ -2,16 +2,16 @@
     "name": "InputSceneCube",
     "maps": [
         {
-            "name": "Cube",
+            "name": "SceneCube",
             "id": "edbaed52-2335-485d-96ec-1d8024810932",
             "actions": [
                 {
-                    "name": "Rotation",
+                    "name": "Rotate",
                     "type": "Button",
                     "id": "56b2c6a5-b8a2-4967-9030-c7c344317ea2",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 },
                 {
                     "name": "Pick",
@@ -19,18 +19,18 @@
                     "id": "7f46db81-921a-4855-8902-df24c9103321",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
                 {
-                    "name": "wasdKeys",
+                    "name": "WASDKeys",
                     "id": "d9ae3402-447d-4eff-9f71-c977e805c3e5",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Rotation",
+                    "action": "Rotate",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -40,8 +40,8 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -51,8 +51,8 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -62,8 +62,8 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -73,19 +73,19 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "arrowKeys",
+                    "name": "ArrowKeys",
                     "id": "443fd30a-a1c6-484f-9415-5323821aacad",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -95,8 +95,8 @@
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -106,8 +106,8 @@
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -117,8 +117,8 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -128,8 +128,8 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
-                    "action": "Rotation",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -139,7 +139,7 @@
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
+                    "groups": "KeyboardAndMouse",
                     "action": "Pick",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -150,7 +150,7 @@
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard and mouse",
+                    "groups": "KeyboardAndMouse",
                     "action": "Pick",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -160,8 +160,8 @@
     ],
     "controlSchemes": [
         {
-            "name": "keyboard and mouse",
-            "bindingGroup": "keyboard and mouse",
+            "name": "KeyboardAndMouse",
+            "bindingGroup": "KeyboardAndMouse",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",

@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/InputSceneCube.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Scene Transition/InputSceneCube.inputactions'
 
 using System;
 using System.Collections;
@@ -15,16 +15,16 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
     ""name"": ""InputSceneCube"",
     ""maps"": [
         {
-            ""name"": ""Cube"",
+            ""name"": ""SceneCube"",
             ""id"": ""edbaed52-2335-485d-96ec-1d8024810932"",
             ""actions"": [
                 {
-                    ""name"": ""Rotation"",
+                    ""name"": ""Rotate"",
                     ""type"": ""Button"",
                     ""id"": ""56b2c6a5-b8a2-4967-9030-c7c344317ea2"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Pick"",
@@ -32,18 +32,18 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""id"": ""7f46db81-921a-4855-8902-df24c9103321"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": ""wasdKeys"",
+                    ""name"": ""WASDKeys"",
                     ""id"": ""d9ae3402-447d-4eff-9f71-c977e805c3e5"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Rotation"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -53,8 +53,8 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -64,8 +64,8 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -75,8 +75,8 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -86,19 +86,19 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""arrowKeys"",
+                    ""name"": ""ArrowKeys"",
                     ""id"": ""443fd30a-a1c6-484f-9415-5323821aacad"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -108,8 +108,8 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -119,8 +119,8 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -130,8 +130,8 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -141,8 +141,8 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
-                    ""action"": ""Rotation"",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -152,7 +152,7 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
+                    ""groups"": ""KeyboardAndMouse"",
                     ""action"": ""Pick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -163,7 +163,7 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""keyboard and mouse"",
+                    ""groups"": ""KeyboardAndMouse"",
                     ""action"": ""Pick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -173,8 +173,8 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": [
         {
-            ""name"": ""keyboard and mouse"",
-            ""bindingGroup"": ""keyboard and mouse"",
+            ""name"": ""KeyboardAndMouse"",
+            ""bindingGroup"": ""KeyboardAndMouse"",
             ""devices"": [
                 {
                     ""devicePath"": ""<Keyboard>"",
@@ -190,10 +190,10 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
         }
     ]
 }");
-        // Cube
-        m_Cube = asset.FindActionMap("Cube", throwIfNotFound: true);
-        m_Cube_Rotation = m_Cube.FindAction("Rotation", throwIfNotFound: true);
-        m_Cube_Pick = m_Cube.FindAction("Pick", throwIfNotFound: true);
+        // SceneCube
+        m_SceneCube = asset.FindActionMap("SceneCube", throwIfNotFound: true);
+        m_SceneCube_Rotate = m_SceneCube.FindAction("Rotate", throwIfNotFound: true);
+        m_SceneCube_Pick = m_SceneCube.FindAction("Pick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -240,58 +240,58 @@ public class @InputSceneCube : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // Cube
-    private readonly InputActionMap m_Cube;
-    private ICubeActions m_CubeActionsCallbackInterface;
-    private readonly InputAction m_Cube_Rotation;
-    private readonly InputAction m_Cube_Pick;
-    public struct CubeActions
+    // SceneCube
+    private readonly InputActionMap m_SceneCube;
+    private ISceneCubeActions m_SceneCubeActionsCallbackInterface;
+    private readonly InputAction m_SceneCube_Rotate;
+    private readonly InputAction m_SceneCube_Pick;
+    public struct SceneCubeActions
     {
         private @InputSceneCube m_Wrapper;
-        public CubeActions(@InputSceneCube wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Rotation => m_Wrapper.m_Cube_Rotation;
-        public InputAction @Pick => m_Wrapper.m_Cube_Pick;
-        public InputActionMap Get() { return m_Wrapper.m_Cube; }
+        public SceneCubeActions(@InputSceneCube wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Rotate => m_Wrapper.m_SceneCube_Rotate;
+        public InputAction @Pick => m_Wrapper.m_SceneCube_Pick;
+        public InputActionMap Get() { return m_Wrapper.m_SceneCube; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(CubeActions set) { return set.Get(); }
-        public void SetCallbacks(ICubeActions instance)
+        public static implicit operator InputActionMap(SceneCubeActions set) { return set.Get(); }
+        public void SetCallbacks(ISceneCubeActions instance)
         {
-            if (m_Wrapper.m_CubeActionsCallbackInterface != null)
+            if (m_Wrapper.m_SceneCubeActionsCallbackInterface != null)
             {
-                @Rotation.started -= m_Wrapper.m_CubeActionsCallbackInterface.OnRotation;
-                @Rotation.performed -= m_Wrapper.m_CubeActionsCallbackInterface.OnRotation;
-                @Rotation.canceled -= m_Wrapper.m_CubeActionsCallbackInterface.OnRotation;
-                @Pick.started -= m_Wrapper.m_CubeActionsCallbackInterface.OnPick;
-                @Pick.performed -= m_Wrapper.m_CubeActionsCallbackInterface.OnPick;
-                @Pick.canceled -= m_Wrapper.m_CubeActionsCallbackInterface.OnPick;
+                @Rotate.started -= m_Wrapper.m_SceneCubeActionsCallbackInterface.OnRotate;
+                @Rotate.performed -= m_Wrapper.m_SceneCubeActionsCallbackInterface.OnRotate;
+                @Rotate.canceled -= m_Wrapper.m_SceneCubeActionsCallbackInterface.OnRotate;
+                @Pick.started -= m_Wrapper.m_SceneCubeActionsCallbackInterface.OnPick;
+                @Pick.performed -= m_Wrapper.m_SceneCubeActionsCallbackInterface.OnPick;
+                @Pick.canceled -= m_Wrapper.m_SceneCubeActionsCallbackInterface.OnPick;
             }
-            m_Wrapper.m_CubeActionsCallbackInterface = instance;
+            m_Wrapper.m_SceneCubeActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Rotation.started += instance.OnRotation;
-                @Rotation.performed += instance.OnRotation;
-                @Rotation.canceled += instance.OnRotation;
+                @Rotate.started += instance.OnRotate;
+                @Rotate.performed += instance.OnRotate;
+                @Rotate.canceled += instance.OnRotate;
                 @Pick.started += instance.OnPick;
                 @Pick.performed += instance.OnPick;
                 @Pick.canceled += instance.OnPick;
             }
         }
     }
-    public CubeActions @Cube => new CubeActions(this);
-    private int m_keyboardandmouseSchemeIndex = -1;
-    public InputControlScheme keyboardandmouseScheme
+    public SceneCubeActions @SceneCube => new SceneCubeActions(this);
+    private int m_KeyboardAndMouseSchemeIndex = -1;
+    public InputControlScheme KeyboardAndMouseScheme
     {
         get
         {
-            if (m_keyboardandmouseSchemeIndex == -1) m_keyboardandmouseSchemeIndex = asset.FindControlSchemeIndex("keyboard and mouse");
-            return asset.controlSchemes[m_keyboardandmouseSchemeIndex];
+            if (m_KeyboardAndMouseSchemeIndex == -1) m_KeyboardAndMouseSchemeIndex = asset.FindControlSchemeIndex("KeyboardAndMouse");
+            return asset.controlSchemes[m_KeyboardAndMouseSchemeIndex];
         }
     }
-    public interface ICubeActions
+    public interface ISceneCubeActions
     {
-        void OnRotation(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
         void OnPick(InputAction.CallbackContext context);
     }
 }

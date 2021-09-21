@@ -9,7 +9,6 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] private Camera camera;
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(GameObject.Find("Player"));
         SceneManager.LoadScene("TransitionScene");
     }
 }
