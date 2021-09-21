@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CameraShift : MonoBehaviour
 {
-    Camera camera;
+    Camera mainCamera;
 
     void Start()
     {
-        camera = GetComponent<Camera>();
+        mainCamera = GetComponent<Camera>();
     }
 
     public void Shift()
     {
-        camera.orthographic = !camera.orthographic;
+        mainCamera.orthographic = !mainCamera.orthographic;
     }
 }
