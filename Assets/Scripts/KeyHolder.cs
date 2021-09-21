@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyHolder : MonoBehaviour
 {
-    private List<Key.KeyType> keyList;
+    public List<Key.KeyType> keyList;
+    public Image keyImage; 
 
     private void Awake()
     {
@@ -15,7 +17,15 @@ public class KeyHolder : MonoBehaviour
     {
         Debug.Log("You have acquired: " + keyType + "!");
         keyList.Add(keyType);
-    }
+        Debug.Log("add to inventory");
+        
+        keyImage = GameObject.FindWithTag("Key " + keyType).GetComponent<Image>();
+            if (!keyImage.enabled) {
+                keyImage.enabled = true; 
+                keyImage.sprite = Resources.Load<Sprite>("Sprites/Items/" + keyType);
+           }
+       }
+
 
     public void RemoveKey(Key.KeyType keyType)
     {

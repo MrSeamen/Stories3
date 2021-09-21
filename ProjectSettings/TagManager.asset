@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Canvas
+  - Main
+  - Key Main
+  - Key Grandma
+  - Key L2
   layers:
   - Default
   - TransparentFX
