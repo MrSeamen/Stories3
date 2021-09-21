@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,38 +7,46 @@ using UnityEngine.InputSystem;
 public class cubeBehavior : MonoBehaviour
 {
     private InputSceneCube inputSceneCube;
-    private InputAction input; 
+    private InputAction inputRotate; 
+    private InputAction inputPick; 
+    [SerializeField]
 
     private void Awake() {
-        inputSceneCube = new inputSceneCube();
+        inputSceneCube = new InputSceneCube();
     }
 
     private void OnEnable() {
-        input = inputSceneCube.Cube.Movement;
-        input.Enable();
+        inputRotate = inputSceneCube.SceneCube.Rotate;
+        inputRotate.Enable();
 
         inputSceneCube.SceneCube.Rotate.performed += DoRotate();
         inputSceneCube.SceneCube.Rotate.Enable();
+
+        inputPick = inputSceneCube.SceneCube.Pick;
+        inputPick.Enable();
 
         inputSceneCube.SceneCube.Pick.performed += DoPick();
         inputSceneCube.SceneCube.Pick.Enable();
     }
 
-    private void DoRotate(InputAction.CallbackContext obj) {
-        Debug.Log("Rotate" + obj);
+    private Action<InputAction.CallbackContext> DoRotate(InputAction.CallbackContext context) {
+        Debug.Log("Rotate" + context);
+        throw new NotImplementedException();
     }
 
-    private void DoPick(InputAction.CallbackContext obj) {
-        Debug.Log("Pick" + obj);
+    private Action<InputAction.CallbackContext> DoPick(InputAction.CallbackContext context) {
+        Debug.Log("Pick" + context);
+        throw new NotImplementedException();
     }
 
     private void OnDisable() {
-        input.Disable();
+        inputRotate.Disable();
+        inputPick.Disable();
         inputSceneCube.SceneCube.Rotate.Disable();
         inputSceneCube.SceneCube.Pick.Disable();
     }
 
     private void FixedUpdate() {
-        Debug.Log("Movement Values " + input.ReadValue<Vector2>());
+        Debug.Log("Movement Values " + inputRotate.ReadValue<Vector2>());
     }
 }
