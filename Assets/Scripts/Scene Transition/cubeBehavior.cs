@@ -8,8 +8,8 @@ public class cubeBehavior : MonoBehaviour
 {
     private InputSceneCube inputSceneCube;
     private InputAction inputRotate; 
-    private InputAction inputPick; 
-    [SerializeField]
+    private InputAction inputPick;
+    [SerializeField] float rotationDegree = 22.0f;
 
     private void Awake() {
         inputSceneCube = new InputSceneCube();
