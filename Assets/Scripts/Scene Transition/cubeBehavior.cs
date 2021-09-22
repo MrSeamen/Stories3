@@ -3,16 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class cubeBehavior : MonoBehaviour
 {
-    private InputSceneCube inputSceneCube;
+    //private InputSceneCube inputSceneCube;
     private InputAction inputRotate; 
     private InputAction inputPick;
     private Vector3 direction;
     [SerializeField] float rotationDegree = 22.0f;
 
-    private void Awake() {
+    /*private void Awake() {
         inputSceneCube = new InputSceneCube();
     }
 
@@ -28,27 +29,27 @@ public class cubeBehavior : MonoBehaviour
 
         //inputSceneCube.SceneCube.Pick.performed += DoPick();
         inputSceneCube.SceneCube.Pick.Enable();
-    }
+    }*/
 
-    private void DoRotate(InputAction.CallbackContext context) {
+    public void DoRotate(InputAction.CallbackContext context) {
         Debug.Log("Rotate" + context);
         Vector2 inputVector = context.ReadValue<Vector2>();
         direction = new Vector3(inputVector.x, 0, inputVector.y);
     }
 
-    private void DoPick(InputAction.CallbackContext context) {
+    public void DoPick(InputAction.CallbackContext context) {
         Debug.Log("Pick" + context);
     }
 
-    private void OnDisable() {
+    /*private void OnDisable() {
         inputRotate.Disable();
         inputPick.Disable();
         inputSceneCube.SceneCube.Rotate.Disable();
         inputSceneCube.SceneCube.Pick.Disable();
-    }
+    }*/
 
     private void FixedUpdate() {
-        Debug.Log("Movement Values " + inputRotate.ReadValue<Vector2>());
+        //Debug.Log("Movement Values " + inputRotate.ReadValue<Vector2>());
         transform.Rotate(direction * Time.deltaTime * rotationDegree);
     }
 }
