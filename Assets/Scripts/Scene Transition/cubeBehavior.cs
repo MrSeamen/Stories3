@@ -9,6 +9,7 @@ public class cubeBehavior : MonoBehaviour
     private InputSceneCube inputSceneCube;
     private InputAction inputRotate; 
     private InputAction inputPick;
+    private Vector3 direction;
     [SerializeField] float rotationDegree = 22.0f;
 
     private void Awake() {
@@ -19,24 +20,24 @@ public class cubeBehavior : MonoBehaviour
         inputRotate = inputSceneCube.SceneCube.Rotate;
         inputRotate.Enable();
 
-        inputSceneCube.SceneCube.Rotate.performed += DoRotate();
+        //inputSceneCube.SceneCube.Rotate.performed += DoRotate();
         inputSceneCube.SceneCube.Rotate.Enable();
 
         inputPick = inputSceneCube.SceneCube.Pick;
         inputPick.Enable();
 
-        inputSceneCube.SceneCube.Pick.performed += DoPick();
+        //inputSceneCube.SceneCube.Pick.performed += DoPick();
         inputSceneCube.SceneCube.Pick.Enable();
     }
 
-    private Action<InputAction.CallbackContext> DoRotate(InputAction.CallbackContext context) {
+    private void DoRotate(InputAction.CallbackContext context) {
         Debug.Log("Rotate" + context);
-        throw new NotImplementedException();
+        Vector2 inputVector = context.ReadValue<Vector2>();
+        direction = new Vector3(inputVector.x, 0, inputVector.y);
     }
 
-    private Action<InputAction.CallbackContext> DoPick(InputAction.CallbackContext context) {
+    private void DoPick(InputAction.CallbackContext context) {
         Debug.Log("Pick" + context);
-        throw new NotImplementedException();
     }
 
     private void OnDisable() {
@@ -48,5 +49,6 @@ public class cubeBehavior : MonoBehaviour
 
     private void FixedUpdate() {
         Debug.Log("Movement Values " + inputRotate.ReadValue<Vector2>());
+        transform.Rotate(direction * Time.deltaTime * rotationDegree);
     }
 }
