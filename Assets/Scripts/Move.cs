@@ -26,15 +26,24 @@ public class Move : MonoBehaviour
 
     public void Movement()
     {
-        transform.Translate(_direction * moveSpeed * Time.deltaTime);
+        if(CameraShift.getScroller())
+        {
+            Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, 0);
+            rb.velocity = movement;
+        } else
+        {
+            Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, _direction.z * moveSpeed);
+            rb.velocity = movement;
+        }
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (isGrounded)
+        if (context.performed && isGrounded)
         {
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
+            Vector3 movement = jump * jumpForce;
+            rb.velocity = movement;
         }
     }
 
@@ -44,8 +53,19 @@ public class Move : MonoBehaviour
         _direction = new Vector3(_inputVector.x, 0, _inputVector.y);
     }
 
-    void OnCollisionStay()
+    void OnCollisionEnter(Collision collision)
     {
-        isGrounded = true;
+        if(collision.gameObject.CompareTag("Jumpable"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    public void Recenter()
+    {
+        if (CameraShift.getScroller() && transform.position.z != 0)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        }
     }
 }

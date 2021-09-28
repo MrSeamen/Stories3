@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/Scene Transition/cubeBehavior.cs.meta
+guid: 0a9a7a839e3db8e428256aa06ae44984
+=======
+guid: 56de6e1cbcc76ca4daf73038a0e49d17
+>>>>>>> develop:Assets/Scripts/InteractableUI.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
