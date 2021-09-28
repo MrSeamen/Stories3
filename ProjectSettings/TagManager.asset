@@ -9,6 +9,9 @@ TagManager:
   - Key Main
   - Key Grandma
   - Key L2
+  - Ground
+  - Non-Jumpable
+  - Jumpable
   layers:
   - Default
   - TransparentFX
