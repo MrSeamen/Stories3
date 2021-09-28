@@ -6,13 +6,13 @@ using UnityEngine.InputSystem;
 public class InteractableUI : MonoBehaviour
 {
     [SerializeField] private GameObject UI;
-    private bool enabled;
+    private bool uiEnabled;
     private bool trigger;
 
     void Start()
     {
         UI.SetActive(false);
-        enabled = false;
+        uiEnabled = false;
     }
 
     void OnTriggerEnter()
@@ -24,19 +24,19 @@ public class InteractableUI : MonoBehaviour
     {
         trigger = false;
         UI.SetActive(false);
-        enabled = false;
+        uiEnabled = false;
     }
 
     public void UIActivate(InputAction.CallbackContext context)
     {
-        if (trigger && !enabled)
+        if (trigger && !uiEnabled)
         {
             UI.SetActive(true);
-            enabled = true;
+            uiEnabled = true;
         } else
         {
             UI.SetActive(false);
-            enabled = false;
+            uiEnabled = false;
         }
         
     }

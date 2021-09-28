@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Non-Jumpable
+  - Jumpable
   layers:
   - Default
   - TransparentFX
