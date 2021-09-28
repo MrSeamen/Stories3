@@ -44,7 +44,6 @@ public class Move : MonoBehaviour
             isGrounded = false;
             Vector3 movement = jump * jumpForce;
             rb.velocity = movement;
-            Debug.Log("Here: " + isGrounded);
         }
     }
 
@@ -59,7 +58,6 @@ public class Move : MonoBehaviour
         if(collision.gameObject.CompareTag("Jumpable"))
         {
             isGrounded = true;
-            Debug.Log("Here2: " + isGrounded);
         }
     }
 
