@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -923,8 +923,8 @@ GameObject:
   m_Component:
   - component: {fileID: 524906383}
   - component: {fileID: 524906385}
-  - component: {fileID: 524906384}
   - component: {fileID: 524906386}
+  - component: {fileID: 524906384}
   m_Layer: 0
   m_Name: mainkey
   m_TagString: Untagged
@@ -955,11 +955,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 524906382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee896029f7cd7544aa1f419e24eedfee, type: 3}
+  m_Script: {fileID: 11500000, guid: f15b49fa76650e24a9ba890c60096f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 969f4d721803b4322ac2850be1950206, type: 3}
 --- !u!212 &524906385
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef123d92135494627831ccaa8a901670, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 969f4d721803b4322ac2850be1950206, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2720,7 +2720,7 @@ GameObject:
   - component: {fileID: 1236044213}
   m_Layer: 0
   m_Name: Ground1
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3024,6 +3024,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 7453d351-53c0-4038-8974-59e2a3c4de5e
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 98cc3815-9a31-4855-a630-641f244e3807
+    m_ActionName: Player/CamShift[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ef4e49b5-0c31-4113-82c1-e75fd2cda1c7
+    m_ActionName: SceneTransition/Rotate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 003190cf-32c5-464a-80fa-d790b987e871
+    m_ActionName: SceneTransition/Select[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -3706,7 +3718,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef123d92135494627831ccaa8a901670, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29a0756c4f24f4f2fb6506f99c6a0654, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3829,8 +3841,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1501430782}
   - component: {fileID: 1501430781}
-  - component: {fileID: 1501430780}
   - component: {fileID: 1501430779}
+  - component: {fileID: 1501430780}
   m_Layer: 0
   m_Name: l2key
   m_TagString: Untagged
@@ -3860,11 +3872,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1501430778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee896029f7cd7544aa1f419e24eedfee, type: 3}
+  m_Script: {fileID: 11500000, guid: f15b49fa76650e24a9ba890c60096f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 2
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 85649b971c4d941e8840225a175872ed, type: 3}
 --- !u!212 &1501430781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4130,8 +4142,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1632931901}
   - component: {fileID: 1632931900}
-  - component: {fileID: 1632931899}
   - component: {fileID: 1632931898}
+  - component: {fileID: 1632931899}
   m_Layer: 0
   m_Name: gma key
   m_TagString: Untagged
@@ -4161,11 +4173,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1632931897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee896029f7cd7544aa1f419e24eedfee, type: 3}
+  m_Script: {fileID: 11500000, guid: f15b49fa76650e24a9ba890c60096f40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 1
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 29a0756c4f24f4f2fb6506f99c6a0654, type: 3}
 --- !u!212 &1632931900
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4599,7 +4611,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef123d92135494627831ccaa8a901670, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85649b971c4d941e8840225a175872ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
