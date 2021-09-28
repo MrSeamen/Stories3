@@ -832,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: XMaxEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: XMinEnabled
@@ -840,11 +840,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: YMaxEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: YMinEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: orthographicSize
