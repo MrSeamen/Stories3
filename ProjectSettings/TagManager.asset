@@ -4,6 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Canvas
+  - Main
+  - Key Main
+  - Key Grandma
+  - Key L2
   - Ground
   - Non-Jumpable
   - Jumpable
