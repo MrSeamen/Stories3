@@ -14,7 +14,7 @@ public class TitleButtons : MonoBehaviour
     public void Play()
     {
         Debug.Log("You have clicked the button!");
-        SceneManager.LoadScene("SandboxScene");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void Instructions()
