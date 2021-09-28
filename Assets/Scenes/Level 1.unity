@@ -423,6 +423,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 468438777}
     m_Modifications:
+    - target: {fileID: 7426438440415048942, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
+      propertyPath: m_Color.b
+      value: 0.08235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426438440415048942, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
+      propertyPath: m_Color.g
+      value: 0.08235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426438440415048942, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7960785
+      objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651960, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -470,6 +482,10 @@ PrefabInstance:
     - target: {fileID: 7426438441440651963, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_Name
       value: KeyObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457473140304066139, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
+      propertyPath: keyType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
@@ -4997,6 +5013,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8135824840966767978, guid: 72acf1e9d27aeea4fa8c8df54447d4b6, type: 3}
   m_PrefabInstance: {fileID: 641563348}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1078582821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5884100325540789401, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+  m_PrefabInstance: {fileID: 5884100326112958037}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1078582822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078582821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee896029f7cd7544aa1f419e24eedfee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1082206315
 GameObject:
   m_ObjectHideFlags: 0
@@ -6851,18 +6884,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 468438777}
     m_Modifications:
-    - target: {fileID: 7426438440415048942, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
-      propertyPath: m_Color.b
-      value: 0.9529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 7426438440415048942, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
-      propertyPath: m_Color.g
-      value: 0.70980394
-      objectReference: {fileID: 0}
-    - target: {fileID: 7426438440415048942, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
-      propertyPath: m_Color.r
-      value: 0.14117648
-      objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651960, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6906,10 +6927,6 @@ PrefabInstance:
     - target: {fileID: 7426438441440651960, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7426438441440651961, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
-      propertyPath: keyType
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651963, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_Name
@@ -9937,7 +9954,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grandma
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5884100325540789403, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5884100325540789400, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
 --- !u!1001 &6216446008539490917
 PrefabInstance:
