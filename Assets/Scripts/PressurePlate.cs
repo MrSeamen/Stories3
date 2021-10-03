@@ -29,7 +29,7 @@ public class PressurePlate : MonoBehaviour
     void Update()
     {
         pos = transform.position;
-        if ((pressed == false) && (pos.y <= starting_pos.y))
+        if ((pressed == false) && (pos.y < starting_pos.y))
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
         }
