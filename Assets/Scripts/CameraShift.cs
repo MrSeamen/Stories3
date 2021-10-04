@@ -3,6 +3,7 @@ using UnityEngine;
 public class CameraShift : MonoBehaviour
 {
     public Camera mainCamera;
+    public Vector3 rotation;
     public Vector3 rotationOffset = new Vector3(10f, 0, 0);
     public Vector3 targetOffset = new Vector3(0,3f,0);
     private Matrix4x4 ortho,
@@ -74,7 +75,7 @@ public class CameraShift : MonoBehaviour
     void Start()
     {
         mainCamera = GetComponent<Camera>();
-        cameraPos = GetComponent<Transform>();
+        //cameraPos = GetComponent<Transform>();
         aspect = (float)Screen.width / (float)Screen.height;
         ortho = Matrix4x4.Ortho(-orthographicSize * aspect, orthographicSize * aspect, -orthographicSize, orthographicSize, near, far);
         perspective = Matrix4x4.Perspective(fov, aspect, near, far);
@@ -87,13 +88,18 @@ public class CameraShift : MonoBehaviour
     }
 
     public void Shift()
-    { 
+    {
+        
         orthoOn = !orthoOn;
         if (orthoOn)
         {
-            cameraPos.Rotate(target.transform.position);
-           
-            cameraPos.LookAt(target.transform.position);
+            // cameraPos.Rotate(target.transform.position);
+
+            //cameraPos.LookAt(target.transform.position);
+            transform.eulerAngles = new Vector3(0, 0, 0);
+            //transform.position = target.transform.position + new Vector3(0, 0, -10);
+            transform.position = target.transform.position + new Vector3(0, 0, -10);
+
             blender.BlendToMatrix(ortho, 1f);
           
         }
@@ -101,8 +107,11 @@ public class CameraShift : MonoBehaviour
         {
 
             //transform.position = lookAt.position + targetOffset;
-            cameraPos.Rotate(target.transform.position + new Vector3(12, 0, 0));
-            cameraPos.LookAt(target.transform.position + targetOffset);
+            //cameraPos.Rotate(target.transform.position + new Vector3(12, 0, 0));
+            //cameraPos.LookAt(target.transform.position + targetOffset);
+            //rotation.x += 10 * 10 * Time.deltaTime;
+            transform.eulerAngles = new Vector3(45, 0, 0);
+            transform.position = target.transform.position + new Vector3(0, 10, -10);
             blender.BlendToMatrix(perspective, 1f);
         } 
        // mainCamera.orthographic = !mainCamera.orthographic;

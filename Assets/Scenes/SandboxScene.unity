@@ -834,6 +834,10 @@ PrefabInstance:
       propertyPath: orthographic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 627571421283538895, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: far
       value: 1000
@@ -878,6 +882,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 207619127}
+    - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: rotation.x
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: smoothTime
       value: 3
@@ -2539,6 +2547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 932553145}
+  rotation: {x: 0, y: 0, z: 0}
   rotationOffset: {x: 0, y: 0, z: 0}
   targetOffset: {x: -1, y: -3, z: 0}
   fov: 40
