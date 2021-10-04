@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CameraShift : MonoBehaviour
 {
@@ -87,33 +89,82 @@ public class CameraShift : MonoBehaviour
        
     }
 
+    public IEnumerator MovePos(Vector3 endPos, float speed)
+    {
+        Vector3 startPos = transform.position;
+
+        while (transform.position != endPos)
+        {
+            transform.position = Vector3.MoveTowards(startPos, endPos, speed*Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+       
+    }
+    public IEnumerator MoveAngle(Vector3 endAngle, float speed)
+    {
+        Vector3 startAngle = transform.eulerAngles;
+
+        while (transform.eulerAngles != endAngle)
+        {
+            transform.eulerAngles = Vector3.MoveTowards(startAngle, endAngle, speed * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+
+    }
+
+
+    public IEnumerator MoveOverTime(Vector3 endPos, Vector3 endAngle)
+    {
+        float timer = 0.0f;
+        float seconds = 1;
+        float percent;
+        Vector3 startPos = transform.position;
+        Vector3 startAngle = transform.eulerAngles;
+
+        while (timer <= seconds)
+        {
+            timer += Time.deltaTime;
+            percent = timer / seconds;
+            transform.position = Vector3.Lerp(startPos, endPos, percent);
+            transform.eulerAngles = Vector3.Lerp(startAngle, endAngle, percent);
+            yield return new WaitForEndOfFrame();
+
+        }
+        transform.position = endPos;
+        transform.eulerAngles = endAngle;
+
+    }
+
     public void Shift()
     {
+        
+
+        
+        Vector3 orthAngle = new Vector3(0, 0, 0);
+        Vector3 perspAngle = new Vector3(45, 0, 0);
+        Vector3 orthPos = new Vector3(0, 0, -10) + target.transform.position;
+        Vector3 perspPos = new Vector3(0, 10, -10) + target.transform.position;
+
         
         orthoOn = !orthoOn;
         if (orthoOn)
         {
-            // cameraPos.Rotate(target.transform.position);
-
-            //cameraPos.LookAt(target.transform.position);
-            transform.eulerAngles = new Vector3(0, 0, 0);
-            //transform.position = target.transform.position + new Vector3(0, 0, -10);
-            transform.position = target.transform.position + new Vector3(0, 0, -10);
+            //StartCoroutine(MoveAngle(orthAngle, 25));
+            // StartCoroutine(MovePos(orthPos, 25));
+            StartCoroutine(MoveOverTime(orthPos, orthAngle));
 
             blender.BlendToMatrix(ortho, 1f);
           
         }
-        else
-        {
+        else {
 
-            //transform.position = lookAt.position + targetOffset;
-            //cameraPos.Rotate(target.transform.position + new Vector3(12, 0, 0));
-            //cameraPos.LookAt(target.transform.position + targetOffset);
-            //rotation.x += 10 * 10 * Time.deltaTime;
-            transform.eulerAngles = new Vector3(45, 0, 0);
-            transform.position = target.transform.position + new Vector3(0, 10, -10);
+
+            //StartCoroutine(MoveAngle(perspAngle, 25));
+            //StartCoroutine(MovePos(perspPos, 25));
+            StartCoroutine(MoveOverTime(perspPos, perspAngle));
+
             blender.BlendToMatrix(perspective, 1f);
         } 
-       // mainCamera.orthographic = !mainCamera.orthographic;
+       
     }
 }
