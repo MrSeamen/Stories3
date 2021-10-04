@@ -8,6 +8,7 @@ public class MatrixBlender : MonoBehaviour
     private void Start(){
         camera = GetComponent<Camera>();
      }
+
     public static Matrix4x4 MatrixLerp(Matrix4x4 from, Matrix4x4 to, float time)
     {
         Matrix4x4 ret = new Matrix4x4();
