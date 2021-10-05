@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class CameraShift : MonoBehaviour
 {
@@ -85,7 +86,7 @@ public class CameraShift : MonoBehaviour
         transform.eulerAngles = endAngle;
     }
 
-    public void Shift()
+    public void Shift(InputAction.CallbackContext context)
     {
         
 
