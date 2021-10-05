@@ -132,7 +132,6 @@ public class CameraShift : MonoBehaviour
         }
         transform.position = endPos;
         transform.eulerAngles = endAngle;
-
     }
 
     public void Shift()
@@ -165,6 +164,5 @@ public class CameraShift : MonoBehaviour
 
             blender.BlendToMatrix(perspective, 1f);
         } 
-       
     }
 }
