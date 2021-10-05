@@ -16,13 +16,19 @@ public class ReleaseSwitch : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerStay(Collider collider)
     {
-        trigger = true;
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            trigger = true;
+        }
     }
 
     private void OnTriggerExit(Collider collider)
     {
-        trigger = false;
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            trigger = false;
+        }
     }
 }
