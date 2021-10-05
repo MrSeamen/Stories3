@@ -19,17 +19,23 @@ public class InteractTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (FloatingTextPrefab && !FloatingTextInstance)
+        if (other.gameObject.CompareTag("Player"))
         {
-            ShowFloatingText();
+            if (FloatingTextPrefab && !FloatingTextInstance)
+            {
+                ShowFloatingText();
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (FloatingTextInstance)
+        if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(FloatingTextInstance);
+            if (FloatingTextInstance)
+            {
+                Destroy(FloatingTextInstance);
+            }
         }
     }
 }
