@@ -13,71 +13,22 @@ public class CameraShift : MonoBehaviour
     public float fov = 60f,
                         near = .3f,
                         far = 1000f,
-                        orthographicSize = 50f;
+                        orthographicSize = 5f;
     private float aspect;
     private MatrixBlender blender;
     private bool orthoOn;
-    public bool YMaxEnabled = false;
-    public float YMaxValue = 0;
-    public bool YMinEnabled = false;
-    public float YMinValue = 0;
-    public bool XMaxEnabled = false;
-    public float XMaxValue = 0;
 
-    public bool XMinEnabled = false;
-    public float XMinValue = 0;
-    public Transform cameraPos;
+
     public GameObject target;
-   // public Transform lookAt;
-    public float smoothTime = 0.0f;
-    //Vector3 targetPos;
-    Vector3 velocity = Vector3.zero;
+   
+    public float smoothTime = 3.0f;
 
-    /**
-    private void FixedUpdate()
-    {
-        //targetPos = lookAt.position;
-        /**
-        Vector3 targetPos = lookAt.position;
-        transform.LookAt(target.transform.position + targetOffset); targetPos = lookAt.position;
-       if (YMinEnabled && YMaxEnabled)
-        {
-            targetPos.y = Mathf.Clamp(lookAt.position.y, YMinValue, YMaxValue);
-        }
-        else if (YMinEnabled)
-        {
-            targetPos.y = Mathf.Clamp(lookAt.position.y, YMinValue, lookAt.position.y);
-        }
-        else if (YMaxEnabled)
-        {
-            targetPos.y = Mathf.Clamp(lookAt.position.y, lookAt.position.y, YMaxValue);
-        }
+    private static bool scroller;
 
-        if (XMinEnabled && XMaxEnabled)
-        {
-            targetPos.y = Mathf.Clamp(lookAt.position.x, XMinValue, XMaxValue);
-        }
-        else if (XMinEnabled)
-        {
-            targetPos.x = Mathf.Clamp(lookAt.position.x, XMinValue, lookAt.position.x);
-        }
-        else if (YMaxEnabled)
-        {
-            targetPos.x = Mathf.Clamp(lookAt.position.x, lookAt.position.x, XMaxValue);
-        }
-
-        targetPos.z = transform.position.z;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime);
-       
-        
-       // transform.LookAt(target.transform.position + targetOffset);
- 
-        //transform.rotation = transform.rotation + rotationOffset; 
-    } **/
     void Start()
     {
         mainCamera = GetComponent<Camera>();
-        //cameraPos = GetComponent<Transform>();
+  
         aspect = (float)Screen.width / (float)Screen.height;
         ortho = Matrix4x4.Ortho(-orthographicSize * aspect, orthographicSize * aspect, -orthographicSize, orthographicSize, near, far);
         perspective = Matrix4x4.Perspective(fov, aspect, near, far);
@@ -85,7 +36,7 @@ public class CameraShift : MonoBehaviour
         orthoOn = true;
         blender = (MatrixBlender)GetComponent(typeof(MatrixBlender));
         target = GameObject.Find("Player");
-       // lookAt = gameObject.GetComponent<Transform>();
+      
        
     }
 
@@ -146,10 +97,10 @@ public class CameraShift : MonoBehaviour
 
         
         orthoOn = !orthoOn;
+        scroller = !scroller;
         if (orthoOn)
         {
-            //StartCoroutine(MoveAngle(orthAngle, 25));
-            // StartCoroutine(MovePos(orthPos, 25));
+           
             StartCoroutine(MoveOverTime(orthPos, orthAngle));
 
             blender.BlendToMatrix(ortho, 1f);
@@ -158,11 +109,15 @@ public class CameraShift : MonoBehaviour
         else {
 
 
-            //StartCoroutine(MoveAngle(perspAngle, 25));
-            //StartCoroutine(MovePos(perspPos, 25));
+           
             StartCoroutine(MoveOverTime(perspPos, perspAngle));
 
             blender.BlendToMatrix(perspective, 1f);
         } 
+    }
+
+    public static bool getScroller()
+    {
+        return scroller;
     }
 }
