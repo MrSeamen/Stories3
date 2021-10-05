@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class MovingPlatforms : MonoBehaviour
 {
-    public Transform transformY;
-    
-    [SerializeField] private float lengthPerSecond = 1f;
-    [SerializeField] private float destinationY = 0f;
+    [SerializeField] private float speed = 0.5f;
+    public Vector3 posDiff = new Vector3(0f, -5f, 0f);
+    private Vector3 pos1;
+    private Vector3 pos2;
     // Start is called before the first frame update
     void Start()
     {
-        
+        pos1 = transform.position;
+        pos2 = transform.position + posDiff;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transformY.position = new Vector3(transformY.position.x, Mathf.PingPong(Time.time * lengthPerSecond, destinationY), transformY.position.z);
+        transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
     }
 }
