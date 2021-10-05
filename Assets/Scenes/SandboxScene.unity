@@ -484,15 +484,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_ActionId
       value: 98cc3815-9a31-4855-a630-641f244e3807
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
+      value: ef4e49b5-0c31-4113-82c1-e75fd2cda1c7
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
+      value: 003190cf-32c5-464a-80fa-d790b987e871
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_ActionName
       value: Player/CamShift[/Keyboard/q]
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
+      value: SceneTransition/Rotate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
+      value: SceneTransition/Select[/Keyboard/space]
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
@@ -577,7 +593,7 @@ PrefabInstance:
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 207619125}
+      objectReference: {fileID: 932553143}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -877,11 +893,11 @@ PrefabInstance:
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: cameraPos
       value: 
-      objectReference: {fileID: 207619123}
+      objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: mainCamera
       value: 
-      objectReference: {fileID: 207619127}
+      objectReference: {fileID: 0}
     - target: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: rotation.x
       value: 10
@@ -935,44 +951,6 @@ PrefabInstance:
 --- !u!82 &207619120 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 627571419503736328, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-  m_PrefabInstance: {fileID: 207619119}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &207619121 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 627571421283538889, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-  m_PrefabInstance: {fileID: 207619119}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &207619122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207619121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7daa094e81fe6fc4c9d7eecb80dcf061, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &207619123 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 627571421283538894, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-  m_PrefabInstance: {fileID: 207619119}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &207619125 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3446058929198939398, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-  m_PrefabInstance: {fileID: 207619119}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207619121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d64a67e2652fb184aa6ab041b38d835a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!20 &207619127 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 627571421283538895, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
   m_PrefabInstance: {fileID: 207619119}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &235318844
@@ -2487,7 +2465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &932553141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2554,15 +2532,6 @@ MonoBehaviour:
   near: 0.3
   far: 1000
   orthographicSize: 5
-  YMaxEnabled: 0
-  YMaxValue: 0
-  YMinEnabled: 0
-  YMinValue: 0
-  XMaxEnabled: 0
-  XMaxValue: 0
-  XMinEnabled: 0
-  XMinValue: 0
-  cameraPos: {fileID: 0}
   target: {fileID: 561743330}
   smoothTime: 0
 --- !u!81 &932553144
@@ -2623,12 +2592,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932553140}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8262684, y: 4.1928897, z: -10.142708}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.8262684, y: 0.20288968, z: -10.142708}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 509145133}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005975072
 GameObject:
