@@ -22,7 +22,7 @@ public class FadeIn : MonoBehaviour
 
         correctZoom = 10;
         zoom = correctZoom + 10;
-        cam.m_Lens.OrthographicSize = zoom;
+        cam.m_Lens.OrthographicSize = zoom; 
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class FadeIn : MonoBehaviour
             color.a -= Time.deltaTime;
             fade.GetComponent<Renderer>().material.color = color;
         }
-
+        
         if(true)
         {
             zoom -= 0.15f;
