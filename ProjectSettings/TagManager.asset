@@ -16,6 +16,11 @@ TagManager:
   - Door2
   - Door3
   - MovingPlatform
+  - Key L3Fragment1
+  - Key L3Fragment2
+  - Key L3Fragment3
+  - Key L1Main
+  - Key L1Grandma
   layers:
   - Default
   - TransparentFX
