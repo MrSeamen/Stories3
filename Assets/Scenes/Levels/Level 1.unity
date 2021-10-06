@@ -8781,7 +8781,7 @@ PrefabInstance:
       objectReference: {fileID: 13400000, guid: 6a53ea19274c87d47bedd70c316ba98b, type: 2}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 20
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[15].m_ActionId
@@ -8809,7 +8809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[16].m_ActionName
-      value: SceneTransition/Enter[/Keyboard/space]
+      value: SceneTransition/Select[/Keyboard/space]
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[17].m_ActionName
@@ -8822,26 +8822,6 @@ PrefabInstance:
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionName
       value: SceneTransition/Select3[/Keyboard/d,/Keyboard/rightArrow]
-      objectReference: {fileID: 0}
-    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
-      value: ef4e49b5-0c31-4113-82c1-e75fd2cda1c7
-      objectReference: {fileID: 0}
-    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
-      value: 003190cf-32c5-464a-80fa-d790b987e871
-      objectReference: {fileID: 0}
-    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
-      value: SceneTransition/Rotate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-      objectReference: {fileID: 0}
-    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
-      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
-      value: SceneTransition/Select[/Keyboard/space]
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
