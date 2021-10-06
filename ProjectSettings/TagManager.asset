@@ -12,6 +12,9 @@ TagManager:
   - Ground
   - Non-Jumpable
   - Jumpable
+  - Door1
+  - Door2
+  - Door3
   layers:
   - Default
   - TransparentFX

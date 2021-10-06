@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 
@@ -23,13 +22,11 @@ public class CameraShift : MonoBehaviour
     public GameObject target;
    
     public float smoothTime = 3.0f;
-
     private static bool scroller;
 
     void Start()
     {
         mainCamera = GetComponent<Camera>();
-  
         aspect = (float)Screen.width / (float)Screen.height;
         ortho = Matrix4x4.Ortho(-orthographicSize * aspect, orthographicSize * aspect, -orthographicSize, orthographicSize, near, far);
         perspective = Matrix4x4.Perspective(fov, aspect, near, far);
@@ -37,53 +34,13 @@ public class CameraShift : MonoBehaviour
         orthoOn = true;
         blender = (MatrixBlender)GetComponent(typeof(MatrixBlender));
         target = GameObject.Find("Player");
-      
-       
+        scroller = true;
     }
 
-    public IEnumerator MovePos(Vector3 endPos, float speed)
+    public void Shift()
     {
-        Vector3 startPos = transform.position;
-
-        while (transform.position != endPos)
-        {
-            transform.position = Vector3.MoveTowards(startPos, endPos, speed*Time.deltaTime);
-            yield return new WaitForEndOfFrame();
-        }
-       
-    }
-    public IEnumerator MoveAngle(Vector3 endAngle, float speed)
-    {
-        Vector3 startAngle = transform.eulerAngles;
-
-        while (transform.eulerAngles != endAngle)
-        {
-            transform.eulerAngles = Vector3.MoveTowards(startAngle, endAngle, speed * Time.deltaTime);
-            yield return new WaitForEndOfFrame();
-        }
-
-    }
-
-
-    public IEnumerator MoveOverTime(Vector3 endPos, Vector3 endAngle)
-    {
-        float timer = 0.0f;
-        float seconds = 1;
-        float percent;
-        Vector3 startPos = transform.position;
-        Vector3 startAngle = transform.eulerAngles;
-
-        while (timer <= seconds)
-        {
-            timer += Time.deltaTime;
-            percent = timer / seconds;
-            transform.position = Vector3.Lerp(startPos, endPos, percent);
-            transform.eulerAngles = Vector3.Lerp(startAngle, endAngle, percent);
-            yield return new WaitForEndOfFrame();
-
-        }
-        transform.position = endPos;
-        transform.eulerAngles = endAngle;
+        mainCamera.orthographic = !mainCamera.orthographic;
+        scroller = !scroller;
     }
 
     public void Shift(InputAction.CallbackContext context)
