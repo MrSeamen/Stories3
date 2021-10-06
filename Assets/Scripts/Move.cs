@@ -83,4 +83,9 @@ public class Move : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
     }
+
+    public bool OnGround()
+    {
+        return isGrounded;
+    }
 }
