@@ -94,11 +94,11 @@ public class LevelSelection : MonoBehaviour
         }
         else if (level == 2)
         {
-            SceneManager.LoadScene("Oliver");
+            SceneManager.LoadScene("Level 2");
         }
         else
         {
-            SceneManager.LoadScene("Oliver 2");
+            SceneManager.LoadScene("Level 3");
         }
     }
 
