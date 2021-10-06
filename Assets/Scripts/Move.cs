@@ -13,10 +13,25 @@ public class Move : MonoBehaviour
     public bool isGrounded;
     Rigidbody rb;
 
+    public GameObject door1;
+    public GameObject door2;
+    public GameObject door3;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
+        if(LevelSelection.getDoor() == 1)
+        {
+            rb.position = door1.transform.position;
+        }
+        else if (LevelSelection.getDoor() == 2)
+        {
+            rb.position = door2.transform.position;
+        } else if (LevelSelection.getDoor() == 3)
+        {
+            rb.position = door3.transform.position;
+        }
     }
 
     void Update()
@@ -67,5 +82,10 @@ public class Move : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }
+    }
+
+    public bool OnGround()
+    {
+        return isGrounded;
     }
 }

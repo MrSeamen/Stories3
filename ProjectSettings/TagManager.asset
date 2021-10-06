@@ -12,6 +12,10 @@ TagManager:
   - Ground
   - Non-Jumpable
   - Jumpable
+  - Door1
+  - Door2
+  - Door3
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

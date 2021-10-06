@@ -15,16 +15,22 @@ public class InteractableUI : MonoBehaviour
         uiEnabled = false;
     }
 
-    void OnTriggerEnter()
+    void OnTriggerStay(Collider collider)
     {
-        trigger = true;
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            trigger = true;
+        }
     }
 
-    void OnTriggerExit()
+    void OnTriggerExit(Collider collider)
     {
-        trigger = false;
-        UI.SetActive(false);
-        uiEnabled = false;
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            trigger = false;
+            UI.SetActive(false);
+            uiEnabled = false;
+        }
     }
 
     public void UIActivate(InputAction.CallbackContext context)
