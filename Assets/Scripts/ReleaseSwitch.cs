@@ -7,14 +7,16 @@ public class ReleaseSwitch : MonoBehaviour
 {
     private bool trigger = false;
     public Collider collider_activatable;
-    public GoondalfDialogFlow goondalfDialog;
+    public DialogueTrigger goondalfInitialDialog;
+    public DialogueTrigger goondalfFreedDialog;
 
     public void ColliderActivate(InputAction.CallbackContext context)
     {
         if (trigger)
         {
             collider_activatable.enabled = !collider_activatable.enabled;
-            goondalfDialog.switchDialogSet();
+            goondalfInitialDialog.gameObject.SetActive(false);
+            goondalfFreedDialog.gameObject.SetActive(true);
         }
     }
 
