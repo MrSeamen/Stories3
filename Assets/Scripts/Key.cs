@@ -9,9 +9,15 @@ public class Key : MonoBehaviour
 
     public enum KeyType
     {
-        Main,
-        Grandma,
-        L2
+        L1Main,
+        L1Grandma,
+        L1Door,
+        L2Main,
+        L2Door,
+        L3Main,
+        L3Fragment1,
+        L3Fragment2,
+        L3Fragment3
     }
 
     public Key(KeyType keyType) {
