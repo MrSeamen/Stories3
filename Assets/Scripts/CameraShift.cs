@@ -1,20 +1,16 @@
 using System.Collections;
-<<<<<<< HEAD
-=======
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
->>>>>>> 286f0a1b8c0a726c843d8539c13acfd2ad10bf50
+
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 
 public class CameraShift : MonoBehaviour
 {
-<<<<<<< HEAD
+
     public Camera mainCamera;
-=======
-    private Camera mainCamera;
->>>>>>> 286f0a1b8c0a726c843d8539c13acfd2ad10bf50
+
     public Vector3 rotation;
     public Vector3 rotationOffset = new Vector3(10f, 0, 0);
     public Vector3 targetOffset = new Vector3(0, 3f, 0);
@@ -29,11 +25,9 @@ public class CameraShift : MonoBehaviour
     private bool orthoOn;
 
 
-<<<<<<< HEAD
+
     public GameObject target;
-=======
-    private GameObject target;
->>>>>>> 286f0a1b8c0a726c843d8539c13acfd2ad10bf50
+
 
     public float smoothTime = 3.0f;
     private static bool scroller;
@@ -73,32 +67,8 @@ public class CameraShift : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
 
-    public IEnumerator MoveOverTime(Vector3 endPos, Vector3 endAngle)
-{
-    float timer = 0.0f;
-    float seconds = 1;
-    float percent;
-    Vector3 startPos = transform.position;
-    Vector3 startAngle = transform.eulerAngles;
 
-    while (timer <= seconds)
-    {
-        timer += Time.deltaTime;
-        percent = timer / seconds;
-        transform.position = Vector3.Lerp(startPos, endPos, percent);
-        transform.eulerAngles = Vector3.Lerp(startAngle, endAngle, percent);
-        yield return new WaitForEndOfFrame();
-
-    }
-    transform.position = endPos;
-    transform.eulerAngles = endAngle;
-
-}
-
-=======
->>>>>>> 286f0a1b8c0a726c843d8539c13acfd2ad10bf50
     public void Shift(InputAction.CallbackContext context)
     {
 
@@ -135,8 +105,6 @@ public class CameraShift : MonoBehaviour
     {
         return scroller;
     }
-<<<<<<< HEAD
-=======
 
     void OnGUI()
     {
@@ -147,5 +115,5 @@ public class CameraShift : MonoBehaviour
             GUI.Label(new Rect(0, 0, 100, 50), "3D Mode");
         }
     }
->>>>>>> 286f0a1b8c0a726c843d8539c13acfd2ad10bf50
+
 }
