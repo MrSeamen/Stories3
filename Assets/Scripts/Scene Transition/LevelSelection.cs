@@ -56,17 +56,17 @@ public class LevelSelection : MonoBehaviour
 
     public void Select1(InputAction.CallbackContext context)
     {
-        level = 1;
-        level1.SetActive(true);
-        level2.SetActive(false);
+        level = 2;
+        level2.SetActive(true);
+        level1.SetActive(false);
         level3.SetActive(false);
     }
 
     public void Select2(InputAction.CallbackContext context)
     {
-        level = 2;
-        level1.SetActive(false);
-        level2.SetActive(true);
+        level = 1;
+        level2.SetActive(false);
+        level1.SetActive(true);
         level3.SetActive(false);
     }
 

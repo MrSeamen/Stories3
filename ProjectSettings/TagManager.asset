@@ -21,6 +21,8 @@ TagManager:
   - Key L3Fragment3
   - Key L1Main
   - Key L1Grandma
+  - Main Theme
+  - Level1 Theme
   layers:
   - Default
   - TransparentFX
