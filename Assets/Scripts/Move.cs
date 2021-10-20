@@ -11,63 +11,50 @@ public class Move : MonoBehaviour
     public Animator animator;
     public SpriteRenderer sprite;
     public TrackTransition trackTransition;
-    public Vector3 _direction;
+    private Vector3 _direction;
     private Vector3 jump;
-    public bool isGrounded;
+    private bool isGrounded;
     Rigidbody rb;
 
-    public GameObject door1;
-    public GameObject door2;
-    public GameObject door3;
-
-    public AudioSource walking;
-    public AudioSource jumping;
-    public AudioSource landing;
+    public AudioSource audioSource;
+    public AudioClip walking;
+    public AudioClip jumping;
+    public AudioClip landing;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
-        if(LevelSelection.getDoor() == 1)
-        {
-            rb.position = door1.transform.position;
-        }
-        else if (LevelSelection.getDoor() == 2)
-        {
-            rb.position = door2.transform.position;
-        } else if (LevelSelection.getDoor() == 3)
-        {
-            rb.position = door3.transform.position;
-        }
-
-        walking.mute = true;
-        walking.Play();
+        _direction = new Vector3(0.0f, 0.0f, 0.0f);
+        audioSource.Play();
     }
 
     void Update()
     {
         Movement();
-
-        //if the player is in the air or not moving, mute the walking audio
-        if(!isGrounded || ((rb.velocity.x == 0f) && (rb.velocity.z == 0f)))
-        {
-            walking.mute = true;
-        } else if (walking.mute == true) //else, if the walking audio is muted, start playing it
-        {
-            walking.mute = false;
-        }
     }
 
     public void Movement()
     {
-        if(CameraShift.getScroller())
+        Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, 0);
+        rb.velocity = movement;
+
+        if (_direction == Vector3.zero || !isGrounded)
         {
-            Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, 0);
-            rb.velocity = movement;
+            animator.SetBool("IsWalking", false);
+            if (audioSource.clip == walking)
+            {
+                audioSource.Pause();
+            }
         } else
         {
-            Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, _direction.z * moveSpeed);
-            rb.velocity = movement;
+            animator.SetBool("IsWalking", true);
+            if (audioSource.clip != walking)
+            {
+                audioSource.loop = true;
+                audioSource.clip = walking;
+                audioSource.Play();
+            }
         }
     }
 
@@ -78,7 +65,11 @@ public class Move : MonoBehaviour
             isGrounded = false;
             Vector3 movement = jump * jumpForce;
             rb.velocity = movement;
-            jumping.Play();
+
+            audioSource.Stop();
+            audioSource.loop = false;
+            audioSource.clip = jumping;
+            audioSource.Play();
         }
     }
 
@@ -88,13 +79,8 @@ public class Move : MonoBehaviour
         if(CameraShift.getScroller())
         {
             _direction = new Vector3(_inputVector.x, 0, 0);
-            if (_direction == Vector3.zero && !trackTransition.IsTransitioning())
+            if (_direction != Vector3.zero || trackTransition.IsTransitioning())
             {
-                animator.SetBool("IsWalking", false);
-            }
-            else
-            {
-                animator.SetBool("IsWalking", true);
                 sprite.flipX = (_inputVector.x < 0);
             }
         } else
@@ -110,8 +96,12 @@ public class Move : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Jumpable"))
         {
+            audioSource.Stop();
+            audioSource.loop = false;
+            audioSource.clip = landing;
+            audioSource.Play();
+
             isGrounded = true;
-            landing.Play();
         }
     }
 
