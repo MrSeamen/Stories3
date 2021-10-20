@@ -9,23 +9,18 @@ public class DialogueUIPanel : MonoBehaviour
     [SerializeField] Text nameBox;
     [SerializeField] Text textBox;
     [SerializeField] Image image;
+    [SerializeField] AudioSource audioSource;
 
     public Animator animator;
 
-    private AudioSource audio1;
-    private AudioSource audio2;
-
-    [SerializeField] AudioSource goondalf1;
-    [SerializeField] AudioSource goondalf2;
-    [SerializeField] AudioSource grandma1;
-    [SerializeField] AudioSource grandma2;
-
     private Coroutine runningRoutine;
+    private AudioClip[] audioClips;
 
-    public void UpdateView(Sprite headImg, string name)
+    public void UpdateView(Sprite headImg, string name, AudioClip[] audioClipsIn)
     {
         nameBox.text = name;
         image.sprite = headImg;
+        audioClips = audioClipsIn;
     }
 
     public void UpdateSentence(string text)
@@ -39,37 +34,15 @@ public class DialogueUIPanel : MonoBehaviour
 
     IEnumerator TypeText(string text)
     {
-        bool flip = true;
         textBox.text = "";
         foreach (char letter in text.ToCharArray())
         {
             textBox.text += letter;
             if (letter != ' ' && animator.GetBool("IsOpen"))
             {
-                if (flip)
-                {
-                    audio1.Play();
-                    flip = false;
-                }
-                else
-                {
-                    audio2.Play();
-                    flip = true;
-                }
+                audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
             }
             yield return new WaitForSeconds(dialogSpeed);
         }
-    }
-
-    public void Goondalf()
-    {
-        audio1 = goondalf1;
-        audio2 = goondalf2;
-    }
-
-    public void Grandma()
-    {
-        audio1 = grandma1;
-        audio2 = grandma2;
     }
 }

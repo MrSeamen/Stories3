@@ -8,28 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: e63e356356ee3a44695cf28176afcaff
-  - enabled: 0
-    path: Assets/Scenes/SandboxScene.unity
-    guid: 5115757e578d6724c8d564af47dd51d5
   - enabled: 1
-    path: Assets/Scenes/Levels-Old/Level 1.unity
-    guid: 6bdc50a39d63c2441a6f9a9978d4c2b5
-  - enabled: 0
+    path: Assets/Scenes/Levels/Level 1.unity
+    guid: 9790a33d2f6966e4ea5596dcdf3337f9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 2.unity
+    guid: d96fd9268f7aa6b4aaad4c61f5767c14
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 3.unity
+    guid: 3ecae4e47254b154c89840bd4c23f9c5
+  - enabled: 1
     path: Assets/Scenes/TransitionScene.unity
     guid: 4382c83d4e523634ab49af350554c671
-  - enabled: 0
-    path: Assets/Scenes/Playground Scenes/Oliver.unity
-    guid: ad5c2f071cececf40876e067ab5de82f
   - enabled: 1
     path: Assets/Scenes/Transition.unity
     guid: b9baea290e806c048b848ad45a962dc2
-  - enabled: 0
-    path: Assets/Scenes/Playground Scenes/Oliver 2.unity
-    guid: 1d9ec0747069c8e43a2e724eca8ebda7
-  - enabled: 1
-    path: Assets/Scenes/Levels-Old/Level 2.unity
-    guid: 728289ead24467445a455f09e619ab1d
-  - enabled: 1
-    path: Assets/Scenes/Levels-Old/Level 3.unity
-    guid: 216446fad2ac53b4a81e06f0623feaf6
   m_configObjects: {}
