@@ -10,6 +10,7 @@ public class Move : MonoBehaviour
 
     public Animator animator;
     public SpriteRenderer sprite;
+    public TrackTransition trackTransition;
     public Vector3 _direction;
     private Vector3 jump;
     public bool isGrounded;
@@ -67,14 +68,19 @@ public class Move : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 _inputVector = context.ReadValue<Vector2>();
-        _direction = new Vector3(_inputVector.x, 0, _inputVector.y);
-        if (_direction == Vector3.zero)
+        _direction = new Vector3(_inputVector.x, 0, 0);
+        if (_direction == Vector3.zero && !trackTransition.IsTransitioning())
         {
             animator.SetBool("IsWalking", false);
         } else
         {
             animator.SetBool("IsWalking", true);
             sprite.flipX = (_inputVector.x < 0);
+        }
+
+        if(context.performed && _inputVector.y != 0)
+        {
+            trackTransition.AttemptTransition(_inputVector.y > 0, animator);
         }
     }
 
