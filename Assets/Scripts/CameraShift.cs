@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+
 using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class CameraShift : MonoBehaviour
 {
-    private Camera mainCamera;
+
+    public Camera mainCamera;
+
     public Vector3 rotation;
     public Vector3 rotationOffset = new Vector3(10f, 0, 0);
     public Vector3 targetOffset = new Vector3(0, 3f, 0);
@@ -20,7 +25,9 @@ public class CameraShift : MonoBehaviour
     private bool orthoOn;
 
 
-    private GameObject target;
+
+    public GameObject target;
+
 
     public float smoothTime = 3.0f;
     private static bool scroller;
@@ -59,6 +66,8 @@ public class CameraShift : MonoBehaviour
         transform.eulerAngles = endAngle;
 
     }
+
+
 
     public void Shift(InputAction.CallbackContext context)
     {
@@ -106,4 +115,5 @@ public class CameraShift : MonoBehaviour
             GUI.Label(new Rect(0, 0, 100, 50), "3D Mode");
         }
     }
+
 }
