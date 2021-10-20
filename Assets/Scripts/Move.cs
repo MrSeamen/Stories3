@@ -8,6 +8,9 @@ public class Move : MonoBehaviour
     [SerializeField] float moveSpeed = 0.02f;
     [SerializeField] float jumpForce = 2.0f;
 
+    public Animator animator;
+    public SpriteRenderer sprite;
+    public TrackTransition trackTransition;
     public Vector3 _direction;
     private Vector3 jump;
     public bool isGrounded;
@@ -82,7 +85,25 @@ public class Move : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 _inputVector = context.ReadValue<Vector2>();
-        _direction = new Vector3(_inputVector.x, 0, _inputVector.y);
+        if(CameraShift.getScroller())
+        {
+            _direction = new Vector3(_inputVector.x, 0, 0);
+            if (_direction == Vector3.zero && !trackTransition.IsTransitioning())
+            {
+                animator.SetBool("IsWalking", false);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", true);
+                sprite.flipX = (_inputVector.x < 0);
+            }
+        } else
+        {
+            if (context.performed && _inputVector.y != 0)
+            {
+                trackTransition.AttemptTransition(_inputVector.y > 0, animator);
+            }
+        }
     }
 
     void OnCollisionEnter(Collision collision)
