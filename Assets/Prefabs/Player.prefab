@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 6319508681768152357}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,18 +233,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 627571419503736328}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 551d550ab98e3cc4bb7793e752fe8628, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 3ec620eb-bcb8-45fd-8a9c-9883dc23ddf0
     m_ActionName: Player/Move
   - m_PersistentCalls:
@@ -256,18 +244,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 627571419503736328}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 6aeefb601c305f64487cebdfacae5b6c, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -349,18 +325,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 627571420467642404}
-        m_TargetAssemblyTypeName: Move, Assembly-CSharp
-        m_MethodName: Recenter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 627571419503736328}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -434,11 +398,11 @@ MonoBehaviour:
   jumpForce: 3.5
   animator: {fileID: 6319508681768152357}
   sprite: {fileID: 3895415614159200747}
-  _direction: {x: 0, y: 0, z: 0}
-  isGrounded: 0
-  door1: {fileID: 0}
-  door2: {fileID: 0}
-  door3: {fileID: 0}
+  trackTransition: {fileID: 0}
+  audioSource: {fileID: 627571419503736328}
+  walking: {fileID: 8300000, guid: fe4cb9d19275aa24ebd33eb2d39f2db7, type: 3}
+  jumping: {fileID: 8300000, guid: e0e69fe158f3cb340afd5fea735b1174, type: 3}
+  landing: {fileID: 8300000, guid: 77a135b8d5f74744386c157c9b741525, type: 3}
 --- !u!95 &6319508681768152357
 Animator:
   serializedVersion: 3
@@ -529,7 +493,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8910426349888178129, guid: cd508c46dbdb53b4984ddc1bdc06e55f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24940acbdde9f224b8b7a781c95e0040, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
