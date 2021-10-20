@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5341385394679346790}
   - component: {fileID: 2634362487793693166}
   - component: {fileID: 8046271554539660172}
+  - component: {fileID: -3900786508936234208}
   m_Layer: 0
-  m_Name: Door
+  m_Name: KeyDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,3 +97,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3900786508936234208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6413672621642450130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b19824943d051469f7fd8a0a43fbf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyType: 0
