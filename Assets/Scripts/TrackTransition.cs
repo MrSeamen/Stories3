@@ -21,7 +21,7 @@ public class TrackTransition : MonoBehaviour
         return moving;
     }
 
-    public void AttemptTransition(bool isAwayFromCamera, Animator animator)
+    public void AttemptTransition(bool isAwayFromCamera, Animator animator, AudioSource audioSource, AudioClip walkingClip)
     {
         int nextIdx = (isAwayFromCamera ? currentTrackIdx + 1 : currentTrackIdx - 1);
         if (tracks.Length <= nextIdx || nextIdx < 0)
@@ -46,7 +46,7 @@ public class TrackTransition : MonoBehaviour
             if(!moving)
             {
                 currentTrackIdx = nextIdx;
-                StartCoroutine(MoveToPosition(player.transform, tracks[nextIdx].transform.position.z, 1.0f, animator));
+                StartCoroutine(MoveToPosition(player.transform, tracks[nextIdx].transform.position.z, 1.0f, animator, audioSource, walkingClip));
             }
         }
     }
@@ -56,8 +56,12 @@ public class TrackTransition : MonoBehaviour
         Debug.Log("Transition is blocked");
     }
 
-    public IEnumerator MoveToPosition(Transform transform, float z, float timeToMove, Animator animator)
+    public IEnumerator MoveToPosition(Transform transform, float z, float timeToMove, Animator animator, AudioSource audioSource, AudioClip walkingClip)
     {
+        audioSource.loop = true;
+        audioSource.clip = walkingClip;
+        audioSource.Play();
+
         animator.SetBool("IsWalking", true);
         moving = true;
         var currentPos = transform.position;
@@ -73,5 +77,7 @@ public class TrackTransition : MonoBehaviour
         transform.position = targetPos;
         moving = false;
         animator.SetBool("IsWalking", false);
+
+        audioSource.Stop();
     }
 }

@@ -36,24 +36,28 @@ public class Move : MonoBehaviour
 
     public void Movement()
     {
-        Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, 0);
-        rb.velocity = movement;
+        if(CameraShift.getScroller())
+        {
+            Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, 0);
+            rb.velocity = movement;
 
-        if (_direction == Vector3.zero || !isGrounded)
-        {
-            animator.SetBool("IsWalking", false);
-            if (audioSource.clip == walking)
+            if (_direction == Vector3.zero || !isGrounded)
             {
-                audioSource.Pause();
+                animator.SetBool("IsWalking", false);
+                if (audioSource.clip == walking)
+                {
+                    audioSource.Pause();
+                }
             }
-        } else
-        {
-            animator.SetBool("IsWalking", true);
-            if (audioSource.clip != walking)
+            else
             {
-                audioSource.loop = true;
-                audioSource.clip = walking;
-                audioSource.Play();
+                animator.SetBool("IsWalking", true);
+                if (audioSource.clip != walking)
+                {
+                    audioSource.loop = true;
+                    audioSource.clip = walking;
+                    audioSource.Play();
+                }
             }
         }
     }
@@ -87,7 +91,7 @@ public class Move : MonoBehaviour
         {
             if (context.performed && _inputVector.y != 0)
             {
-                trackTransition.AttemptTransition(_inputVector.y > 0, animator);
+                trackTransition.AttemptTransition(_inputVector.y > 0, animator, audioSource, walking);
             }
         }
     }
