@@ -24,17 +24,19 @@ public class TrackTransition : MonoBehaviour
     public void AttemptTransition(bool isAwayFromCamera, Animator animator)
     {
         int nextIdx = (isAwayFromCamera ? currentTrackIdx + 1 : currentTrackIdx - 1);
-        if (!tracks[nextIdx])
+        if (tracks.Length <= nextIdx || nextIdx < 0)
         {
             // Can't go to a track that does not exist
             TransitionBlocked();
             return;
         }
 
-        
-        float distance = Mathf.Abs(tracks[nextIdx].transform.position.z - tracks[startTrackIdx].transform.position.z);
-        bool blocked = Physics.Raycast(player.transform.position, player.transform.TransformDirection((isAwayFromCamera ? Vector3.forward : Vector3.back)), distance);
-        bool floorExists = Physics.Raycast(player.transform.position, player.transform.TransformDirection((isAwayFromCamera ? new Vector3(0, -1, 1) : new Vector3(0, -1, -1))), distance);
+        Debug.DrawRay(player.transform.position, player.transform.TransformDirection(isAwayFromCamera ? Vector3.forward : Vector3.back), Color.green);
+        Debug.DrawRay(player.transform.position, player.transform.TransformDirection(isAwayFromCamera ? new Vector3(0, -1, 1) : new Vector3(0, -1, -1)), Color.red);
+
+        float distance = Mathf.Abs(tracks[nextIdx].transform.position.z - tracks[currentTrackIdx].transform.position.z);
+        bool blocked = Physics.Raycast(player.transform.position, player.transform.TransformDirection(isAwayFromCamera ? Vector3.forward : Vector3.back), distance);
+        bool floorExists = Physics.Raycast(player.transform.position, player.transform.TransformDirection(isAwayFromCamera ? new Vector3(0, -1, 1) : new Vector3(0, -1, -1)), distance);
 
         if (blocked || !floorExists)
         {

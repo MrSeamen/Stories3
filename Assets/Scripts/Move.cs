@@ -68,19 +68,24 @@ public class Move : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 _inputVector = context.ReadValue<Vector2>();
-        _direction = new Vector3(_inputVector.x, 0, 0);
-        if (_direction == Vector3.zero && !trackTransition.IsTransitioning())
+        if(CameraShift.getScroller())
         {
-            animator.SetBool("IsWalking", false);
+            _direction = new Vector3(_inputVector.x, 0, 0);
+            if (_direction == Vector3.zero && !trackTransition.IsTransitioning())
+            {
+                animator.SetBool("IsWalking", false);
+            }
+            else
+            {
+                animator.SetBool("IsWalking", true);
+                sprite.flipX = (_inputVector.x < 0);
+            }
         } else
         {
-            animator.SetBool("IsWalking", true);
-            sprite.flipX = (_inputVector.x < 0);
-        }
-
-        if(context.performed && _inputVector.y != 0)
-        {
-            trackTransition.AttemptTransition(_inputVector.y > 0, animator);
+            if (context.performed && _inputVector.y != 0)
+            {
+                trackTransition.AttemptTransition(_inputVector.y > 0, animator);
+            }
         }
     }
 
