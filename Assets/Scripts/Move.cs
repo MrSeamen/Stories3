@@ -20,6 +20,10 @@ public class Move : MonoBehaviour
     public GameObject door2;
     public GameObject door3;
 
+    public AudioSource walking;
+    public AudioSource jumping;
+    public AudioSource landing;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,11 +39,23 @@ public class Move : MonoBehaviour
         {
             rb.position = door3.transform.position;
         }
+
+        walking.mute = true;
+        walking.Play();
     }
 
     void Update()
     {
         Movement();
+
+        //if the player is in the air or not moving, mute the walking audio
+        if(!isGrounded || ((rb.velocity.x == 0f) && (rb.velocity.z == 0f)))
+        {
+            walking.mute = true;
+        } else if (walking.mute == true) //else, if the walking audio is muted, start playing it
+        {
+            walking.mute = false;
+        }
     }
 
     public void Movement()
@@ -62,6 +78,7 @@ public class Move : MonoBehaviour
             isGrounded = false;
             Vector3 movement = jump * jumpForce;
             rb.velocity = movement;
+            jumping.Play();
         }
     }
 
@@ -94,6 +111,15 @@ public class Move : MonoBehaviour
         if(collision.gameObject.CompareTag("Jumpable"))
         {
             isGrounded = true;
+            landing.Play();
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Jumpable"))
+        {
+            isGrounded = false;
         }
     }
 
