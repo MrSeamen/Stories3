@@ -41,9 +41,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 5e7be59be9706134aab126d2a37940f9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -233,6 +233,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1986329369303958598, guid: 6a5298aeeeae8be4da13c32c339bbd34, type: 3}
+        m_TargetAssemblyTypeName: MovableBlock, Assembly-CSharp
+        m_MethodName: MoveBlock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3ec620eb-bcb8-45fd-8a9c-9883dc23ddf0
     m_ActionName: Player/Move
   - m_PersistentCalls:
@@ -262,7 +274,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 99348d26b121bdf40bca2ff30b000207, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 5e7be59be9706134aab126d2a37940f9, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -325,18 +337,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 627571419503736328}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 99348d26b121bdf40bca2ff30b000207, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 98cc3815-9a31-4855-a630-641f244e3807
     m_ActionName: Player/CamShift[/Keyboard/q]
   - m_PersistentCalls:
@@ -363,6 +363,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e83a9b60-daa9-4f54-aa0a-bfe11aa22a02
     m_ActionName: Dialogue/Continue[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1986329369303958598, guid: 6a5298aeeeae8be4da13c32c339bbd34, type: 3}
+        m_TargetAssemblyTypeName: MovableBlock, Assembly-CSharp
+        m_MethodName: StopBlock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c80b500d-15d3-4843-ad37-f08f979b7813
+    m_ActionName: Player/StopMove[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

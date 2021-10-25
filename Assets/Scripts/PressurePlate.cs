@@ -15,6 +15,10 @@ public class PressurePlate : MonoBehaviour
     Vector3 door_start;
     Vector3 door_end;
 
+    public AudioSource audioSource;
+    public AudioClip down;
+    public AudioClip up;
+
     void Start()
     {
         starting_pos = transform.position;
@@ -32,6 +36,11 @@ public class PressurePlate : MonoBehaviour
         if ((pressed == false) && (pos.y < starting_pos.y))
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
+            if(!audioSource.isPlaying || audioSource.clip == down)
+            {
+                audioSource.clip = up;
+                audioSource.Play();
+            }
         }
         door_pos = door.position;
         if ((pressed == false) && (door_pos.y <= door_start.y))
@@ -46,6 +55,11 @@ public class PressurePlate : MonoBehaviour
         if (pos.y >= ending_pos.y)
         {
             transform.Translate(Vector3.down * Time.deltaTime * speed);
+            if (!audioSource.isPlaying || audioSource.clip == up)
+            {
+                audioSource.clip = down;
+                audioSource.Play();
+            }
         }
         if (door_pos.y >= door_end.y)
         {

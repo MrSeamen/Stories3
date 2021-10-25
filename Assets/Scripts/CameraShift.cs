@@ -24,7 +24,9 @@ public class CameraShift : MonoBehaviour
     private MatrixBlender blender;
     private bool orthoOn;
 
-
+    public AudioSource audioSource;
+    public AudioClip shift1;
+    public AudioClip shift2;
 
     public GameObject target;
 
@@ -72,33 +74,39 @@ public class CameraShift : MonoBehaviour
     public void Shift(InputAction.CallbackContext context)
     {
 
-
-
-        Vector3 orthAngle = new Vector3(0, 0, 0);
-        Vector3 perspAngle = new Vector3(45, 0, 0);
-        Vector3 orthPos = new Vector3(0, 0, -10) + target.transform.position;
-        Vector3 perspPos = new Vector3(0, 10, -10) + target.transform.position;
-
-
-        orthoOn = !orthoOn;
-        scroller = !scroller;
-        if (orthoOn)
+        if(context.performed)
         {
 
-            StartCoroutine(MoveOverTime(orthPos, orthAngle));
+            Vector3 orthAngle = new Vector3(0, 0, 0);
+            Vector3 perspAngle = new Vector3(45, 0, 0);
+            Vector3 orthPos = new Vector3(0, 0, -10) + target.transform.position;
+            Vector3 perspPos = new Vector3(0, 10, -10) + target.transform.position;
 
-            blender.BlendToMatrix(ortho, 1f);
 
+            orthoOn = !orthoOn;
+            scroller = !scroller;
+            if (orthoOn)
+            {
+
+                StartCoroutine(MoveOverTime(orthPos, orthAngle));
+
+                blender.BlendToMatrix(ortho, 1f);
+
+                audioSource.clip = shift2;
+                audioSource.Play();
+
+            }
+            else
+            {
+                StartCoroutine(MoveOverTime(perspPos, perspAngle));
+
+                blender.BlendToMatrix(perspective, 1f);
+
+                audioSource.clip = shift1;
+                audioSource.Play();
+            }
         }
-        else
-        {
 
-
-
-            StartCoroutine(MoveOverTime(perspPos, perspAngle));
-
-            blender.BlendToMatrix(perspective, 1f);
-        }
     }
 
     public static bool getScroller()

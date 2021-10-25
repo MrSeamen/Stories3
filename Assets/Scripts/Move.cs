@@ -26,7 +26,6 @@ public class Move : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
         _direction = new Vector3(0.0f, 0.0f, 0.0f);
-        audioSource.Play();
     }
 
     void Update()
@@ -129,4 +128,21 @@ public class Move : MonoBehaviour
     {
         return isGrounded;
     }
+
+    public bool isMoving()
+    {
+        if(_direction != Vector3.zero)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
+
+    public float DirectionX()
+    {
+        return _direction.x;
+    }
+
 }
