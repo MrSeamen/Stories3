@@ -552,11 +552,12 @@ MonoBehaviour:
   dialogue:
     headImg: {fileID: 21300000, guid: 863ac5c96111fb647b568a3919704319, type: 3}
     name: Suitor1
-    audio: []
+    audio:
+    - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
+    - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     sentences:
     - '"Here is an object that may help you on your journey"'
   triggered: 0
-  key: {fileID: 1452685782}
 --- !u!135 &101681649
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -614,8 +615,16 @@ PrefabInstance:
       value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 387172222}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -624,6 +633,10 @@ PrefabInstance:
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -638,11 +651,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 387172216}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: d800c02d1f0bfa849af14f7b009d8661, type: 3}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
@@ -654,6 +675,10 @@ PrefabInstance:
       value: UseDoor
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_name
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: TransitionDoor, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -662,8 +687,16 @@ PrefabInstance:
       value: TransitionDoor, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: DialogueManager.DisplayNextSentence()
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -671,6 +704,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642403, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
@@ -938,11 +975,12 @@ MonoBehaviour:
   dialogue:
     headImg: {fileID: 21300000, guid: e9ff4104604b75f4ea79c6af95d718df, type: 3}
     name: Kaguya
-    audio: []
+    audio:
+    - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
+    - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     sentences:
     - '"Hello kind stranger, maybe you could help me..."'
   triggered: 0
-  key: {fileID: 0}
 --- !u!135 &280264197
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1245,7 +1283,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &330250305
 PrefabInstance:
@@ -1967,7 +2005,7 @@ Transform:
   - {fileID: 765933032}
   - {fileID: 1403322513}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &474681329
 GameObject:
@@ -2818,6 +2856,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &743056197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743056199}
+  - component: {fileID: 743056198}
+  m_Layer: 0
+  m_Name: DialogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &743056198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743056197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d800c02d1f0bfa849af14f7b009d8661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueActionMap: Dialogue
+  playerActionMap: Player
+  dialogueUIPanel: {fileID: 1712122382}
+  animator: {fileID: 1712122381}
+--- !u!4 &743056199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743056197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -38.448692, y: -25.404552, z: -2.1084118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &765933031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,7 +3103,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843017392
 GameObject:
@@ -3094,7 +3179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a1fcbd42f3df14d9784877164276d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade: {fileID: 0}
+  fade: {fileID: 1428654982}
 --- !u!212 &843017397
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3642,11 +3727,12 @@ MonoBehaviour:
   dialogue:
     headImg: {fileID: 21300000, guid: 27f4d1db64720eb46be0e522967dbc9e, type: 3}
     name: Suitor3
-    audio: []
+    audio:
+    - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
+    - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     sentences:
     - '"Here is an object that may help you on your journey"'
   triggered: 0
-  key: {fileID: 963910386}
 --- !u!135 &950210216
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3660,11 +3746,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &963910386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7426438441440651963, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
-  m_PrefabInstance: {fileID: 2105813264}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &997241192
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,7 +3940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651963, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651967, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_Size.x
@@ -4578,7 +4659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a1fcbd42f3df14d9784877164276d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fade: {fileID: 0}
+  fade: {fileID: 1428654982}
 --- !u!212 &1141043487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5548,7 +5629,7 @@ RectTransform:
   - {fileID: 1712122379}
   - {fileID: 1428654983}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5911,16 +5992,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1441341784 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7426438441440651963, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
-  m_PrefabInstance: {fileID: 1742213233}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1452685782 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7426438441440651963, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
-  m_PrefabInstance: {fileID: 1007826636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1496809563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6170,6 +6241,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1353753071}
     m_Modifications:
+    - target: {fileID: 1249338304487175939, guid: 0b18823673cf1e9448b7aa59d53861f3, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1712122381}
+    - target: {fileID: 1249338304487175939, guid: 0b18823673cf1e9448b7aa59d53861f3, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2018233866}
     - target: {fileID: 5494563405173938965, guid: 0b18823673cf1e9448b7aa59d53861f3, type: 3}
       propertyPath: m_Name
       value: DialogOverlay
@@ -6293,6 +6372,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1712122382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1249338304487175939, guid: 0b18823673cf1e9448b7aa59d53861f3, type: 3}
+  m_PrefabInstance: {fileID: 1712122378}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712122380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a6f1986aecfe549be821ccfebb5da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1732645050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6458,7 +6548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651963, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651967, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_Size.x
@@ -7023,6 +7113,11 @@ Transform:
   m_Father: {fileID: 2123253288}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2018233866 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 627571419503736328, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+  m_PrefabInstance: {fileID: 175832153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2018615171
 GameObject:
   m_ObjectHideFlags: 0
@@ -7180,11 +7275,12 @@ MonoBehaviour:
   dialogue:
     headImg: {fileID: 21300000, guid: 64f3aacdb2b97c5429c86cf4ab91316f, type: 3}
     name: Suitor2
-    audio: []
+    audio:
+    - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
+    - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     sentences:
     - '"Here is an object that may help you on your journey"'
   triggered: 0
-  key: {fileID: 1441341784}
 --- !u!135 &2029318354
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7717,7 +7813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651963, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7426438441440651967, guid: 8816c61a9af1b754fab09b76bf808f39, type: 3}
       propertyPath: m_Size.x
@@ -7793,7 +7889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123253287
 GameObject:
@@ -7826,7 +7922,7 @@ Transform:
   - {fileID: 1798266429}
   - {fileID: 1997289478}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2127190153 stripped
 Transform:
@@ -7843,6 +7939,10 @@ PrefabInstance:
     - target: {fileID: 1793596625, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031634070, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6216446007379455145, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: m_Name
@@ -7900,6 +8000,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.audio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.audio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.audio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 3

@@ -6,7 +6,6 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public bool triggered = false;
-    public GameObject key;
 
     public void TriggerDialogue()
     {
@@ -14,7 +13,6 @@ public class DialogueTrigger : MonoBehaviour
         {
             triggered = true;
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            key.SetActive(true);
         }
     }
 }
