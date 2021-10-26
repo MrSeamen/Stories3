@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Example : MonoBehaviour
 {
-
-    {
     [SerializeField] private float speed = 0.5f;
     public Vector3 posDiff = new Vector3(0f, -5f, 0f);
     private Vector3 pos1;
@@ -38,7 +36,7 @@ public class Example : MonoBehaviour
             collision.gameObject.transform.parent = null;
         }
     }
-}
+}/*
 private GameObject sphere;
     private Vector3 scaleChange, positionChange;
 
@@ -76,4 +74,4 @@ private GameObject sphere;
             positionChange = -positionChange;
         }
     }
-}
+}*/
