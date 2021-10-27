@@ -8,8 +8,9 @@ using UnityEngine.InputSystem;
 
 public class CameraShift : MonoBehaviour
 {
-
-    public Camera mainCamera;
+    public Cinemachine.CinemachineVirtualCamera liftedVC;
+    public Cinemachine.CinemachineVirtualCamera scrollingVC;
+    private Camera mainCamera;
 
     public Vector3 rotation;
     public Vector3 rotationOffset = new Vector3(10f, 0, 0);
@@ -24,7 +25,9 @@ public class CameraShift : MonoBehaviour
     private MatrixBlender blender;
     private bool orthoOn;
 
-
+    public AudioSource audioSource;
+    public AudioClip shift1;
+    public AudioClip shift2;
 
     public GameObject target;
 
@@ -33,9 +36,11 @@ public class CameraShift : MonoBehaviour
     private static bool scroller;
     public bool showText = false;
 
-    void Start()
+    void Awake()
     {
-        mainCamera = GetComponent<Camera>();
+        liftedVC.Priority = 0;
+        scrollingVC.Priority = 1;
+        mainCamera = Camera.main;
         aspect = (float)Screen.width / (float)Screen.height;
         ortho = Matrix4x4.Ortho(-orthographicSize * aspect, orthographicSize * aspect, -orthographicSize, orthographicSize, near, far);
         perspective = Matrix4x4.Perspective(fov, aspect, near, far);
@@ -45,60 +50,30 @@ public class CameraShift : MonoBehaviour
         target = GameObject.Find("Player");
         scroller = true;
     }
-    public IEnumerator MoveOverTime(Vector3 endPos, Vector3 endAngle)
-    {
-        float timer = 0.0f;
-        float seconds = 1;
-        float percent;
-        Vector3 startPos = transform.position;
-        Vector3 startAngle = transform.eulerAngles;
-
-        while (timer <= seconds)
-        {
-            timer += Time.deltaTime;
-            percent = timer / seconds;
-            transform.position = Vector3.Lerp(startPos, endPos, percent);
-            transform.eulerAngles = Vector3.Lerp(startAngle, endAngle, percent);
-            yield return new WaitForEndOfFrame();
-
-        }
-        transform.position = endPos;
-        transform.eulerAngles = endAngle;
-
-    }
-
-
 
     public void Shift(InputAction.CallbackContext context)
     {
-
-
-
-        Vector3 orthAngle = new Vector3(0, 0, 0);
-        Vector3 perspAngle = new Vector3(45, 0, 0);
-        Vector3 orthPos = new Vector3(0, 0, -10) + target.transform.position;
-        Vector3 perspPos = new Vector3(0, 10, -10) + target.transform.position;
-
-
         orthoOn = !orthoOn;
         scroller = !scroller;
         if (orthoOn)
         {
-
-            StartCoroutine(MoveOverTime(orthPos, orthAngle));
-
+            liftedVC.Priority = 0;
+            scrollingVC.Priority = 1;
             blender.BlendToMatrix(ortho, 1f);
-
+            
+            audioSource.clip = shift2;
+            audioSource.Play();
         }
         else
         {
-
-
-
-            StartCoroutine(MoveOverTime(perspPos, perspAngle));
-
+            liftedVC.Priority = 1;
+            scrollingVC.Priority = 0;
             blender.BlendToMatrix(perspective, 1f);
+            
+            audioSource.clip = shift1;
+            audioSource.Play();
         }
+
     }
 
     public static bool getScroller()

@@ -15,6 +15,7 @@ public class Move : MonoBehaviour
     private Vector3 jump;
     private bool isGrounded;
     Rigidbody rb;
+    private bool isWalking = false;
 
     public AudioSource audioSource;
     public AudioClip walking;
@@ -26,12 +27,21 @@ public class Move : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
         _direction = new Vector3(0.0f, 0.0f, 0.0f);
-        audioSource.Play();
     }
 
     void Update()
     {
         Movement();
+    }
+
+    public void StopMovement(InputAction.CallbackContext context)
+    {
+        if (isWalking)
+        {
+            animator.SetBool("IsWalking", false);
+            isWalking = false;
+            audioSource.Pause();
+        }
     }
 
     public void Movement()
@@ -43,19 +53,24 @@ public class Move : MonoBehaviour
 
             if (_direction == Vector3.zero || !isGrounded)
             {
-                animator.SetBool("IsWalking", false);
-                if (audioSource.clip == walking)
+                if (isWalking)
                 {
+                    animator.SetBool("IsWalking", false);
+                    isWalking = false;
                     audioSource.Pause();
                 }
             }
             else
             {
-                animator.SetBool("IsWalking", true);
-                if (audioSource.clip != walking)
+                if (!isWalking)
                 {
-                    audioSource.loop = true;
-                    audioSource.clip = walking;
+                    animator.SetBool("IsWalking", true);
+                    isWalking = true;
+                    if (audioSource.clip != walking)
+                    {
+                        audioSource.loop = true;
+                        audioSource.clip = walking;
+                    }
                     audioSource.Play();
                 }
             }
@@ -80,9 +95,9 @@ public class Move : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 _inputVector = context.ReadValue<Vector2>();
-        if(CameraShift.getScroller())
+        _direction = new Vector3(_inputVector.x, 0, 0);
+        if (CameraShift.getScroller())
         {
-            _direction = new Vector3(_inputVector.x, 0, 0);
             if (_direction != Vector3.zero || trackTransition.IsTransitioning())
             {
                 sprite.flipX = (_inputVector.x < 0);
@@ -129,4 +144,21 @@ public class Move : MonoBehaviour
     {
         return isGrounded;
     }
+
+    public bool isMoving()
+    {
+        if(_direction != Vector3.zero)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
+
+    public float DirectionX()
+    {
+        return _direction.x;
+    }
+
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1262823199221273268}
   m_Layer: 0
   m_Name: RRH Pressure Plate
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

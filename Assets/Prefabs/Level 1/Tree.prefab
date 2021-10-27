@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3463139752373538774}
   m_Layer: 0
   m_Name: Tree
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,5 +94,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 5.98, z: 0.4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.6, y: 4, z: 0.4}
+  m_Center: {x: 0, y: -0.7, z: 0}
