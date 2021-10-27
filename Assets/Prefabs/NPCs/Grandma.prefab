@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1302010906}
   - component: {fileID: 1302010908}
-  - component: {fileID: 1302010907}
+  - component: {fileID: 5884100326112958039}
+  - component: {fileID: 6631737850401158975}
   m_Layer: 0
   m_Name: DialogRange
   m_TagString: Untagged
@@ -45,7 +46,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1302010907
+--- !u!114 &5884100326112958039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,26 +55,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 1302010905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50def725bc5d1134f82c88f5517eef94, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogPanel: {fileID: 0}
-  headImg: {fileID: 21300000, guid: eb3b44608700c0b42b4c346c0c9720fc, type: 3}
-  dialogLines:
-  - "\u201CWelcome to my home, child. That forest is truly dangerous, remarkable
-    you came out unscathed!\u201D"
-  - "\u201CI set up traps all the time for the wolves, but that nefarious and idiotic
-    wizard always gets caught in them!\u201D"
-  - "\u201CEven though he gets trapped dozens of times, he never even bothers to
-    reset them. I don\u2019t know they\u2019ve been triggered until a wolf sneaks
-    by. He\u2019s an absolute buffoon!\u201D"
-  - "\u201CAnyway child, we need to get you out of here. There\u2019s other victims--er,
-    animal characters--in this world. Each of them has a fragment of a spell.\u201D"
-  - "\u201COh deary me, I think I left the stove on! Take this key, I have no use
-    for it in this fluffy form. Come back when you have the other spell fragments.
-    Everything you need to fetch is beyond that fence, get going dear!\u201D"
-  currentPrompt: 0
-  dialogSpeed: 5
+  dialogue:
+    headImg: {fileID: 21300000, guid: eb3b44608700c0b42b4c346c0c9720fc, type: 3}
+    name: Grandma
+    sentences:
+    - "\u201CWelcome to my home, child. That forest is truly dangerous, remarkable
+      you came out unscathed!\u201D"
+    - "\u201CI set up traps all the time for the wolves, but that nefarious and idiotic
+      wizard always gets caught in them!\u201D"
+    - "\u201CEven though he gets trapped dozens of times, he never even bothers to
+      reset them. I don\u2019t know they\u2019ve been triggered until a wolf sneaks
+      by. He\u2019s an absolute buffoon!\u201D"
+    - "\u201CAnyway child, we need to get you out of here. There\u2019s other victims--er,
+      animal characters--in this world. Each of them has a fragment of a spell.\u201D"
+    - "\u201COh deary me, I think I left the stove on! Take this key, I have no use
+      for it in this fluffy form. Come back when you have the other spell fragments.
+      Everything you need to fetch is beyond that fence, get going dear!\u201D"
+--- !u!114 &6631737850401158975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302010905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c27d7e36195d740a94b623f7b3c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5884100326112958039}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5884100325540789401
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +112,6 @@ GameObject:
   - component: {fileID: 5884100325540789381}
   - component: {fileID: 5884100325540789402}
   - component: {fileID: 5884100325540789403}
-  - component: {fileID: 1078582822}
   m_Layer: 0
   m_Name: Grandma
   m_TagString: Untagged
@@ -172,15 +198,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.16, y: 9.64, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1078582822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5884100325540789401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee896029f7cd7544aa1f419e24eedfee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
