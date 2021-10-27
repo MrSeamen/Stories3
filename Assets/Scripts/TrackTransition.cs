@@ -6,7 +6,7 @@ public class TrackTransition : MonoBehaviour
 {
     public GameObject player;
     public int startTrackIdx = 1;
-    public GameObject[] tracks;
+    public Track[] tracks;
 
     private int currentTrackIdx = 0;
     private bool moving = false;
@@ -14,6 +14,11 @@ public class TrackTransition : MonoBehaviour
     void Start()
     {
         currentTrackIdx = startTrackIdx;
+        foreach (Track track in tracks)
+        {
+            track.AddShade();
+        }
+        tracks[currentTrackIdx].RemoveShade();
     }
 
     public bool IsTransitioning()
@@ -45,8 +50,8 @@ public class TrackTransition : MonoBehaviour
         {
             if(!moving)
             {
+                StartCoroutine(MoveToPosition(player.transform, tracks[nextIdx].transform.position.z, 1.0f, animator, audioSource, walkingClip, tracks[currentTrackIdx], tracks[nextIdx]));
                 currentTrackIdx = nextIdx;
-                StartCoroutine(MoveToPosition(player.transform, tracks[nextIdx].transform.position.z, 1.0f, animator, audioSource, walkingClip));
             }
         }
     }
@@ -56,7 +61,7 @@ public class TrackTransition : MonoBehaviour
         Debug.Log("Transition is blocked");
     }
 
-    public IEnumerator MoveToPosition(Transform transform, float z, float timeToMove, Animator animator, AudioSource audioSource, AudioClip walkingClip)
+    public IEnumerator MoveToPosition(Transform transform, float z, float timeToMove, Animator animator, AudioSource audioSource, AudioClip walkingClip, Track currentTrack, Track nextTrack)
     {
         audioSource.loop = true;
         audioSource.clip = walkingClip;
@@ -72,6 +77,8 @@ public class TrackTransition : MonoBehaviour
         {
             t += Time.deltaTime / timeToMove;
             transform.position = Vector3.Lerp(currentPos, targetPos, t);
+            currentTrack.LerpRemoveShade(t);
+            nextTrack.LerpAddShade(t);
             yield return null;
         }
         transform.position = targetPos;
