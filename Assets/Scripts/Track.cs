@@ -5,6 +5,7 @@ using UnityEngine;
 public class Track : MonoBehaviour
 {
     public Color shadeColor;
+    public int startLayer;
     private Dictionary<SpriteRenderer, Color> children;
 
     private void Awake()
@@ -40,10 +41,17 @@ public class Track : MonoBehaviour
     {
         foreach (SpriteRenderer r in children.Keys)
         {
-            Color originalColor;
-            if (children.TryGetValue(r, out originalColor))
+            try
             {
-                r.color = Color.Lerp(shadeColor, originalColor, t);
+                Color originalColor;
+                if (children.TryGetValue(r, out originalColor))
+                {
+                    r.color = Color.Lerp(shadeColor, originalColor, t);
+                }
+            }
+            catch
+            {
+
             }
         }
     }
@@ -52,10 +60,16 @@ public class Track : MonoBehaviour
     {
         foreach (SpriteRenderer r in children.Keys)
         {
-            Color originalColor;
-            if (children.TryGetValue(r, out originalColor))
+            try
             {
-                r.color = Color.Lerp(originalColor, shadeColor, t);
+                Color originalColor;
+                if (children.TryGetValue(r, out originalColor))
+                {
+                    r.color = Color.Lerp(originalColor, shadeColor, t);
+                }
+            } catch
+            {
+
             }
         }
     }

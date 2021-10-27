@@ -19,6 +19,7 @@ public class TrackTransition : MonoBehaviour
             track.AddShade();
         }
         tracks[currentTrackIdx].RemoveShade();
+        player.GetComponentInChildren<SpriteRenderer>().sortingOrder = tracks[currentTrackIdx].startLayer + 1;
     }
 
     public bool IsTransitioning()

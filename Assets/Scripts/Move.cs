@@ -36,8 +36,9 @@ public class Move : MonoBehaviour
 
     public void StopMovement(InputAction.CallbackContext context)
     {
-        if (isWalking)
+        if (isWalking && CameraShift.getScroller())
         {
+            _direction = Vector3.zero;
             animator.SetBool("IsWalking", false);
             isWalking = false;
             audioSource.Pause();
@@ -95,9 +96,9 @@ public class Move : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         Vector2 _inputVector = context.ReadValue<Vector2>();
-        _direction = new Vector3(_inputVector.x, 0, 0);
         if (CameraShift.getScroller())
         {
+            _direction = new Vector3(_inputVector.x, 0, 0);
             if (_direction != Vector3.zero || trackTransition.IsTransitioning())
             {
                 sprite.flipX = (_inputVector.x < 0);
@@ -113,22 +114,34 @@ public class Move : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Jumpable"))
+        if (collision.contacts.Length > 0)
         {
-            audioSource.Stop();
-            audioSource.loop = false;
-            audioSource.clip = landing;
-            audioSource.Play();
+            ContactPoint contact = collision.contacts[0];
+            if (Vector3.Dot(contact.normal, Vector3.up) > 0.5)
+            {
+                //collision was from below
 
-            isGrounded = true;
+                audioSource.Stop();
+                audioSource.loop = false;
+                audioSource.clip = landing;
+                audioSource.Play();
+
+                isGrounded = true;
+            }
         }
     }
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Jumpable"))
+        if (collision.contacts.Length > 0)
         {
-            isGrounded = false;
+            ContactPoint contact = collision.contacts[0];
+            if (Vector3.Dot(contact.normal, Vector3.up) > 0.5)
+            {
+                //collision was from below
+
+                isGrounded = false;
+            }
         }
     }
 

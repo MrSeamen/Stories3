@@ -51,19 +51,22 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
-        pressed = true;
-        if (pos.y >= ending_pos.y)
+        if(collider.gameObject.tag == "Player" || collider.gameObject.tag == "Rock")
         {
-            transform.Translate(Vector3.down * Time.deltaTime * speed);
-            if (!audioSource.isPlaying || audioSource.clip == up)
+            pressed = true;
+            if (pos.y >= ending_pos.y)
             {
-                audioSource.clip = down;
-                audioSource.Play();
+                transform.Translate(Vector3.down * Time.deltaTime * speed);
+                if (!audioSource.isPlaying || audioSource.clip == up)
+                {
+                    audioSource.clip = down;
+                    audioSource.Play();
+                }
             }
-        }
-        if (door_pos.y >= door_end.y)
-        {
-            door.Translate(Vector3.down * Time.deltaTime * speed);
+            if (door_pos.y >= door_end.y)
+            {
+                door.Translate(Vector3.down * Time.deltaTime * speed);
+            }
         }
     }
 

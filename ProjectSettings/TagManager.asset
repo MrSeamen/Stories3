@@ -9,10 +9,7 @@ TagManager:
   - Key Main
   - Key Grandma
   - Key L2
-  - Ground
-  - Non-Jumpable
   - Jumpable
-  - Door1
   - Door2
   - Door3
   - MovingPlatform
@@ -22,6 +19,9 @@ TagManager:
   - Key L1Main
   - Key L1Grandma
   - Suitor
+  - Level1 Theme
+  - Main Theme
+  - Rock
   layers:
   - Default
   - TransparentFX

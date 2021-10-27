@@ -29,9 +29,6 @@ public class CameraShift : MonoBehaviour
     public AudioClip shift1;
     public AudioClip shift2;
 
-    public GameObject target;
-
-
     public float smoothTime = 3.0f;
     private static bool scroller;
     public bool showText = false;
@@ -47,7 +44,6 @@ public class CameraShift : MonoBehaviour
         mainCamera.projectionMatrix = ortho;
         orthoOn = true;
         blender = (MatrixBlender)GetComponent(typeof(MatrixBlender));
-        target = GameObject.Find("Player");
         scroller = true;
     }
 
