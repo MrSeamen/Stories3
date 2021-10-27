@@ -14,6 +14,10 @@ public class MovableBlock : MonoBehaviour
     public Collider left;
     public Collider right;
 
+    public AudioSource audioSource;
+
+    private float direction;
+
     void Start()
     {
         this.transform.parent = parent.transform;
@@ -22,6 +26,31 @@ public class MovableBlock : MonoBehaviour
         col.enabled = true;
         left.enabled = false;
         right.enabled = false;
+    }
+
+    void Update()
+    {
+        if(player.transform.position.x < this.transform.position.x)
+        {
+            direction = 1f;
+        } else
+        {
+            direction = -1f;
+        }
+        
+        if (hold && player.GetComponent<Move>().isMoving() && !audioSource.isPlaying && player.GetComponent<Move>().OnGround())
+        {
+            audioSource.Play();
+        } else if (trigger && !hold && player.GetComponent<Move>().isMoving() && !audioSource.isPlaying && (direction == player.GetComponent<Move>().DirectionX()))
+        {
+            audioSource.Play();
+        } else if (!trigger || !player.GetComponent<Move>().isMoving())
+        {
+            audioSource.Pause();
+        } else if (hold && !player.GetComponent<Move>().OnGround())
+        {
+            audioSource.Pause();
+        }
     }
 
     public void Hold(InputAction.CallbackContext context)

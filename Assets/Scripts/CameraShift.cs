@@ -25,7 +25,9 @@ public class CameraShift : MonoBehaviour
     private MatrixBlender blender;
     private bool orthoOn;
 
-
+    public AudioSource audioSource;
+    public AudioClip shift1;
+    public AudioClip shift2;
 
     public GameObject target;
 
@@ -58,13 +60,20 @@ public class CameraShift : MonoBehaviour
             liftedVC.Priority = 0;
             scrollingVC.Priority = 1;
             blender.BlendToMatrix(ortho, 1f);
+            
+            audioSource.clip = shift2;
+            audioSource.Play();
         }
         else
         {
             liftedVC.Priority = 1;
             scrollingVC.Priority = 0;
             blender.BlendToMatrix(perspective, 1f);
+            
+            audioSource.clip = shift1;
+            audioSource.Play();
         }
+
     }
 
     public static bool getScroller()
