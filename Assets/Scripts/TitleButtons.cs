@@ -10,6 +10,7 @@ public class TitleButtons : MonoBehaviour
     public string instructions;
     public string credits;
     public string titlescreen;
+    public string settings;
 
     public void Play()
     {
@@ -30,6 +31,11 @@ public class TitleButtons : MonoBehaviour
     public void Title()
     {
         SceneManager.LoadScene(titlescreen);
+    }
+
+    public void Settings() 
+    {
+        SceneManager.LoadScene(settings);
     }
 
     public void Exit()
