@@ -21,7 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        dialogueUIPanel.UpdateView(dialogue.headImg, dialogue.name);
+        dialogueUIPanel.UpdateView(dialogue.headImg, dialogue.name, dialogue.audio);
         animator.SetBool("IsOpen", true);
 
         PlayerInput playerInput = FindObjectOfType<PlayerInput>();

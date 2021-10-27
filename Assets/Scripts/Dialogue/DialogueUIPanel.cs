@@ -9,18 +9,23 @@ public class DialogueUIPanel : MonoBehaviour
     [SerializeField] Text nameBox;
     [SerializeField] Text textBox;
     [SerializeField] Image image;
+    [SerializeField] AudioSource audioSource;
+
+    public Animator animator;
 
     private Coroutine runningRoutine;
+    private AudioClip[] audioClips;
 
-    public void UpdateView(Sprite headImg, string name)
+    public void UpdateView(Sprite headImg, string name, AudioClip[] audioClipsIn)
     {
         nameBox.text = name;
         image.sprite = headImg;
+        audioClips = audioClipsIn;
     }
 
     public void UpdateSentence(string text)
     {
-        if(runningRoutine != null)
+        if (runningRoutine != null)
         {
             StopCoroutine(runningRoutine);
         }
@@ -30,9 +35,13 @@ public class DialogueUIPanel : MonoBehaviour
     IEnumerator TypeText(string text)
     {
         textBox.text = "";
-        foreach(char letter in text.ToCharArray())
+        foreach (char letter in text.ToCharArray())
         {
             textBox.text += letter;
+            if (letter != ' ' && animator.GetBool("IsOpen"))
+            {
+                audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
+            }
             yield return new WaitForSeconds(dialogSpeed);
         }
     }
