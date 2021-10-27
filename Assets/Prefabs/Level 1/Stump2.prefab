@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5274544233151350008}
   m_Layer: 0
   m_Name: Stump2
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

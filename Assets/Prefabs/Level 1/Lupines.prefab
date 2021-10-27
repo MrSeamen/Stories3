@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5892794416259724885}
   m_Layer: 0
   m_Name: Lupines
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
