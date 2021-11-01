@@ -10,8 +10,8 @@ public class ScalingObject : MonoBehaviour
 
     void Update()
     {
-        gameObject.transform.localScale += scaleChange;
-        gameObject.transform.position += positionChange;
+        transform.localScale += scaleChange;
+        transform.position += positionChange;
 
         // Move upwards when the sphere hits the floor or downwards
         // when the sphere scale extends 1.0f.
