@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class KeyHolder : MonoBehaviour
 {
     public List<Key.KeyType> keyList;
-    public Image keyImage; 
 
     private void Awake()
     {
@@ -18,19 +17,21 @@ public class KeyHolder : MonoBehaviour
         Debug.Log("You have acquired: " + keyType + "!");
         keyList.Add(keyType);
         Debug.Log("add to inventory");
-        /*
-        keyImage = GameObject.FindWithTag("Key " + keyType).GetComponent<Image>();
+
+        Image keyImage = GameObject.Find("Key " + keyType).GetComponent<Image>();
             if (!keyImage.enabled) {
                 keyImage.enabled = true; 
                 keyImage.sprite = Resources.Load<Sprite>("Sprites/Items/" + keyType);
            }
-        */
+        
        }
 
 
     public void RemoveKey(Key.KeyType keyType)
     {
         keyList.Remove(keyType);
+        Image keyImage = GameObject.Find("Key " + keyType).GetComponent<Image>();
+        keyImage.enabled = false;
     }
 
 
@@ -45,6 +46,7 @@ public class KeyHolder : MonoBehaviour
         if (key != null)
         {
             AddKey(key.GetKeyType());
+            GameObject.Find("Pickup Audio").GetComponent<AudioSource>().Play();
             Destroy(key.gameObject);
         }
 

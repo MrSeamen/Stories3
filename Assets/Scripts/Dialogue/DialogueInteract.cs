@@ -3,22 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ReleaseSwitch : MonoBehaviour
+public class DialogueInteract : MonoBehaviour
 {
+    public Dialogue dialogue;
     private bool trigger = false;
-    public Collider collider_activatable;
-    public DialogueTrigger goondalfInitialDialog;
-    public DialogueTrigger goondalfFreedDialog;
 
-    public void ColliderActivate(InputAction.CallbackContext context)
+    public void TriggerDialogue(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
             if (trigger)
             {
-                collider_activatable.enabled = false;
-                goondalfInitialDialog.gameObject.SetActive(false);
-                goondalfFreedDialog.gameObject.SetActive(true);
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
             }
         }
     }
