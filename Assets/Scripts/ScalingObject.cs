@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ScalingObject : MonoBehaviour
 {
-    
     public float verticalShift, amplitude, phaseShift1, phaseShift2, lowerScaleLimit;
 
     void Update()
