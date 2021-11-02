@@ -3849,11 +3849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008447955
+      value: 0.0000000084479606
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000016269276
+      value: -0.0000000016269286
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249947, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_Follow
@@ -5291,9 +5291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ad6d57b27eb8643976e0109c2144de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowerLimit: 0.5
-  speed: 1
-  scale: 0.5
+  verticalShift: 0.2
+  amplitude: 1
+  phaseShift: 1
 --- !u!1 &1795243904
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,16 @@ using UnityEngine;
 public class ScalingObject : MonoBehaviour
 {
     
-    public float lowerLimit, speed, scale;
+    public float verticalShift, amplitude, phaseShift, lowerScaleLimit;
 
     void Update()
     {
-        Vector3 vector = new Vector3(Math.Abs(speed * Mathf.Sin(Time.time * scale)) + lowerLimit, Math.Abs(speed * Mathf.Sin(Time.time * scale)) + lowerLimit, speed * Math.Abs(Mathf.Sin(Time.time * scale)) + lowerLimit);
+        float scalar = Math.Abs(amplitude * Mathf.Sin(Time.time * phaseShift)) + verticalShift;
+        if (scalar < lowerScaleLimit)
+        {
+            ;
+        }
+        Vector3 vector = new Vector3(scalar, scalar, scalar);
 
         transform.localScale = vector;
     }
