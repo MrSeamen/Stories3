@@ -13,7 +13,7 @@ public class ScalingObject : MonoBehaviour
         float scalar = Math.Abs(amplitude * Mathf.Sin(Time.time * phaseShift1 + phaseShift2)) + verticalShift;
         if (scalar < lowerScaleLimit)
         {
-            ;
+            ; //unfinished
         }
         Vector3 vector = new Vector3(scalar, scalar, scalar);
 

@@ -1966,7 +1966,7 @@ Transform:
   m_Children:
   - {fileID: 465534509}
   - {fileID: 169405}
-  - {fileID: 1792432970}
+  - {fileID: 2078681907}
   - {fileID: 443490412}
   - {fileID: 2120301657}
   - {fileID: 207217497}
@@ -3849,11 +3849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000084479606
+      value: -0.000000008447955
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000016269286
+      value: 0.0000000016269276
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249947, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_Follow
@@ -5193,8 +5193,6 @@ GameObject:
   - component: {fileID: 1792432970}
   - component: {fileID: 1792432971}
   - component: {fileID: 1792432972}
-  - component: {fileID: 1792432973}
-  - component: {fileID: 1792432974}
   m_Layer: 0
   m_Name: Parkour Building (3)
   m_TagString: Untagged
@@ -5210,11 +5208,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792432969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.79, y: 5.71, z: 0}
+  m_LocalPosition: {x: 0, y: 5.79, z: 0}
   m_LocalScale: {x: 1.1483, y: 1.1483, z: 1}
   m_Children: []
-  m_Father: {fileID: 529613597}
-  m_RootOrder: 2
+  m_Father: {fileID: 2078681907}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1792432971
 SpriteRenderer:
@@ -5280,37 +5278,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7, y: 9, z: 0.2}
   m_Center: {x: 0, y: -0.5, z: 0}
---- !u!114 &1792432973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792432969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ad6d57b27eb8643976e0109c2144de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  verticalShift: 0.2
-  amplitude: 1
-  phaseShift1: 1
-  phaseShift2: 1.5
-  lowerScaleLimit: 0
---- !u!114 &1792432974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792432969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de6816273b466d4ba6bebc838a5e3b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  posDiff: {x: 0, y: -3, z: 0}
 --- !u!1 &1795243904
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,6 +6133,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   posDiff: {x: 20, y: 0, z: 0}
+--- !u!1 &2078681906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078681907}
+  - component: {fileID: 2078681908}
+  m_Layer: 0
+  m_Name: Scaling Building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2078681907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078681906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.56, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1792432970}
+  m_Father: {fileID: 529613597}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2078681908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078681906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ad6d57b27eb8643976e0109c2144de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verticalShift: 0.2
+  amplitude: 1
+  phaseShift1: 1
+  phaseShift2: 1.5
+  lowerScaleLimit: 0
 --- !u!1 &2088899397
 GameObject:
   m_ObjectHideFlags: 0
