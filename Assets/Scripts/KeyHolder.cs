@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class KeyHolder : MonoBehaviour
 {
+    public Animator animator;
     public List<Key.KeyType> keyList;
-    public Image keyImage; 
+    public Vector3 showPickupOffset;
+    public float pickupTime;
 
     private void Awake()
     {
@@ -39,13 +41,27 @@ public class KeyHolder : MonoBehaviour
         return keyList.Contains(keyType);
     }
 
+    private IEnumerator ItemPickup(GameObject key)
+    {
+        animator.SetBool("ObjectPickedUp", true);
+        GetComponent<Move>().LockMovement(true);
+        key.transform.parent = transform;
+        key.transform.localPosition = showPickupOffset;
+
+        yield return new WaitForSeconds(pickupTime);
+
+        animator.SetBool("ObjectPickedUp", false);
+        GetComponent<Move>().LockMovement(false);
+        Destroy(key);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Key key = other.GetComponent<Key>();
         if (key != null)
         {
             AddKey(key.GetKeyType());
-            Destroy(key.gameObject);
+            StartCoroutine(ItemPickup(key.gameObject));
         }
 
         KeyDoor keyDoor = other.GetComponent<KeyDoor>();
