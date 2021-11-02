@@ -1,24 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ScalingObject : MonoBehaviour
 {
-    public GameObject gameObject;
-    public Vector3 scaleChange, positionChange;
-    public double lowerLimit, upperLimit;
+    
+    public float lowerLimit, speed, scale;
 
     void Update()
     {
-        transform.localScale += scaleChange;
-        transform.position += positionChange;
+        Vector3 vector = new Vector3(Math.Abs(speed * Mathf.Sin(Time.time * scale)) + lowerLimit, Math.Abs(speed * Mathf.Sin(Time.time * scale)) + lowerLimit, speed * Math.Abs(Mathf.Sin(Time.time * scale)) + lowerLimit);
 
-        // Move upwards when the sphere hits the floor or downwards
-        // when the sphere scale extends 1.0f.
-        if (gameObject.transform.localScale.y < lowerLimit || gameObject.transform.localScale.y > upperLimit)
-        {
-            scaleChange = -scaleChange;
-            positionChange = -positionChange;
-        }
+        transform.localScale = vector;
     }
 }
