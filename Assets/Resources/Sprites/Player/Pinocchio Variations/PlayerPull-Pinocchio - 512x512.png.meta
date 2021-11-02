@@ -1,103 +1,106 @@
 fileFormatVersion: 2
-guid: cd508c46dbdb53b4984ddc1bdc06e55f
+guid: 6e6228351408d0941bc95b387f521ce3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3979856900670687138
-    second: Stories3-PlayerWalk-SpriteSheet_0
+      213: 1675919527626748138
+    second: PlayerPull-Pinocchio - 512x512_0
   - first:
-      213: 6930197077952851857
-    second: Stories3-PlayerWalk-SpriteSheet_1
+      213: 5033628038664368159
+    second: PlayerPull-Pinocchio - 512x512_1
   - first:
-      213: 9006987489815751529
-    second: Stories3-PlayerWalk-SpriteSheet_2
+      213: 3714245533066739191
+    second: PlayerPull-Pinocchio - 512x512_2
   - first:
-      213: -3844546197223646967
-    second: Stories3-PlayerWalk-SpriteSheet_3
+      213: -8611248637252165065
+    second: PlayerPull-Pinocchio - 512x512_3
   - first:
-      213: 8578446116415427962
-    second: Stories3-PlayerWalk-SpriteSheet_4
+      213: 5767675431396964133
+    second: PlayerPull-Pinocchio - 512x512_4
   - first:
-      213: 456425006593219641
-    second: Stories3-PlayerWalk-SpriteSheet_5
+      213: -5688915607286329526
+    second: PlayerPull-Pinocchio - 512x512_5
   - first:
-      213: -8557443799750846613
-    second: Stories3-PlayerWalk-SpriteSheet_6
+      213: 6761664623462002466
+    second: PlayerPull-Pinocchio - 512x512_6
   - first:
-      213: -3066028723207132668
-    second: Stories3-PlayerWalk-SpriteSheet_7
+      213: -18125965658051154
+    second: PlayerPull-Pinocchio - 512x512_7
   - first:
-      213: 5667085256564112484
-    second: Stories3-PlayerWalk-SpriteSheet_8
+      213: -542371871797055852
+    second: PlayerPull-Pinocchio - 512x512_8
   - first:
-      213: 3751711977319134042
-    second: Stories3-PlayerWalk-SpriteSheet_9
+      213: -3210912296094827316
+    second: PlayerPull-Pinocchio - 512x512_9
   - first:
-      213: 6449423119810441410
-    second: Stories3-PlayerWalk-SpriteSheet_10
+      213: 4449637957826939128
+    second: PlayerPull-Pinocchio - 512x512_10
   - first:
-      213: 4581196133056534270
-    second: Stories3-PlayerWalk-SpriteSheet_11
+      213: 1714529422240408727
+    second: PlayerPull-Pinocchio - 512x512_11
   - first:
-      213: -3262061307938409803
-    second: Stories3-PlayerWalk-SpriteSheet_12
+      213: -4176227148363807310
+    second: PlayerPull-Pinocchio - 512x512_12
   - first:
-      213: 1870095826883384426
-    second: Stories3-PlayerWalk-SpriteSheet_13
+      213: 502127727624793225
+    second: PlayerPull-Pinocchio - 512x512_13
   - first:
-      213: -9120041397335437180
-    second: Stories3-PlayerWalk-SpriteSheet_14
+      213: 236519554484560885
+    second: PlayerPull-Pinocchio - 512x512_14
   - first:
-      213: -2263031318513316394
-    second: Stories3-PlayerWalk-SpriteSheet_15
+      213: 8294014999636866655
+    second: PlayerPull-Pinocchio - 512x512_15
   - first:
-      213: -2859040291195939148
-    second: Stories3-PlayerWalk-SpriteSheet_16
+      213: -6914822899531879136
+    second: PlayerPull-Pinocchio - 512x512_16
   - first:
-      213: -3136877210110448780
-    second: Stories3-PlayerWalk-SpriteSheet_17
+      213: 6646024006585614403
+    second: PlayerPull-Pinocchio - 512x512_17
   - first:
-      213: -8332963703865990141
-    second: Stories3-PlayerWalk-SpriteSheet_18
+      213: 4653918129731197465
+    second: PlayerPull-Pinocchio - 512x512_18
   - first:
-      213: -4846937530135038092
-    second: Stories3-PlayerWalk-SpriteSheet_19
+      213: 1034614132990575202
+    second: PlayerPull-Pinocchio - 512x512_19
   - first:
-      213: -4906770198916986710
-    second: Stories3-PlayerWalk-SpriteSheet_20
+      213: 7311611554467866482
+    second: PlayerPull-Pinocchio - 512x512_20
   - first:
-      213: 6423287812149543595
-    second: Stories3-PlayerWalk-SpriteSheet_21
+      213: -1608429537230243558
+    second: PlayerPull-Pinocchio - 512x512_21
   - first:
-      213: -4585180372704534470
-    second: Stories3-PlayerWalk-SpriteSheet_22
+      213: 200703086885358840
+    second: PlayerPull-Pinocchio - 512x512_22
   - first:
-      213: 1291841618568619994
-    second: Stories3-PlayerWalk-SpriteSheet_23
+      213: -1093414202262617535
+    second: PlayerPull-Pinocchio - 512x512_23
   - first:
-      213: -2074098707946878115
-    second: Stories3-PlayerWalk-SpriteSheet_24
+      213: -9037282231639161478
+    second: PlayerPull-Pinocchio - 512x512_24
   - first:
-      213: 8910426349888178129
-    second: Stories3-PlayerWalk-SpriteSheet_25
+      213: 9153784923242408592
+    second: PlayerPull-Pinocchio - 512x512_25
   - first:
-      213: -939996709323395935
-    second: Stories3-PlayerWalk-SpriteSheet_26
+      213: -9216206678445030214
+    second: PlayerPull-Pinocchio - 512x512_26
   - first:
-      213: -3213869267265935370
-    second: Stories3-PlayerWalk-SpriteSheet_27
+      213: 4817843517980038228
+    second: PlayerPull-Pinocchio - 512x512_27
   - first:
-      213: -1525062192084510108
-    second: Stories3-PlayerWalk-SpriteSheet_28
+      213: -3707287033801639231
+    second: PlayerPull-Pinocchio - 512x512_28
   - first:
-      213: 5277954635114003943
-    second: Stories3-PlayerWalk-SpriteSheet_29
+      213: 7714857703529547076
+    second: PlayerPull-Pinocchio - 512x512_29
   - first:
-      213: -473771336296590697
-    second: Stories3-PlayerWalk-SpriteSheet_30
+      213: 1588120071684465621
+    second: PlayerPull-Pinocchio - 512x512_30
   - first:
-      213: 3635321832997761267
-    second: Stories3-PlayerWalk-SpriteSheet_31
+      213: -8313520860900473906
+    second: PlayerPull-Pinocchio - 512x512_31
+  - first:
+      213: -6156995081264834096
+    second: PlayerPull-Pinocchio - 512x512_32
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -211,265 +214,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_0
+      name: PlayerPull-Pinocchio - 512x512_0
       rect:
         serializedVersion: 2
-        x: 266
-        y: 3190
-        width: 488
-        height: 792
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a70d55d3ca4b3730800000000000000
-      internalID: 3979856900670687138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 1286
-        y: 3186
-        width: 480
-        height: 792
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19f64de46810d2060800000000000000
-      internalID: 6930197077952851857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_2
-      rect:
-        serializedVersion: 2
-        x: 2306
-        y: 3182
-        width: 472
-        height: 792
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96bead2a66f3ffc70800000000000000
-      internalID: 9006987489815751529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_3
-      rect:
-        serializedVersion: 2
-        x: 3326
-        y: 3178
-        width: 460
-        height: 792
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 909d7e75a9d65aac0800000000000000
-      internalID: -3844546197223646967
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 4346
-        y: 3178
-        width: 448
-        height: 784
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7555c5da43cc0770800000000000000
-      internalID: 8578446116415427962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 5382
-        y: 3174
-        width: 436
-        height: 796
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93c1890102c855600800000000000000
-      internalID: 456425006593219641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_6
-      rect:
-        serializedVersion: 2
-        x: 6422
-        y: 3174
-        width: 420
-        height: 804
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b675b72143add3980800000000000000
-      internalID: -8557443799750846613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_7
-      rect:
-        serializedVersion: 2
-        x: 7462
-        y: 3178
-        width: 404
-        height: 808
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40a281aee174375d0800000000000000
-      internalID: -3066028723207132668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_8
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 2158
-        width: 404
-        height: 812
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46c7b5de30885ae40800000000000000
-      internalID: 5667085256564112484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_9
-      rect:
-        serializedVersion: 2
-        x: 1318
-        y: 2162
-        width: 404
-        height: 808
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a537fab7a22c01430800000000000000
-      internalID: 3751711977319134042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_10
-      rect:
-        serializedVersion: 2
-        x: 2342
-        y: 2166
-        width: 420
-        height: 811
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c03e7e2824f08950800000000000000
-      internalID: 6449423119810441410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_11
-      rect:
-        serializedVersion: 2
-        x: 3366
-        y: 2166
-        width: 452
-        height: 815
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef65a3d5c9da39f30800000000000000
-      internalID: 4581196133056534270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_12
-      rect:
-        serializedVersion: 2
-        x: 4362
-        y: 2170
+        x: 0
+        y: 3584
         width: 512
-        height: 812
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,20 +228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b2f8c80684dab2d0800000000000000
-      internalID: -3262061307938409803
+      spriteID: ae035545eef024710800000000000000
+      internalID: 1675919527626748138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_13
+      name: PlayerPull-Pinocchio - 512x512_1
       rect:
         serializedVersion: 2
-        x: 5362
-        y: 2166
-        width: 556
-        height: 812
+        x: 512
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6413511f3ae3f910800000000000000
-      internalID: 1870095826883384426
+      spriteID: f103908280a0bd540800000000000000
+      internalID: 5033628038664368159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_14
+      name: PlayerPull-Pinocchio - 512x512_2
       rect:
         serializedVersion: 2
-        x: 6362
-        y: 2162
-        width: 596
-        height: 808
+        x: 1024
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,20 +270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 480d6fe4baa1f6180800000000000000
-      internalID: -9120041397335437180
+      spriteID: 7fd360722a6ab8330800000000000000
+      internalID: 3714245533066739191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_15
+      name: PlayerPull-Pinocchio - 512x512_3
       rect:
         serializedVersion: 2
-        x: 7366
-        y: 2162
-        width: 636
-        height: 804
+        x: 1536
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -540,20 +291,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dd0e6081091890e0800000000000000
-      internalID: -2263031318513316394
+      spriteID: 732a4002df2be7880800000000000000
+      internalID: -8611248637252165065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_16
+      name: PlayerPull-Pinocchio - 512x512_4
       rect:
         serializedVersion: 2
-        x: 178
-        y: 1138
-        width: 672
-        height: 796
+        x: 2048
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,20 +312,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b69cb4c006a258d0800000000000000
-      internalID: -2859040291195939148
+      spriteID: 527f9241f36ea0050800000000000000
+      internalID: 5767675431396964133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_17
+      name: PlayerPull-Pinocchio - 512x512_5
       rect:
         serializedVersion: 2
-        x: 1210
-        y: 1130
-        width: 651
-        height: 800
+        x: 2560
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,20 +333,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47b295b1cc29774d0800000000000000
-      internalID: -3136877210110448780
+      spriteID: a4fc5867569ec01b0800000000000000
+      internalID: -5688915607286329526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_18
+      name: PlayerPull-Pinocchio - 512x512_6
       rect:
         serializedVersion: 2
-        x: 2242
-        y: 1122
-        width: 628
-        height: 804
+        x: 3072
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -603,20 +354,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30428d849ad5b5c80800000000000000
-      internalID: -8332963703865990141
+      spriteID: 22f27c3762246dd50800000000000000
+      internalID: 6761664623462002466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_19
+      name: PlayerPull-Pinocchio - 512x512_7
       rect:
         serializedVersion: 2
-        x: 3275
-        y: 1118
-        width: 603
-        height: 804
+        x: 3584
+        y: 3584
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -624,20 +375,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 477bacb1ff73cbcb0800000000000000
-      internalID: -4846937530135038092
+      spriteID: eadadbfb78a9fbff0800000000000000
+      internalID: -18125965658051154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_20
+      name: PlayerPull-Pinocchio - 512x512_8
       rect:
         serializedVersion: 2
-        x: 4310
-        y: 1122
-        width: 576
-        height: 796
+        x: 0
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -645,20 +396,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa884135086a7ebb0800000000000000
-      internalID: -4906770198916986710
+      spriteID: 49e6f5df7ab1978f0800000000000000
+      internalID: -542371871797055852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_21
+      name: PlayerPull-Pinocchio - 512x512_9
       rect:
         serializedVersion: 2
-        x: 5346
-        y: 1126
-        width: 548
-        height: 788
+        x: 512
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -666,20 +417,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2054dab3a142950800000000000000
-      internalID: 6423287812149543595
+      spriteID: ccc7552674c8073d0800000000000000
+      internalID: -3210912296094827316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_22
+      name: PlayerPull-Pinocchio - 512x512_10
       rect:
         serializedVersion: 2
-        x: 6390
-        y: 1126
-        width: 500
-        height: 796
+        x: 1024
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -687,20 +438,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a306add8eba2e50c0800000000000000
-      internalID: -4585180372704534470
+      spriteID: 8f88e5fb52a40cd30800000000000000
+      internalID: 4449637957826939128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_23
+      name: PlayerPull-Pinocchio - 512x512_11
       rect:
         serializedVersion: 2
-        x: 7434
-        y: 1126
-        width: 448
-        height: 804
+        x: 1536
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -708,20 +459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad729dc8b1b8de110800000000000000
-      internalID: 1291841618568619994
+      spriteID: 7946891fc6b3bc710800000000000000
+      internalID: 1714529422240408727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_24
+      name: PlayerPull-Pinocchio - 512x512_12
       rect:
         serializedVersion: 2
-        x: 290
-        y: 106
-        width: 408
-        height: 808
+        x: 2048
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -729,20 +480,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5bcab3d6325733e0800000000000000
-      internalID: -2074098707946878115
+      spriteID: 2b5ce60098f0b06c0800000000000000
+      internalID: -4176227148363807310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_25
+      name: PlayerPull-Pinocchio - 512x512_13
       rect:
         serializedVersion: 2
-        x: 1318
-        y: 110
-        width: 404
-        height: 812
+        x: 2560
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -750,20 +501,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d78d564e8138ab70800000000000000
-      internalID: 8910426349888178129
+      spriteID: 98c23f4028ae7f600800000000000000
+      internalID: 502127727624793225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_26
+      name: PlayerPull-Pinocchio - 512x512_14
       rect:
         serializedVersion: 2
-        x: 2342
-        y: 110
-        width: 404
-        height: 812
+        x: 3072
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -771,20 +522,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ac2eb229f574f2f0800000000000000
-      internalID: -939996709323395935
+      spriteID: 5f36c7b1849484300800000000000000
+      internalID: 236519554484560885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_27
+      name: PlayerPull-Pinocchio - 512x512_15
       rect:
         serializedVersion: 2
-        x: 3366
-        y: 114
-        width: 404
-        height: 816
+        x: 3584
+        y: 3072
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -792,20 +543,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f7a112edea0663d0800000000000000
-      internalID: -3213869267265935370
+      spriteID: f56fd17d2b24a1370800000000000000
+      internalID: 8294014999636866655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_28
+      name: PlayerPull-Pinocchio - 512x512_16
       rect:
         serializedVersion: 2
-        x: 4390
-        y: 114
-        width: 404
-        height: 820
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -813,20 +564,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46a9c643404e5dae0800000000000000
-      internalID: -1525062192084510108
+      spriteID: 02d6aac853d9900a0800000000000000
+      internalID: -6914822899531879136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_29
+      name: PlayerPull-Pinocchio - 512x512_17
       rect:
         serializedVersion: 2
-        x: 5414
-        y: 118
-        width: 404
-        height: 820
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -834,20 +585,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7edb89ed6cf0f3940800000000000000
-      internalID: 5277954635114003943
+      spriteID: 34001413f9b6b3c50800000000000000
+      internalID: 6646024006585614403
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_30
+      name: PlayerPull-Pinocchio - 512x512_18
       rect:
         serializedVersion: 2
-        x: 6438
-        y: 114
-        width: 404
-        height: 816
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -855,20 +606,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7929743da73dc69f0800000000000000
-      internalID: -473771336296590697
+      spriteID: 91ad068a1e9069040800000000000000
+      internalID: 4653918129731197465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stories3-PlayerWalk-SpriteSheet_31
+      name: PlayerPull-Pinocchio - 512x512_19
       rect:
         serializedVersion: 2
-        x: 7462
-        y: 110
-        width: 404
-        height: 812
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -876,8 +627,281 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f0bd0442f1437230800000000000000
-      internalID: 3635321832997761267
+      spriteID: 26280848210bb5e00800000000000000
+      internalID: 1034614132990575202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_20
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277e2bf58ff087560800000000000000
+      internalID: 7311611554467866482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_21
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1935239bd5bda9e0800000000000000
+      internalID: -1608429537230243558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_22
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc4027e46a09c200800000000000000
+      internalID: 200703086885358840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_23
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14205c1839963d0f0800000000000000
+      internalID: -1093414202262617535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75c23021bf159280800000000000000
+      internalID: -9037282231639161478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09aa03c83e6c80f70800000000000000
+      internalID: 9153784923242408592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_26
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab483b20bd4791080800000000000000
+      internalID: -9216206678445030214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_27
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4545e90572b6cd240800000000000000
+      internalID: 4817843517980038228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_28
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca77d5b5121d8cc0800000000000000
+      internalID: -3707287033801639231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_29
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445809fc43ea01b60800000000000000
+      internalID: 7714857703529547076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_30
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3ab6d7ac22a0610800000000000000
+      internalID: 1588120071684465621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_31
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec34a3de2d070ac80800000000000000
+      internalID: -8313520860900473906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPull-Pinocchio - 512x512_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9d1614895fd8aa0800000000000000
+      internalID: -6156995081264834096
       vertices: []
       indices: 
       edges: []
@@ -885,7 +909,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 58f6085d5d167b944a60ceb08c3d8ee2
+    spriteID: 9f202ebbe84d7e148912c707e0db02b5
     internalID: 0
     vertices: []
     indices: 

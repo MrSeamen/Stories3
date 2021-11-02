@@ -17,6 +17,8 @@ public class MovableBlock : MonoBehaviour
     public AudioSource audioSource;
 
     private float direction;
+    private bool pastHold;
+    private bool pastTrigger;
 
     void Start()
     {
@@ -26,6 +28,8 @@ public class MovableBlock : MonoBehaviour
         col.enabled = true;
         left.enabled = false;
         right.enabled = false;
+        pastHold = false;
+        pastTrigger = false;
     }
 
     void Update()
@@ -38,19 +42,28 @@ public class MovableBlock : MonoBehaviour
             direction = -1f;
         }
         
-        if (hold && player.GetComponent<Move>().isMoving() && !audioSource.isPlaying && player.GetComponent<Move>().OnGround())
+        if (hold && hold != pastHold && player.GetComponent<Move>().isMoving() && !audioSource.isPlaying && player.GetComponent<Move>().OnGround())
         {
             audioSource.Play();
-        } else if (trigger && !hold && player.GetComponent<Move>().isMoving() && !audioSource.isPlaying && (direction == player.GetComponent<Move>().DirectionX()))
+            player.GetComponent<Move>().TogglePull(true);
+        } else if (trigger && trigger != pastTrigger && !hold && player.GetComponent<Move>().isMoving() && !audioSource.isPlaying && (direction == player.GetComponent<Move>().DirectionX()))
         {
             audioSource.Play();
-        } else if (!trigger || !player.GetComponent<Move>().isMoving())
+            player.GetComponent<Move>().TogglePush(true);
+        } else if (trigger != pastTrigger && (!trigger || !player.GetComponent<Move>().isMoving()))
         {
             audioSource.Pause();
-        } else if (hold && !player.GetComponent<Move>().OnGround())
+            player.GetComponent<Move>().TogglePull(false);
+            player.GetComponent<Move>().TogglePush(false);
+        } else if (hold && hold != pastHold && !player.GetComponent<Move>().OnGround())
         {
             audioSource.Pause();
+            player.GetComponent<Move>().TogglePull(false);
+            player.GetComponent<Move>().TogglePush(false);
         }
+
+        pastHold = hold;
+        pastTrigger = trigger;
     }
 
     public void Hold(InputAction.CallbackContext context)
@@ -80,7 +93,7 @@ public class MovableBlock : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
-        if (collider.gameObject.CompareTag("Player") && collider.GetComponent<Move>().OnGround())
+        if (collider.gameObject.CompareTag("Player") && collider.gameObject.GetComponent<Move>().OnGround())
         {
             trigger = true;
         }
