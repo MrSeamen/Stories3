@@ -6,11 +6,11 @@ using UnityEngine;
 public class ScalingObject : MonoBehaviour
 {
     
-    public float verticalShift, amplitude, phaseShift, lowerScaleLimit;
+    public float verticalShift, amplitude, phaseShift1, phaseShift2, lowerScaleLimit;
 
     void Update()
     {
-        float scalar = Math.Abs(amplitude * Mathf.Sin(Time.time * phaseShift)) + verticalShift;
+        float scalar = Math.Abs(amplitude * Mathf.Sin(Time.time * phaseShift1 + phaseShift2)) + verticalShift;
         if (scalar < lowerScaleLimit)
         {
             ;
