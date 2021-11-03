@@ -30,6 +30,8 @@ public class MovableBlock : MonoBehaviour
         right.enabled = false;
         pastHold = false;
         pastTrigger = false;
+        trigger = false;
+        audioSource.Stop();
     }
 
     void Update()
