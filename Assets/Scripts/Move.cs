@@ -96,7 +96,7 @@ public class Move : MonoBehaviour
 
     public void StopMovement()
     {
-        if (isWalking && CameraShift.getScroller())
+        if (CameraShift.getScroller())
         {
             _direction = Vector3.zero;
             animator.SetBool("IsWalking", false);
