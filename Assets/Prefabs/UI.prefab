@@ -951,6 +951,7 @@ GameObject:
   - component: {fileID: 354088959240272021}
   - component: {fileID: 354088959240272018}
   - component: {fileID: 354088959240272019}
+  - component: {fileID: 544773324}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -1060,6 +1061,21 @@ MonoBehaviour:
   keyList: 
   showPickupOffset: {x: 0, y: 0, z: 0}
   pickupTime: 0
+--- !u!114 &544773324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354088959240272017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c966b624793e441395df451286d38f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicked: 0
+  isClicked: 0
+  inventory: {fileID: 354088959240272017}
 --- !u!1 &354088959312191542
 GameObject:
   m_ObjectHideFlags: 0
