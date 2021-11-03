@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class FakeItems : MonoBehaviour
 {
     public GameObject image;
-    public Text text;
+    //public Text text;
 
     private static bool retrieved = false;
     private static int items = 6;
@@ -15,7 +15,8 @@ public class FakeItems : MonoBehaviour
     void Start()
     {
         image.SetActive(false);
-        text.text = "";
+        Debug.Log("");
+        //text.text = "";
     }
 
     void Update()
@@ -23,12 +24,14 @@ public class FakeItems : MonoBehaviour
         if(retrieved)
         {
             image.SetActive(true);
-            text.text = "x" + items;
+            Debug.Log("x" + items);
+            //text.text = "x" + items;
         }
         if(items <= 0)
         {
+            Debug.Log("");
             image.SetActive(false);
-            text.text = "";
+            //text.text = "";
         }
     }
 
