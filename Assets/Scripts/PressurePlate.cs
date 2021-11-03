@@ -19,6 +19,8 @@ public class PressurePlate : MonoBehaviour
     public AudioClip down;
     public AudioClip up;
 
+    public AudioSource doorAudio;
+
     void Start()
     {
         starting_pos = transform.position;
@@ -27,7 +29,7 @@ public class PressurePlate : MonoBehaviour
 
         door_start = door.position;
         door_pos = door_start;
-        door_end = door_start - new Vector3(0f, 4f, 0f);
+        door_end = door_start - new Vector3(0f, 3.5f, 0f);
     }
 
     void Update()
@@ -46,7 +48,15 @@ public class PressurePlate : MonoBehaviour
         if ((pressed == false) && (door_pos.y <= door_start.y))
         {
             door.Translate(Vector3.up * Time.deltaTime * speed);
+            if(doorAudio.isPlaying == false)
+            {
+                doorAudio.Play();
+            }
+        } else if(pressed == false)
+        {
+            doorAudio.Stop();
         }
+
     }
 
     private void OnTriggerStay(Collider collider)
@@ -66,6 +76,13 @@ public class PressurePlate : MonoBehaviour
             if (door_pos.y >= door_end.y)
             {
                 door.Translate(Vector3.down * Time.deltaTime * speed);
+                if (doorAudio.isPlaying == false)
+                {
+                    doorAudio.Play();
+                }
+            }  else
+            {
+                doorAudio.Stop();
             }
         }
     }

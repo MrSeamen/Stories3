@@ -20,19 +20,21 @@ public class KeyHolder : MonoBehaviour
         Debug.Log("You have acquired: " + keyType + "!");
         keyList.Add(keyType);
         Debug.Log("add to inventory");
-        /*
-        keyImage = GameObject.FindWithTag("Key " + keyType).GetComponent<Image>();
+
+        Image keyImage = GameObject.Find("Key " + keyType).GetComponent<Image>();
             if (!keyImage.enabled) {
                 keyImage.enabled = true; 
                 keyImage.sprite = Resources.Load<Sprite>("Sprites/Items/" + keyType);
            }
-        */
+        
        }
 
 
     public void RemoveKey(Key.KeyType keyType)
     {
         keyList.Remove(keyType);
+        Image keyImage = GameObject.Find("Key " + keyType).GetComponent<Image>();
+        keyImage.enabled = false;
     }
 
 
@@ -50,6 +52,7 @@ public class KeyHolder : MonoBehaviour
 
         yield return new WaitForSeconds(pickupTime);
 
+        GameObject.Find("Pickup Audio").GetComponent<AudioSource>().Stop();
         animator.SetBool("ObjectPickedUp", false);
         GetComponent<Move>().LockMovement(false);
         Destroy(key);
@@ -61,6 +64,7 @@ public class KeyHolder : MonoBehaviour
         if (key != null)
         {
             AddKey(key.GetKeyType());
+            GameObject.Find("Pickup Audio").GetComponent<AudioSource>().Play();
             StartCoroutine(ItemPickup(key.gameObject));
         }
 

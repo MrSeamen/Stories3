@@ -113,13 +113,21 @@ public class Move : MonoBehaviour
             Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, 0);
             rb.velocity = movement;
 
-            if (_direction == Vector3.zero || !isGrounded)
+            if (_direction == Vector3.zero)
             {
                 if (isWalking)
                 {
                     animator.SetBool("IsWalking", false);
                     isWalking = false;
                     audioSource.Pause();
+                }
+            }
+            else if (!isGrounded) //these need to be separate for jump sound effect to occur while moving
+            {
+                if (isWalking)
+                {
+                    animator.SetBool("IsWalking", false);
+                    isWalking = false;
                 }
             }
             else
@@ -135,13 +143,23 @@ public class Move : MonoBehaviour
                     }
                     audioSource.Play();
                 }
+                if (audioSource.clip != walking)
+                {
+                    audioSource.loop = true;
+                    audioSource.clip = walking;
+                    audioSource.Play();
+                }
             }
+        } else
+        {
+            Vector3 movement = new Vector3(0, 0, rb.velocity.z);
+            rb.velocity = movement;
         }
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded && !movementLocked)
+        if (context.performed && isGrounded && !movementLocked && CameraShift.getScroller())
         {
             isJumping = true;
             animator.SetBool("IsJumping", true);
@@ -229,6 +247,11 @@ public class Move : MonoBehaviour
     public float DirectionX()
     {
         return _direction.x;
+    }
+
+    public void SetMovementZero()
+    {
+        _direction = Vector3.zero;
     }
 
 }

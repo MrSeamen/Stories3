@@ -22,6 +22,7 @@ TagManager:
   - Level1 Theme
   - Main Theme
   - Rock
+  - Key L1Door
   layers:
   - Default
   - TransparentFX
