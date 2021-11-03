@@ -141,7 +141,6 @@ GameObject:
   - component: {fileID: 627571420467642402}
   - component: {fileID: 627571420467642395}
   - component: {fileID: 627571420467642404}
-  - component: {fileID: 6319508681768152357}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -157,7 +156,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627571420467642403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.99, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5337919875603188865}
@@ -173,7 +172,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627571420467642403}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6a53ea19274c87d47bedd70c316ba98b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -193,7 +192,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &627571420467642402
 MonoBehaviour:
@@ -234,18 +233,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1986329369303958598, guid: 6a5298aeeeae8be4da13c32c339bbd34, type: 3}
-        m_TargetAssemblyTypeName: MovableBlock, Assembly-CSharp
-        m_MethodName: MoveBlock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 3ec620eb-bcb8-45fd-8a9c-9883dc23ddf0
     m_ActionName: Player/Move
   - m_PersistentCalls:
@@ -270,7 +257,7 @@ MonoBehaviour:
     m_ActionName: Player/Duck/Fall
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627571419503736328}
+      - m_Target: {fileID: 5448723760891278023}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
         m_Mode: 2
@@ -285,18 +272,6 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ReleaseSwitch, Assembly-CSharp
         m_MethodName: ColliderActivate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MovableBlock, Assembly-CSharp
-        m_MethodName: Hold
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -374,7 +349,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 627571419503736328}
+      - m_Target: {fileID: 5448723760891278023}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
         m_Mode: 2
@@ -437,21 +412,9 @@ MonoBehaviour:
     m_ActionId: e83a9b60-daa9-4f54-aa0a-bfe11aa22a02
     m_ActionName: Dialogue/Continue[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1986329369303958598, guid: 6a5298aeeeae8be4da13c32c339bbd34, type: 3}
-        m_TargetAssemblyTypeName: MovableBlock, Assembly-CSharp
-        m_MethodName: StopBlock
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c80b500d-15d3-4843-ad37-f08f979b7813
-    m_ActionName: Player/StopMove[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+      m_Calls: []
+    m_ActionId: c1f145eb-b98c-4004-8839-eb50a2294a74
+    m_ActionName: Player/Inventory[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -469,8 +432,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3dff91d0845be444b2b98ca044b248d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 900566063}
   keyList: 
-  keyImage: {fileID: 0}
+  showPickupOffset: {x: 0, y: 1, z: 0}
+  pickupTime: 2
 --- !u!114 &627571420467642404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,34 +448,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b84cd0351d489f458638fc19f0dc879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  jumpForce: 3.5
-  animator: {fileID: 6319508681768152357}
+  moveSpeed: 2
+  jumpForce: 3
+  animator: {fileID: 900566063}
   sprite: {fileID: 3895415614159200747}
   trackTransition: {fileID: 0}
   audioSource: {fileID: 627571419503736328}
   walking: {fileID: 8300000, guid: fe4cb9d19275aa24ebd33eb2d39f2db7, type: 3}
   jumping: {fileID: 8300000, guid: e0e69fe158f3cb340afd5fea735b1174, type: 3}
   landing: {fileID: 8300000, guid: 77a135b8d5f74744386c157c9b741525, type: 3}
---- !u!95 &6319508681768152357
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627571420467642403}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6fcf4891d26c36443bda5161ac9340de, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  fallingThreshold: -8
 --- !u!1 &3171094418455440540
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4711341180367681115}
   - component: {fileID: 3895415614159200747}
+  - component: {fileID: 900566063}
   m_Layer: 0
   m_Name: Img
   m_TagString: Untagged
@@ -664,7 +612,7 @@ Transform:
   m_GameObject: {fileID: 4035164380887821301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 627571420467642405}
   m_RootOrder: 2
@@ -708,15 +656,34 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 24940acbdde9f224b8b7a781c95e0040, type: 3}
+  m_SortingOrder: 100
+  m_Sprite: {fileID: 4693877950375435916, guid: 9b97f7fbb9b32e249b8363a5330980f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &900566063
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035164380887821301}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fcf4891d26c36443bda5161ac9340de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
