@@ -578,6 +578,8 @@ GameObject:
   - component: {fileID: 264098465}
   - component: {fileID: 264098464}
   - component: {fileID: 264098463}
+  - component: {fileID: 264098467}
+  - component: {fileID: 264098466}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -650,6 +652,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264098466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264098462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25552acb3994174d9a26e8b16af1d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
+  initialLevel: 0
+  masterslider: {fileID: 515133150}
+  musicslider: {fileID: 657806894}
+  sfxslider: {fileID: 1188552318}
+  click: {fileID: 650097508}
+--- !u!114 &264098467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264098462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &424158497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,17 +1175,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 424158498}
   m_HandleRect: {fileID: 1122957806}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.4
+  m_Value: 0.75
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 650097508}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 264098466}
+        m_TargetAssemblyTypeName: Mixer, Assembly-CSharp
+        m_MethodName: SetMasterLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1149,7 +1201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515133148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c58b634e38a8c4a44a6f68101a6ee380, type: 3}
   m_Name: 
@@ -1464,16 +1516,16 @@ AudioSource:
   m_GameObject: {fileID: 650097507}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 99348d26b121bdf40bca2ff30b000207, type: 3}
+  OutputAudioMixerGroup: {fileID: -5839217065963593899, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5e7be59be9706134aab126d2a37940f9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 175
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1572,7 +1624,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650097507}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2da4d65aa999747beb8dac0e554456ee, type: 3}
   m_Name: 
@@ -1663,17 +1715,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 1454659309}
   m_HandleRect: {fileID: 95540647}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.4
+  m_Value: 0.75
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 650097508}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 264098466}
+        m_TargetAssemblyTypeName: Mixer, Assembly-CSharp
+        m_MethodName: SetMusicLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1689,7 +1741,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657806892}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c58b634e38a8c4a44a6f68101a6ee380, type: 3}
   m_Name: 
@@ -1820,12 +1872,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2006,7 +2058,7 @@ AudioSource:
   m_GameObject: {fileID: 765126737}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2215672547171334219, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
   m_audioClip: {fileID: 8300000, guid: fdc6bf301d57b9349856a9ad788ef077, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -2510,7 +2562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 160, y: 90}
+  m_AnchoredPosition: {x: 160, y: 88}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038222154
@@ -3009,17 +3061,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 716275600}
   m_HandleRect: {fileID: 1126554387}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.4
+  m_Value: 0.75
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 650097508}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 264098466}
+        m_TargetAssemblyTypeName: Mixer, Assembly-CSharp
+        m_MethodName: SetSFXLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3035,7 +3087,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188552316}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c58b634e38a8c4a44a6f68101a6ee380, type: 3}
   m_Name: 
@@ -3562,7 +3614,7 @@ AudioSource:
   m_GameObject: {fileID: 1661810412}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2215672547171334219, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9dabc41bf8322844d9779c2591bbdded, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -3942,7 +3994,7 @@ AudioSource:
   m_GameObject: {fileID: 1864949906}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2215672547171334219, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
   m_audioClip: {fileID: 8300000, guid: b844d6acb2bf58d4fad0358cadc650a9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -4369,7 +4421,7 @@ AudioSource:
   m_GameObject: {fileID: 2118470547}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2215672547171334219, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 20b9287c422c7c24a95e766f6c4b9bfa, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5

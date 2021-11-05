@@ -12,11 +12,14 @@ public class ReleaseSwitch : MonoBehaviour
 
     public void ColliderActivate(InputAction.CallbackContext context)
     {
-        if (trigger)
+        if(context.performed)
         {
-            collider_activatable.enabled = !collider_activatable.enabled;
-            goondalfInitialDialog.gameObject.SetActive(false);
-            goondalfFreedDialog.gameObject.SetActive(true);
+            if (trigger)
+            {
+                collider_activatable.enabled = false;
+                goondalfInitialDialog.gameObject.SetActive(false);
+                goondalfFreedDialog.gameObject.SetActive(true);
+            }
         }
     }
 

@@ -19,6 +19,9 @@ public class LevelSelection : MonoBehaviour
     [SerializeField] private GameObject fade;
     private Color color;
 
+    public AudioSource click;
+    public AudioSource select;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,31 +59,47 @@ public class LevelSelection : MonoBehaviour
 
     public void Select1(InputAction.CallbackContext context)
     {
-        level = 2;
-        level2.SetActive(true);
-        level1.SetActive(false);
-        level3.SetActive(false);
+        if(context.performed)
+        {
+            level = 2;
+            level2.SetActive(true);
+            level1.SetActive(false);
+            level3.SetActive(false);
+            click.Play();
+        }
     }
 
     public void Select2(InputAction.CallbackContext context)
     {
-        level = 1;
-        level2.SetActive(false);
-        level1.SetActive(true);
-        level3.SetActive(false);
+        if (context.performed)
+        {
+            level = 1;
+            level2.SetActive(false);
+            level1.SetActive(true);
+            level3.SetActive(false);
+            click.Play();
+        }
     }
 
     public void Select3(InputAction.CallbackContext context)
     {
-        level = 3;
-        level1.SetActive(false);
-        level2.SetActive(false);
-        level3.SetActive(true);
+        if (context.performed)
+        {
+            level = 3;
+            level1.SetActive(false);
+            level2.SetActive(false);
+            level3.SetActive(true);
+            click.Play();
+        }
     }
 
     public void Enter(InputAction.CallbackContext context)
     {
-        StartCoroutine(Transition());
+        if(context.performed)
+        {
+            StartCoroutine(Transition());
+            select.Play();
+        }
     }
 
     public IEnumerator Transition()

@@ -13,34 +13,95 @@ public class Move : MonoBehaviour
     public TrackTransition trackTransition;
     private Vector3 _direction;
     private Vector3 jump;
-    private bool isGrounded;
     Rigidbody rb;
+    private bool isGrounded;
+    private bool isJumping = false;
     private bool isWalking = false;
+    private bool isFalling = false;
+    private bool isPushing = false;
+    private bool isPulling = false;
+    private bool movementLocked = false;
 
     public AudioSource audioSource;
     public AudioClip walking;
     public AudioClip jumping;
     public AudioClip landing;
+    public float fallingThreshold;
+    //private Coroutine fallTimerInstance;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
         _direction = new Vector3(0.0f, 0.0f, 0.0f);
+        movementLocked = false;
+        TogglePinocchio(false);
     }
 
     void Update()
     {
-        Movement();
+        if(rb.velocity.y < fallingThreshold)
+        {
+            isFalling = true;
+            isGrounded = false;
+            animator.SetBool("IsFalling", true);
+        } else
+        {
+            isFalling = false;
+            animator.SetBool("IsFalling", false);
+        }
+
+        if(!movementLocked)
+        {
+            Movement();
+        }
+    }
+
+    public void TogglePinocchio(bool hasPinocchio)
+    {
+        animator.SetBool("HasPinocchio", hasPinocchio);
+    }
+
+    public void TogglePush(bool push)
+    {
+        if(isPushing != push)
+        {
+            isPushing = push;
+            animator.SetBool("IsPushing", push);
+            Debug.Log(push);
+            if (push)
+            {
+                TogglePull(false);
+            }
+        }
+    }
+
+    public void TogglePull(bool pull)
+    {
+        if (isPulling != pull)
+        {
+            isPulling = pull;
+            animator.SetBool("IsPulling", pull);
+            if (pull)
+            {
+                TogglePush(false);
+            }
+        }
     }
 
     public void StopMovement(InputAction.CallbackContext context)
     {
-        if (isWalking && CameraShift.getScroller())
+        StopMovement();
+    }
+
+    public void StopMovement()
+    {
+        if (CameraShift.getScroller())
         {
             _direction = Vector3.zero;
             animator.SetBool("IsWalking", false);
             isWalking = false;
+            rb.velocity = Vector3.zero;
             audioSource.Pause();
         }
     }
@@ -52,13 +113,21 @@ public class Move : MonoBehaviour
             Vector3 movement = new Vector3(_direction.x * moveSpeed, rb.velocity.y, 0);
             rb.velocity = movement;
 
-            if (_direction == Vector3.zero || !isGrounded)
+            if (_direction == Vector3.zero)
             {
                 if (isWalking)
                 {
                     animator.SetBool("IsWalking", false);
                     isWalking = false;
                     audioSource.Pause();
+                }
+            }
+            else if (!isGrounded) //these need to be separate for jump sound effect to occur while moving
+            {
+                if (isWalking)
+                {
+                    animator.SetBool("IsWalking", false);
+                    isWalking = false;
                 }
             }
             else
@@ -74,14 +143,26 @@ public class Move : MonoBehaviour
                     }
                     audioSource.Play();
                 }
+                if (audioSource.clip != walking)
+                {
+                    audioSource.loop = true;
+                    audioSource.clip = walking;
+                    audioSource.Play();
+                }
             }
+        } else
+        {
+            Vector3 movement = new Vector3(0, 0, rb.velocity.z);
+            rb.velocity = movement;
         }
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        if (context.performed && isGrounded && !movementLocked && CameraShift.getScroller())
         {
+            isJumping = true;
+            animator.SetBool("IsJumping", true);
             isGrounded = false;
             Vector3 movement = jump * jumpForce;
             rb.velocity = movement;
@@ -127,22 +208,16 @@ public class Move : MonoBehaviour
                 audioSource.Play();
 
                 isGrounded = true;
+                isJumping = false;
+                animator.SetBool("IsJumping", false);
             }
         }
     }
 
-    void OnCollisionExit(Collision collision)
+    public void LockMovement(bool shouldLock)
     {
-        if (collision.contacts.Length > 0)
-        {
-            ContactPoint contact = collision.contacts[0];
-            if (Vector3.Dot(contact.normal, Vector3.up) > 0.5)
-            {
-                //collision was from below
-
-                isGrounded = false;
-            }
-        }
+        StopMovement();
+        movementLocked = shouldLock;
     }
 
     public void Recenter()
@@ -172,6 +247,11 @@ public class Move : MonoBehaviour
     public float DirectionX()
     {
         return _direction.x;
+    }
+
+    public void SetMovementZero()
+    {
+        _direction = Vector3.zero;
     }
 
 }

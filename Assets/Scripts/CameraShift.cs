@@ -49,27 +49,29 @@ public class CameraShift : MonoBehaviour
 
     public void Shift(InputAction.CallbackContext context)
     {
-        orthoOn = !orthoOn;
-        scroller = !scroller;
-        if (orthoOn)
+        if(context.performed)
         {
-            liftedVC.Priority = 0;
-            scrollingVC.Priority = 1;
-            blender.BlendToMatrix(ortho, 1f);
-            
-            audioSource.clip = shift2;
-            audioSource.Play();
-        }
-        else
-        {
-            liftedVC.Priority = 1;
-            scrollingVC.Priority = 0;
-            blender.BlendToMatrix(perspective, 1f);
-            
-            audioSource.clip = shift1;
-            audioSource.Play();
-        }
+            orthoOn = !orthoOn;
+            scroller = !scroller;
+            if (orthoOn)
+            {
+                liftedVC.Priority = 0;
+                scrollingVC.Priority = 1;
+                blender.BlendToMatrix(ortho, 1f);
 
+                audioSource.clip = shift2;
+                audioSource.Play();
+            }
+            else
+            {
+                liftedVC.Priority = 1;
+                scrollingVC.Priority = 0;
+                blender.BlendToMatrix(perspective, 1f);
+
+                audioSource.clip = shift1;
+                audioSource.Play();
+            }
+        }
     }
 
     public static bool getScroller()
