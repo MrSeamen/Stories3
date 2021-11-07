@@ -12470,7 +12470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  destination: {x: 0, y: 0, z: 0}
+  destination: {x: 0, y: 3, z: 0}
 --- !u!1 &2078681906
 GameObject:
   m_ObjectHideFlags: 0
