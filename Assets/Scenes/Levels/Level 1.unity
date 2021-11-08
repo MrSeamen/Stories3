@@ -7898,6 +7898,102 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+--- !u!1 &584850439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584850440}
+  - component: {fileID: 584850444}
+  - component: {fileID: 584850443}
+  - component: {fileID: 584850442}
+  - component: {fileID: 584850441}
+  m_Layer: 0
+  m_Name: Dialogue Trigger 1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &584850440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584850439}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.240002, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1650308061}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &584850441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584850439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c27d7e36195d740a94b623f7b3c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &584850442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584850439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    headImg: {fileID: 21300000, guid: b69aad59e7c76e64cb5c10c50d04f611, type: 3}
+    name: Goondalf
+    audio: []
+    sentences: []
+  triggered: 0
+--- !u!114 &584850443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584850439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d800c02d1f0bfa849af14f7b009d8661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueActionMap: Dialogue
+  playerActionMap: Player
+  dialogueUIPanel: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!65 &584850444
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584850439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.169763, z: 3}
+  m_Center: {x: 0, y: 2.0848815, z: 1}
 --- !u!1001 &591680901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15012,6 +15108,7 @@ Transform:
   - {fileID: 1091397489}
   - {fileID: 1558677015}
   - {fileID: 1700918861}
+  - {fileID: 1758062333}
   m_Father: {fileID: 405523328}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15915,7 +16012,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -105.72998
+      value: -74.97998
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15927,11 +16024,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000000084479606
+      value: 0.000000008447955
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000016269286
+      value: -0.0000000016269276
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249947, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_Follow
@@ -15991,7 +16088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -105.72998
+      value: -74.97998
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16043,7 +16140,7 @@ PrefabInstance:
       objectReference: {fileID: 1832533030}
     - target: {fileID: 2979244712235688423, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -105.72998
+      value: -74.97998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
@@ -17647,6 +17744,102 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2f3435909f6654ea3b846a73e4f2d5, type: 3}
+--- !u!1 &1184310547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184310548}
+  - component: {fileID: 1184310552}
+  - component: {fileID: 1184310551}
+  - component: {fileID: 1184310550}
+  - component: {fileID: 1184310549}
+  m_Layer: 0
+  m_Name: Dialogue Trigger 1 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1184310548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184310547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 95.990005, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1650308061}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184310549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184310547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c27d7e36195d740a94b623f7b3c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1184310550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184310547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    headImg: {fileID: 21300000, guid: b69aad59e7c76e64cb5c10c50d04f611, type: 3}
+    name: Goondalf
+    audio: []
+    sentences: []
+  triggered: 0
+--- !u!114 &1184310551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184310547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d800c02d1f0bfa849af14f7b009d8661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueActionMap: Dialogue
+  playerActionMap: Player
+  dialogueUIPanel: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!65 &1184310552
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184310547}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.169763, z: 3}
+  m_Center: {x: 0, y: 2.0848815, z: 1}
 --- !u!1001 &1188956248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24394,6 +24587,102 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2441707148297150631, guid: ab45780a6ff2327448746b62bf82443a, type: 3}
   m_PrefabInstance: {fileID: 1568243711}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1576384921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1576384922}
+  - component: {fileID: 1576384926}
+  - component: {fileID: 1576384925}
+  - component: {fileID: 1576384924}
+  - component: {fileID: 1576384923}
+  m_Layer: 0
+  m_Name: Dialogue Trigger 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1576384922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576384921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.4900017, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1650308061}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1576384923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576384921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c27d7e36195d740a94b623f7b3c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1576384924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576384921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    headImg: {fileID: 21300000, guid: b69aad59e7c76e64cb5c10c50d04f611, type: 3}
+    name: Goondalf
+    audio: []
+    sentences: []
+  triggered: 0
+--- !u!114 &1576384925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576384921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d800c02d1f0bfa849af14f7b009d8661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueActionMap: Dialogue
+  playerActionMap: Player
+  dialogueUIPanel: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!65 &1576384926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576384921}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.169763, z: 3}
+  m_Center: {x: 0, y: 2.0848815, z: 1}
 --- !u!4 &1578377901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5145439474066410729, guid: cc50bc4833d29c640ad976038dd548a2, type: 3}
@@ -25559,6 +25848,12 @@ Transform:
   - {fileID: 756334179}
   - {fileID: 899410769}
   - {fileID: 1255434549}
+  - {fileID: 1576384922}
+  - {fileID: 584850440}
+  - {fileID: 2086261241}
+  - {fileID: 1961541265}
+  - {fileID: 1184310548}
+  - {fileID: 2005055201}
   m_Father: {fileID: 1027354300}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26990,6 +27285,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1758062332
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1035819452}
+    m_Modifications:
+    - target: {fileID: 93173692575236128, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_Name
+      value: Pine (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_RootOrder
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -81
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455817375237295686, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+--- !u!4 &1758062333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 637870933362702270, guid: 4cfc18c91688e6e459bff08c782cc477, type: 3}
+  m_PrefabInstance: {fileID: 1758062332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1772227501
 GameObject:
   m_ObjectHideFlags: 0
@@ -28839,7 +29200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642405, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -105.72998
+      value: -74.97998
       objectReference: {fileID: 0}
     - target: {fileID: 627571420467642405, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30896,6 +31257,102 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f2f3435909f6654ea3b846a73e4f2d5, type: 3}
+--- !u!1 &1961541264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1961541265}
+  - component: {fileID: 1961541269}
+  - component: {fileID: 1961541268}
+  - component: {fileID: 1961541267}
+  - component: {fileID: 1961541266}
+  m_Layer: 0
+  m_Name: Dialogue Trigger 1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1961541265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961541264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 76.240005, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1650308061}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1961541266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961541264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c27d7e36195d740a94b623f7b3c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1961541267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961541264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    headImg: {fileID: 21300000, guid: b69aad59e7c76e64cb5c10c50d04f611, type: 3}
+    name: Goondalf
+    audio: []
+    sentences: []
+  triggered: 0
+--- !u!114 &1961541268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961541264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d800c02d1f0bfa849af14f7b009d8661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueActionMap: Dialogue
+  playerActionMap: Player
+  dialogueUIPanel: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!65 &1961541269
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961541264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.169763, z: 3}
+  m_Center: {x: 0, y: 2.0848815, z: 1}
 --- !u!1001 &1964226111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31555,6 +32012,102 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5868479491937019303, guid: 9827f1511f2c28a4eb3fdce2c5cb517c, type: 3}
   m_PrefabInstance: {fileID: 2001454603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2005055200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005055201}
+  - component: {fileID: 2005055205}
+  - component: {fileID: 2005055204}
+  - component: {fileID: 2005055203}
+  - component: {fileID: 2005055202}
+  m_Layer: 0
+  m_Name: Dialogue Trigger 1 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2005055201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005055200}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 115.490005, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1650308061}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2005055202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005055200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c27d7e36195d740a94b623f7b3c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2005055203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005055200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    headImg: {fileID: 21300000, guid: b69aad59e7c76e64cb5c10c50d04f611, type: 3}
+    name: Goondalf
+    audio: []
+    sentences: []
+  triggered: 0
+--- !u!114 &2005055204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005055200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d800c02d1f0bfa849af14f7b009d8661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueActionMap: Dialogue
+  playerActionMap: Player
+  dialogueUIPanel: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!65 &2005055205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005055200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.169763, z: 3}
+  m_Center: {x: 0, y: 2.0848815, z: 1}
 --- !u!1001 &2006210539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32801,6 +33354,102 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b9e8c16bed4c84493d41698347332e, type: 3}
+--- !u!1 &2086261240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2086261241}
+  - component: {fileID: 2086261245}
+  - component: {fileID: 2086261244}
+  - component: {fileID: 2086261243}
+  - component: {fileID: 2086261242}
+  m_Layer: 0
+  m_Name: Dialogue Trigger 1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2086261241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086261240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.74, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1650308061}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2086261242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086261240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c27d7e36195d740a94b623f7b3c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2086261243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086261240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    headImg: {fileID: 21300000, guid: b69aad59e7c76e64cb5c10c50d04f611, type: 3}
+    name: Goondalf
+    audio: []
+    sentences: []
+  triggered: 0
+--- !u!114 &2086261244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086261240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d800c02d1f0bfa849af14f7b009d8661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueActionMap: Dialogue
+  playerActionMap: Player
+  dialogueUIPanel: {fileID: 0}
+  animator: {fileID: 0}
+--- !u!65 &2086261245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086261240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.169763, z: 3}
+  m_Center: {x: 0, y: 2.0848815, z: 1}
 --- !u!1001 &2088723241
 PrefabInstance:
   m_ObjectHideFlags: 0
