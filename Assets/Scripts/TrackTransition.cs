@@ -9,7 +9,8 @@ public class TrackTransition : MonoBehaviour
     public Track[] tracks;
 
     private int currentTrackIdx = 0;
-    private bool moving = false;
+
+    private bool moving;
 
     void Start()
     {
@@ -83,8 +84,11 @@ public class TrackTransition : MonoBehaviour
             yield return null;
         }
         transform.position = targetPos;
+        if (GameObject.Find("Player").GetComponent<Move>().DirectionX() == 0) 
+        {
+            animator.SetBool("IsWalking", false);
+        }
         moving = false;
-        animator.SetBool("IsWalking", false);
 
         audioSource.Stop();
     }

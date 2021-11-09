@@ -844,6 +844,7 @@ GameObject:
   - component: {fileID: 354088958818751493}
   - component: {fileID: 354088958818751490}
   - component: {fileID: 354088958818751491}
+  - component: {fileID: 791948059117485340}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -938,6 +939,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &791948059117485340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354088958818751488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ddc9a05c3eb4d1d94ce72b5ed7b34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &354088959240272017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,7 +1588,6 @@ GameObject:
   - component: {fileID: 3565790929140862969}
   - component: {fileID: 3545782245343443645}
   - component: {fileID: 2370587517481199787}
-  - component: {fileID: 1219714610286091147}
   m_Layer: 5
   m_Name: Menu Button
   m_TagString: Untagged
@@ -1697,7 +1709,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1219714610286091147}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -1709,18 +1721,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &1219714610286091147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748971658580616694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ddc9a05c3eb4d1d94ce72b5ed7b34c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1021445406244793719
 GameObject:
   m_ObjectHideFlags: 0

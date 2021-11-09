@@ -49,7 +49,7 @@ public class CameraShift : MonoBehaviour
 
     public void Shift(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        if(context.performed && GameObject.Find("Player").GetComponent<Move>().OnGround() && !GameObject.Find("Player").GetComponent<Move>().getLock())
         {
             orthoOn = !orthoOn;
             scroller = !scroller;
@@ -64,6 +64,7 @@ public class CameraShift : MonoBehaviour
             }
             else
             {
+                GameObject.Find("Player").GetComponent<Move>().StopMovement();
                 liftedVC.Priority = 1;
                 scrollingVC.Priority = 0;
                 blender.BlendToMatrix(perspective, 1f);

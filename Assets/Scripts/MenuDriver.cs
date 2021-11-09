@@ -15,6 +15,11 @@ public class MenuDriver : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void ShowMain()
     {
         mainPanel.SetActive(true);
