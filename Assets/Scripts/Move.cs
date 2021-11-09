@@ -55,6 +55,11 @@ public class Move : MonoBehaviour
         {
             Movement();
         }
+        else
+        {
+            StopMovement2D();
+            StopMovement();
+        }
     }
 
     public void TogglePinocchio(bool hasPinocchio)
@@ -95,6 +100,18 @@ public class Move : MonoBehaviour
     }
 
     public void StopMovement()
+    {
+        if (!CameraShift.getScroller())
+        {
+            _direction = Vector3.zero;
+            animator.SetBool("IsWalking", false);
+            isWalking = false;
+            rb.velocity = Vector3.zero;
+            audioSource.Pause();
+        }
+    }
+
+    public void StopMovement2D()
     {
         if (CameraShift.getScroller())
         {
@@ -142,7 +159,7 @@ public class Move : MonoBehaviour
                         audioSource.clip = walking;
                     }
                     audioSource.Play();
-                }
+                } 
                 if (audioSource.clip != walking)
                 {
                     audioSource.loop = true;
@@ -150,11 +167,7 @@ public class Move : MonoBehaviour
                     audioSource.Play();
                 }
             }
-        } else
-        {
-            Vector3 movement = new Vector3(0, 0, rb.velocity.z);
-            rb.velocity = movement;
-        }
+        } 
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -186,7 +199,7 @@ public class Move : MonoBehaviour
             }
         } else
         {
-            if (context.performed && _inputVector.y != 0)
+            if (context.performed && _inputVector.y != 0 && !movementLocked)
             {
                 trackTransition.AttemptTransition(_inputVector.y > 0, animator, audioSource, walking);
             }
@@ -252,6 +265,27 @@ public class Move : MonoBehaviour
     public void SetMovementZero()
     {
         _direction = Vector3.zero;
+    }
+
+    public void PauseAnimation(bool val)
+    {
+        if(!val)
+        {
+            animator.speed = 1;
+        } else
+        {
+            animator.speed = 0;
+        }
+    }
+
+    public void Flip()
+    {
+        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+    }
+
+    public bool getLock()
+    {
+        return movementLocked;
     }
 
 }
