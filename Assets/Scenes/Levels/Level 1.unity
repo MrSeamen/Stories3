@@ -22434,6 +22434,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1145737297295961680, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_Name
+      value: MiniMapMarker
+      objectReference: {fileID: 0}
     - target: {fileID: 2495938814416027210, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -22448,11 +22452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3680062772980814991, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3680062772980814991, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3680062772980814991, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_LocalPosition.y
