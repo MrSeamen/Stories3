@@ -20,11 +20,6 @@ public class Key : MonoBehaviour
         L3Fragment3
     }
 
-    public Key(KeyType keyType) {
-        this.keyType = keyType; 
-        this.icon = Resources.Load<Sprite>("Sprites/Items/" + keyType);
-    }
-
     public KeyType GetKeyType()
     {
         return keyType;

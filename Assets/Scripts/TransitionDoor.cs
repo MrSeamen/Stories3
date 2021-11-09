@@ -9,7 +9,7 @@ public class TransitionDoor : MonoBehaviour
 {
     private bool trigger = false;
 
-    [SerializeField] private GameObject fade;
+    private GameObject fade;
     private Color color;
     private bool fadeActivate = false;
 
@@ -17,6 +17,7 @@ public class TransitionDoor : MonoBehaviour
     {
         color = Color.black;
         color.a = 0.0f;
+        fade = GameObject.Find("/UI/Fade");
         fade.GetComponent<Renderer>().material.color = color;
         fade.SetActive(true);
     }
