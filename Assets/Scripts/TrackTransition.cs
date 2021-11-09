@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrackTransition : MonoBehaviour
 {
     public GameObject player;
     public int startTrackIdx = 1;
     public Track[] tracks;
+    public Text trackIndicator;
 
     private int currentTrackIdx = 0;
 
@@ -20,6 +22,7 @@ public class TrackTransition : MonoBehaviour
             track.AddShade();
         }
         tracks[currentTrackIdx].RemoveShade();
+        trackIndicator.text = "Track " + (currentTrackIdx + 1) + "/" + tracks.Length;
         player.GetComponentInChildren<SpriteRenderer>().sortingOrder = tracks[currentTrackIdx].startLayer + 1;
     }
 
@@ -54,6 +57,7 @@ public class TrackTransition : MonoBehaviour
             {
                 StartCoroutine(MoveToPosition(player.transform, tracks[nextIdx].transform.position.z, 1.0f, animator, audioSource, walkingClip, tracks[currentTrackIdx], tracks[nextIdx]));
                 currentTrackIdx = nextIdx;
+                trackIndicator.text = "Track " + (currentTrackIdx + 1) + "/" + tracks.Length;
             }
         }
     }
