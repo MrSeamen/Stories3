@@ -8,7 +8,7 @@ public class PressurePlate : MonoBehaviour
     Vector3 ending_pos;
     Vector3 pos;
     public float speed = 1.0f;
-    public bool pressed = false;
+    public bool pressed;
 
     public Transform door;
     Vector3 door_pos;
@@ -23,19 +23,20 @@ public class PressurePlate : MonoBehaviour
 
     void Start()
     {
-        starting_pos = transform.position;
-        pos = starting_pos;
-        ending_pos = starting_pos - new Vector3(0f, 0.06f, 0f);
+        this.starting_pos = transform.position;
+        this.pos = starting_pos;
+        this.ending_pos = starting_pos - new Vector3(0f, 0.06f, 0f);
 
-        door_start = door.position;
-        door_pos = door_start;
-        door_end = door_start - new Vector3(0f, 3.5f, 0f);
+        this.door_start = door.position;
+        this.door_pos = door_start;
+        this.door_end = door_start - new Vector3(0f, 3.5f, 0f);
+        this.pressed = false;
     }
 
     void Update()
     {
-        pos = transform.position;
-        if ((pressed == false) && (pos.y < starting_pos.y))
+        this.pos = transform.position;
+        if ((this.pressed == false) && (this.pos.y < this.starting_pos.y))
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
             if(!audioSource.isPlaying || audioSource.clip == down)
@@ -44,17 +45,17 @@ public class PressurePlate : MonoBehaviour
                 audioSource.Play();
             }
         }
-        door_pos = door.position;
-        if ((pressed == false) && (door_pos.y <= door_start.y))
+        this.door_pos = door.position;
+        if ((this.pressed == false) && (this.door_pos.y <= this.door_start.y))
         {
-            door.Translate(Vector3.up * Time.deltaTime * speed);
-            if(doorAudio.isPlaying == false)
+            this.door.Translate(Vector3.up * Time.deltaTime * speed);
+            if(!this.doorAudio.isPlaying)
             {
-                doorAudio.Play();
+                this.doorAudio.Play();
             }
-        } else if(pressed == false)
+        } else if(this.pressed == false)
         {
-            doorAudio.Stop();
+            this.doorAudio.Stop();
         }
 
     }
@@ -63,8 +64,8 @@ public class PressurePlate : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player" || collider.gameObject.tag == "Rock")
         {
-            pressed = true;
-            if (pos.y >= ending_pos.y)
+            this.pressed = true;
+            if (this.pos.y >= this.ending_pos.y)
             {
                 transform.Translate(Vector3.down * Time.deltaTime * speed);
                 if (!audioSource.isPlaying || audioSource.clip == up)
@@ -73,16 +74,16 @@ public class PressurePlate : MonoBehaviour
                     audioSource.Play();
                 }
             }
-            if (door_pos.y >= door_end.y)
+            if (this.door_pos.y >= this.door_end.y)
             {
-                door.Translate(Vector3.down * Time.deltaTime * speed);
-                if (doorAudio.isPlaying == false)
+                this.door.Translate(Vector3.down * Time.deltaTime * speed);
+                if (!this.doorAudio.isPlaying)
                 {
-                    doorAudio.Play();
+                    this.doorAudio.Play();
                 }
             }  else
             {
-                doorAudio.Stop();
+                this.doorAudio.Stop();
             }
         }
     }

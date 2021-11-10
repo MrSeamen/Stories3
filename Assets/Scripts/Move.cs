@@ -29,6 +29,8 @@ public class Move : MonoBehaviour
     public float fallingThreshold;
     //private Coroutine fallTimerInstance;
 
+    private bool onRock;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,11 +38,12 @@ public class Move : MonoBehaviour
         _direction = new Vector3(0.0f, 0.0f, 0.0f);
         movementLocked = false;
         TogglePinocchio(false);
+        onRock = false;
     }
 
     void Update()
     {
-        if(rb.velocity.y < fallingThreshold)
+        if((rb.velocity.y < fallingThreshold) && CameraShift.getScroller())
         {
             isFalling = true;
             isGrounded = false;
@@ -115,10 +118,10 @@ public class Move : MonoBehaviour
     {
         if (CameraShift.getScroller())
         {
-            _direction = Vector3.zero;
+            _direction = new Vector3(0f, _direction.y, 0f);
             animator.SetBool("IsWalking", false);
             isWalking = false;
-            rb.velocity = Vector3.zero;
+            rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
             audioSource.Pause();
         }
     }
@@ -223,6 +226,13 @@ public class Move : MonoBehaviour
                 isGrounded = true;
                 isJumping = false;
                 animator.SetBool("IsJumping", false);
+                if(collision.gameObject.CompareTag("Rock"))
+                {
+                    onRock = true;
+                } else
+                {
+                    onRock = false;
+                }
             }
         }
     }
@@ -286,6 +296,11 @@ public class Move : MonoBehaviour
     public bool getLock()
     {
         return movementLocked;
+    }
+
+    public bool OnRock()
+    {
+        return onRock;
     }
 
 }

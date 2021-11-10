@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 354088958818751490}
   - component: {fileID: 354088958818751491}
   - component: {fileID: 791948059117485340}
+  - component: {fileID: 2373458465948940654}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -715,7 +716,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ddc9a05c3eb4d1d94ce72b5ed7b34c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
+  menu: {fileID: 5323151132266156879}
+--- !u!114 &2373458465948940654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354088958818751488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25552acb3994174d9a26e8b16af1d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
+  initialLevel: 1
+  masterslider: {fileID: 8697431246325021580}
+  musicslider: {fileID: 1985352874026165871}
+  sfxslider: {fileID: 912209968271999381}
+  click: {fileID: 0}
 --- !u!1 &354088959240272017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,19 +1266,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5565917886570561963}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 791948059117485340}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -1269,7 +1276,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1021445406244793719
 GameObject:
@@ -1281,7 +1288,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6897441907531859000}
   - component: {fileID: 912209968271999381}
-  - component: {fileID: 1574215827315118067}
   m_Layer: 5
   m_Name: Slider (2)
   m_TagString: Untagged
@@ -1355,17 +1361,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 1871405392432823701}
   m_HandleRect: {fileID: 3450648613161550197}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 2373458465948940654}
+        m_TargetAssemblyTypeName: Mixer, Assembly-CSharp
+        m_MethodName: SetSFXLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1374,20 +1380,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1574215827315118067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021445406244793719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c58b634e38a8c4a44a6f68101a6ee380, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundType: 2
-  initialLevel: 1
 --- !u!1 &1241334822629522035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,7 +2648,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5430981317489729076}
   - component: {fileID: 8697431246325021580}
-  - component: {fileID: 662036454381292041}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -2730,17 +2721,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 4532261017028516827}
   m_HandleRect: {fileID: 506271347318698505}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 2373458465948940654}
+        m_TargetAssemblyTypeName: Mixer, Assembly-CSharp
+        m_MethodName: SetMasterLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2749,20 +2740,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &662036454381292041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5313259009545539151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c58b634e38a8c4a44a6f68101a6ee380, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundType: 0
-  initialLevel: 1
 --- !u!1 &5323151132266156879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,22 +2997,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5323151132266156879}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5565917886570561963}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 791948059117485340}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4022,7 +3987,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1273133143829231078}
   - component: {fileID: 1985352874026165871}
-  - component: {fileID: 4854204375480736801}
   m_Layer: 5
   m_Name: Slider (1)
   m_TagString: Untagged
@@ -4096,17 +4060,17 @@ MonoBehaviour:
   m_FillRect: {fileID: 1890265327471716657}
   m_HandleRect: {fileID: 2375993705846057961}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0.4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
+      - m_Target: {fileID: 2373458465948940654}
+        m_TargetAssemblyTypeName: Mixer, Assembly-CSharp
+        m_MethodName: SetMusicLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4115,20 +4079,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4854204375480736801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8067125693028453326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c58b634e38a8c4a44a6f68101a6ee380, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundType: 1
-  initialLevel: 1
 --- !u!1 &8749342315308360100
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,10 +4236,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5323151132266156879}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 791948059117485340}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4297,18 +4247,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5565917886570561963}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &8968228207648022113
 GameObject:
