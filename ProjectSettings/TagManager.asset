@@ -23,6 +23,7 @@ TagManager:
   - Main Theme
   - Rock
   - Key L1Door
+  - Door1
   layers:
   - Default
   - TransparentFX

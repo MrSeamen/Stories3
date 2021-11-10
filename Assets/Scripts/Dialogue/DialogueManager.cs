@@ -8,8 +8,9 @@ public class DialogueManager : MonoBehaviour
 {
     public string dialogueActionMap = "Dialogue";
     public string playerActionMap = "Player";
-    public DialogueUIPanel dialogueUIPanel;
-    public Animator animator;
+    private DialogueUIPanel dialogueUIPanel;
+    private Animator animator;
+    static DialogueManager dialogueManager;
 
 
     private Queue<string> sentences;
@@ -17,6 +18,15 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        dialogueUIPanel = GameObject.Find("UI/DialogOverlay").GetComponent<DialogueUIPanel>();
+        animator = dialogueUIPanel.gameObject.GetComponent<Animator>();
+        if(dialogueManager)
+        {
+            throw new System.Exception("Only 1 dialog manager can be used in a scene!");
+        } else
+        {
+            dialogueManager = this;
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)

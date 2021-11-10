@@ -9,7 +9,7 @@ public class TransitionDoor : MonoBehaviour
 {
     private bool trigger = false;
 
-    [SerializeField] private GameObject fade;
+    private GameObject fade;
     private Color color;
     private bool fadeActivate = false;
 
@@ -17,6 +17,7 @@ public class TransitionDoor : MonoBehaviour
     {
         color = Color.black;
         color.a = 0.0f;
+        fade = GameObject.Find("/UI/Fade");
         fade.GetComponent<Renderer>().material.color = color;
         fade.SetActive(true);
     }
@@ -57,27 +58,12 @@ public class TransitionDoor : MonoBehaviour
         {
             fadeActivate = true;
             yield return new WaitForSeconds(0.5f);
-            LevelSelection.setDoor(1);
-            SceneManager.LoadScene("Transition");
-        }
-        else if (trigger && gameObject.CompareTag("Door2"))
+            SceneManager.LoadScene("Level 2");
+        } else if (trigger && gameObject.CompareTag("Door2"))
         {
             fadeActivate = true;
             yield return new WaitForSeconds(0.5f);
-            LevelSelection.setDoor(2);
-            SceneManager.LoadScene("Transition");
-        }
-        else if (trigger && gameObject.CompareTag("Door3"))
-        {
-            fadeActivate = true;
-            yield return new WaitForSeconds(0.5f);
-            LevelSelection.setDoor(3);
-            SceneManager.LoadScene("Transition");
-        } else if (trigger)
-        {
-            fadeActivate = true;
-            yield return new WaitForSeconds(0.5f);
-            SceneManager.LoadScene("Transition");
+            SceneManager.LoadScene("Level 1");
         }
     }
 
