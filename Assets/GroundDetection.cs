@@ -5,24 +5,19 @@ using UnityEngine;
 public class GroundDetection : MonoBehaviour
 {
     public Transform player;
-    public bool isGrounded;
-    public Move move;
-    public MovingPlatform[] platforms;
     private Collider col;
     private bool isHitting = false;
 
     // Update is called once per frame
     void Update()
     {
-        isGrounded = move.OnGround();
         RaycastHit hit;
 
-        //  if (isGrounded)
-        // {
-        //Debug.Log("Player is grounded");
+       
 
         if (Physics.Raycast(player.transform.position, player.transform.TransformDirection(Vector3.up), out hit, 2))
         {
+            Debug.Log("Ray Hit OverHead");
            // Debug.DrawRay(player.transform.position, player.transform.TransformDirection(Vector3.up)*2, Color.green);
             if (hit.collider.GetComponent<MovingPlatforms>() != null)
             {
@@ -43,17 +38,5 @@ public class GroundDetection : MonoBehaviour
             }
         }
 
-            
-      //  }
-        /**
-        if (!isGrounded)
-        {
-            if(col != null)
-            {
-                col.enabled = true;
-                Physics.IgnoreCollision(player.GetComponent<Collider>(), col, false);
-
-            }
-        } **/
     }
 }
