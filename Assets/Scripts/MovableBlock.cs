@@ -147,7 +147,7 @@ public class MovableBlock : MonoBehaviour
                 left.enabled = false;
                 right.enabled = false;
             }
-            else if (trigger)
+            else if (trigger && !player.GetComponent<Move>().OnRock())
             {
                 this.transform.parent = player.transform;
                 hold = true;

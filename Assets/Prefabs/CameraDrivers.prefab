@@ -329,7 +329,9 @@ MonoBehaviour:
   near: 0.3
   far: 1000
   orthographicSize: 5
-  target: {fileID: 0}
+  audioSource: {fileID: 0}
+  shift1: {fileID: 0}
+  shift2: {fileID: 0}
   smoothTime: 3
   showText: 0
 --- !u!81 &2979244711584421197
