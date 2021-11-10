@@ -12281,6 +12281,10 @@ PrefabInstance:
       propertyPath: m_Lens.Dutch
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2754185321086420793, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.x
       value: -99.97998
@@ -12295,11 +12299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008447955
+      value: -0.0000000084479606
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000016269276
+      value: 0.0000000016269286
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249947, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_Follow
@@ -25452,7 +25456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030505903690120923, guid: 266f2cddac8c58949b9e589edcc4f92a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 170
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1030505903690120923, guid: 266f2cddac8c58949b9e589edcc4f92a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -25460,7 +25464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030505903690120923, guid: 266f2cddac8c58949b9e589edcc4f92a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 227
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1030505903690120923, guid: 266f2cddac8c58949b9e589edcc4f92a, type: 3}
       propertyPath: m_AnchoredPosition.y
