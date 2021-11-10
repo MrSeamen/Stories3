@@ -8,11 +8,11 @@ public class PlatFormUnderTrigger : MonoBehaviour
     
     private void OnTriggernEnter(Collider collider)
     {
-        //if (collider.gameObject.CompareTag("Player"))
-       // {
+        if (collider.gameObject.CompareTag("Player"))
+       {
             Debug.Log("Player entered trigger");
             Physics.IgnoreCollision(collider, platform, true );
-       // }
+        }
     }
 
     private void OnTriggerExit(Collider collider)
