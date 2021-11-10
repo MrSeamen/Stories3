@@ -21,8 +21,9 @@ public class GroundDetection : MonoBehaviour
         // {
         //Debug.Log("Player is grounded");
 
-        if (Physics.Raycast(player.transform.position, player.transform.TransformDirection(Vector3.up), out hit, Mathf.Abs(2)))
+        if (Physics.Raycast(player.transform.position, player.transform.TransformDirection(Vector3.up), out hit, 2))
         {
+           // Debug.DrawRay(player.transform.position, player.transform.TransformDirection(Vector3.up)*2, Color.green);
             if (hit.collider.GetComponent<MovingPlatforms>() != null)
             {
                 isHitting = true;
