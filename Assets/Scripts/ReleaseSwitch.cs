@@ -19,6 +19,7 @@ public class ReleaseSwitch : MonoBehaviour
                 collider_activatable.enabled = false;
                 goondalfInitialDialog.gameObject.SetActive(false);
                 goondalfFreedDialog.gameObject.SetActive(true);
+                Destroy(this.gameObject);
             }
         }
     }
