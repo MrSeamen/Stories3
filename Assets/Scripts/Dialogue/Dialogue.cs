@@ -1,6 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class OnSentenceEvent : UnityEvent { }
+
+[System.Serializable]
+public struct DialogueEvents
+{
+    [TextArea(3, 5)]
+    public string sentence;
+    public OnSentenceEvent sentenceEvent;
+}
+
 
 [System.Serializable]
 public class Dialogue
@@ -9,6 +22,6 @@ public class Dialogue
     public string name;
     public AudioClip[] audio;
 
-    [TextArea(3,5)]
-    public string[] sentences;
+    [SerializeField]
+    public DialogueEvents[] dialogueEvents;
 }

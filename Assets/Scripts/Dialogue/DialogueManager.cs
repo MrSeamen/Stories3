@@ -12,12 +12,14 @@ public class DialogueManager : MonoBehaviour
     private Animator animator;
     static DialogueManager dialogueManager;
 
-
     private Queue<string> sentences;
+    private Queue<OnSentenceEvent> onSentenceEvents;
+    private OnSentenceEvent nextEvent = null;
 
     void Start()
     {
         sentences = new Queue<string>();
+        onSentenceEvents = new Queue<OnSentenceEvent>();
         dialogueUIPanel = GameObject.Find("UI/DialogOverlay").GetComponent<DialogueUIPanel>();
         animator = dialogueUIPanel.gameObject.GetComponent<Animator>();
         if(dialogueManager)
@@ -39,9 +41,10 @@ public class DialogueManager : MonoBehaviour
 
         sentences.Clear();
 
-        foreach (string sentence in dialogue.sentences)
+        foreach (DialogueEvents dialogueEvent in dialogue.dialogueEvents)
         {
-            sentences.Enqueue(sentence);
+            onSentenceEvents.Enqueue(dialogueEvent.sentenceEvent);
+            sentences.Enqueue(dialogueEvent.sentence);
         }
 
         DisplayNextSentence();
@@ -49,14 +52,21 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (nextEvent != null)
+        {
+            nextEvent.Invoke();
+        }
+
+        if (sentences.Count == 0)
         {
             EndDialogue();
+            nextEvent = null;
             return;
         }
 
         string sentence = sentences.Dequeue();
         dialogueUIPanel.UpdateSentence(sentence);
+        nextEvent = onSentenceEvents.Dequeue();
     }
 
     public void DisplayNextSentence(InputAction.CallbackContext context)
