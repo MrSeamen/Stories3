@@ -24,6 +24,7 @@ TagManager:
   - Rock
   - Key L1Door
   - Door1
+  - Non-Jumpable
   layers:
   - Default
   - TransparentFX
@@ -31,8 +32,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Minimap Camera
+  - Main Camera
   - 
   - 
   - 

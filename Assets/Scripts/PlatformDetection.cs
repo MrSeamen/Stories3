@@ -27,12 +27,15 @@ public class PlatformDetection : MonoBehaviour
                 {
                     player.SetParent(hit.transform);
                 }
-                else
+                else 
                 {
                     player.SetParent(null);
+                    
                 }
                 check = true;
             }
         }
+
+  
     }
 }
