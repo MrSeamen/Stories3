@@ -438,7 +438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18399967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 66.84, y: 4.52, z: 0}
+  m_LocalPosition: {x: 65.24, y: 4.52, z: 0}
   m_LocalScale: {x: 2.0750837, y: 2.0750837, z: 2.0750837}
   m_Children: []
   m_Father: {fileID: 1586218922}
@@ -486,9 +486,11 @@ MonoBehaviour:
   dialogue:
     headImg: {fileID: 8264568858548796570, guid: 9b97f7fbb9b32e249b8363a5330980f8, type: 3}
     name: Player
-    audio: []
+    audio:
+    - {fileID: 8300000, guid: e0e69fe158f3cb340afd5fea735b1174, type: 3}
+    - {fileID: 8300000, guid: 77a135b8d5f74744386c157c9b741525, type: 3}
     dialogueEvents:
-    - sentence: "This place is certainly busy, I don\u2019t know if I can get through.\r\n"
+    - sentence: "This place is certainly busy, I don\u2019t know if I can get through.\r"
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1507,7 +1509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163093531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.7, y: 4.52, z: 0}
+  m_LocalPosition: {x: 63.82, y: 4.52, z: 0}
   m_LocalScale: {x: 2.0750837, y: 2.0750837, z: 2.0750837}
   m_Children: []
   m_Father: {fileID: 1586218922}
@@ -1555,9 +1557,11 @@ MonoBehaviour:
   dialogue:
     headImg: {fileID: 8264568858548796570, guid: 9b97f7fbb9b32e249b8363a5330980f8, type: 3}
     name: Player
-    audio: []
+    audio:
+    - {fileID: 8300000, guid: e0e69fe158f3cb340afd5fea735b1174, type: 3}
+    - {fileID: 8300000, guid: 77a135b8d5f74744386c157c9b741525, type: 3}
     dialogueEvents:
-    - sentence: "Did you just\u2026.?\n"
+    - sentence: "Did you just\u2026.?"
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -2169,6 +2173,7 @@ Transform:
   - {fileID: 101448728}
   - {fileID: 152801284}
   - {fileID: 823405455}
+  - {fileID: 617412181}
   m_Father: {fileID: 271411237}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2326,7 +2331,6 @@ Transform:
   - {fileID: 415084238}
   - {fileID: 110687744}
   - {fileID: 1793657966}
-  - {fileID: 617412181}
   m_Father: {fileID: 271411237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2370,7 +2374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345895883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.5, y: 1.5300001, z: 0}
+  m_LocalPosition: {x: 68.5, y: 1.43, z: 0}
   m_LocalScale: {x: 0.6545048, y: 0.250448, z: 0.14033608}
   m_Children: []
   m_Father: {fileID: 319064409}
@@ -2466,7 +2470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405250296}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 32.64, y: 3.352, z: 0}
+  m_LocalPosition: {x: 32.64, y: 3.311, z: -0}
   m_LocalScale: {x: 0.6578229, y: 0.13954216, z: 0.047335}
   m_Children: []
   m_Father: {fileID: 990054537}
@@ -2840,7 +2844,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447006008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.21, y: 4.52, z: 0}
+  m_LocalPosition: {x: 67.42, y: 4.52, z: 0}
   m_LocalScale: {x: 2.0750837, y: 2.0750837, z: 2.0750837}
   m_Children: []
   m_Father: {fileID: 1586218922}
@@ -3383,7 +3387,9 @@ MonoBehaviour:
   dialogue:
     headImg: {fileID: 8264568858548796570, guid: 9b97f7fbb9b32e249b8363a5330980f8, type: 3}
     name: Player
-    audio: []
+    audio:
+    - {fileID: 8300000, guid: e0e69fe158f3cb340afd5fea735b1174, type: 3}
+    - {fileID: 8300000, guid: 77a135b8d5f74744386c157c9b741525, type: 3}
     dialogueEvents:
     - sentence: "That\u2019s quite the building, I almost feel bad removing it to
         get around."
@@ -3937,14 +3943,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617412180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.59, y: 1.27, z: 0}
+  m_LocalPosition: {x: 54.34, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1120873706}
   - {fileID: 1124136178}
   - {fileID: 627440647}
-  m_Father: {fileID: 329809624}
-  m_RootOrder: 16
+  m_Father: {fileID: 319064409}
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &617412184
 MonoBehaviour:
@@ -4636,7 +4642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670195447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.5, y: 1.5300001, z: 0}
+  m_LocalPosition: {x: 68.5, y: 1.43, z: 0}
   m_LocalScale: {x: 0.6545048, y: 0.250448, z: 0.14033608}
   m_Children: []
   m_Father: {fileID: 329809624}
@@ -6002,7 +6008,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946392306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 68.5, y: 1.5300001, z: 0}
+  m_LocalPosition: {x: 68.5, y: 1.43, z: 0}
   m_LocalScale: {x: 0.6545048, y: 0.250448, z: 0.14033608}
   m_Children:
   - {fileID: 1947763488}
@@ -7239,7 +7245,7 @@ Transform:
   m_GameObject: {fileID: 1120873705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20.191, y: 20.191, z: 20.191}
+  m_LocalScale: {x: 5.8983965, y: 5.8983965, z: 5.8983965}
   m_Children: []
   m_Father: {fileID: 617412181}
   m_RootOrder: 0
@@ -7262,7 +7268,13 @@ MonoBehaviour:
     audio:
     - {fileID: 8300000, guid: a7dea25489a9f38449cdfd84efce7a92, type: 3}
     - {fileID: 8300000, guid: fbb02cbd2d0469042a0c81ecb634d786, type: 3}
-    dialogueEvents: []
+    dialogueEvents:
+    - sentence: "Ciao there little one, thanks for bringing my boy home. I don\u2019t
+        have a reward for you, but here\u2019s an IOU. Let me know if there\u2019s
+        anything you need made.\r"
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
   triggered: 0
 --- !u!135 &1120873708
 SphereCollider:
@@ -7272,7 +7284,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120873705}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -12071,11 +12083,11 @@ MonoBehaviour:
   dialogue:
     headImg: {fileID: 8264568858548796570, guid: 9b97f7fbb9b32e249b8363a5330980f8, type: 3}
     name: Player
-    audio: []
+    audio:
+    - {fileID: 8300000, guid: e0e69fe158f3cb340afd5fea735b1174, type: 3}
+    - {fileID: 8300000, guid: 77a135b8d5f74744386c157c9b741525, type: 3}
     dialogueEvents:
-    - sentence: 'Hey Pinocchio? Is there a giant pit in front of me?
-
-'
+    - sentence: Hey Pinocchio? Is there a giant pit in front of me?
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -13117,7 +13129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986494259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.97, y: 4.52, z: 0}
+  m_LocalPosition: {x: 64.73, y: 4.52, z: 0}
   m_LocalScale: {x: 2.0750837, y: 2.0750837, z: 2.0750837}
   m_Children: []
   m_Father: {fileID: 1586218922}
