@@ -12,16 +12,17 @@ public class moveTowardPoint : MonoBehaviour
     public void moveTowards()
     {
         //transform.localPosition += destination;
-        currentPosition = transform.position;
-        destination += currentPosition;
+        destination += transform.position;
         activate = true;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (activate)
         {
-            transform.position = Vector3.Lerp(currentPosition, destination, Time.time*speed);
+            float step = speed * Time.deltaTime;
+            //transform.position = Vector3.Lerp(currentPosition, destination, Time.deltaTime*speed);
+            transform.position = Vector3.MoveTowards(transform.position, destination, step);
         }
     }
 }
