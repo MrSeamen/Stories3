@@ -51,6 +51,7 @@ public class Move : MonoBehaviour
         } else
         {
             isFalling = false;
+            isGrounded = true;
             animator.SetBool("IsFalling", false);
         }
 

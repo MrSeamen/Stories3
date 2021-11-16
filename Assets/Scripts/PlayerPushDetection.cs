@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundDetection : MonoBehaviour
+public class PlayerPushDetection : MonoBehaviour
 {
     public Transform player;
     private Collider col;
@@ -12,19 +12,15 @@ public class GroundDetection : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-
-       
-
-        if (Physics.Raycast(player.transform.position, player.transform.TransformDirection(Vector3.up), out hit, 2))
+        Debug.DrawRay(player.transform.position, player.transform.TransformDirection(Vector3.up) * 4, Color.green);
+        if (Physics.Raycast(player.transform.position - Vector3.down, player.transform.TransformDirection(Vector3.up), out hit, 4))
         {
-            Debug.Log("Ray Hit OverHead");
-           // Debug.DrawRay(player.transform.position, player.transform.TransformDirection(Vector3.up)*2, Color.green);
             if (hit.collider.GetComponent<MovingPlatforms>() != null)
             {
+                Debug.Log("Bonk");
                 isHitting = true;
                 col = hit.collider;
                 Physics.IgnoreCollision(player.GetComponent<Collider>(), hit.collider, true);
-               // hit.collider.enabled = false;
             }
 
         }
@@ -33,7 +29,6 @@ public class GroundDetection : MonoBehaviour
             if (!(col == null))
             {
                 isHitting = false;
-               // col.enabled = true;
                 Physics.IgnoreCollision(player.GetComponent<Collider>(), col, false);
             }
         }
