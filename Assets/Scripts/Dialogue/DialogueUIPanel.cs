@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class DialogueUIPanel : MonoBehaviour
 {
+    [SerializeField] float continueDelay = 0.5f;
     [SerializeField] float dialogSpeed = 0.025f;
     [SerializeField] Text nameBox;
     [SerializeField] Text textBox;
+    [SerializeField] Text continueBox;
     [SerializeField] Image image;
     [SerializeField] AudioSource audioSource;
 
@@ -29,6 +31,7 @@ public class DialogueUIPanel : MonoBehaviour
         {
             StopCoroutine(runningRoutine);
         }
+        continueBox.gameObject.SetActive(false);
         runningRoutine = StartCoroutine(TypeText(text));
     }
 
@@ -44,5 +47,7 @@ public class DialogueUIPanel : MonoBehaviour
             }
             yield return new WaitForSeconds(dialogSpeed);
         }
+        yield return new WaitForSeconds(continueDelay);
+        continueBox.gameObject.SetActive(true);
     }
 }
