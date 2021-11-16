@@ -35039,7 +35039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5450001
+      value: 4.0199976
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35061,6 +35061,10 @@ PrefabInstance:
       propertyPath: fade
       value: 
       objectReference: {fileID: 1828123391}
+    - target: {fileID: 2979244711584421187, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421193, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: audioSource
       value: 
@@ -35110,12 +35114,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1832533030}
     - target: {fileID: 2979244712235688423, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -61.3
+      propertyPath: m_LocalPosition.y
+      value: 4.0199976
+      objectReference: {fileID: 0}
+    - target: {fileID: 2979244712347258108, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
+      propertyPath: m_ScreenY
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 4970450553916266697, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -61.3
+      value: -62.089996
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
