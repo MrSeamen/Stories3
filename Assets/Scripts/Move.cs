@@ -48,7 +48,7 @@ public class Move : MonoBehaviour
             isFalling = true;
             isGrounded = false;
             animator.SetBool("IsFalling", true);
-        } else
+        } else if(isFalling)
         {
             isFalling = false;
             isGrounded = true;
@@ -100,7 +100,10 @@ public class Move : MonoBehaviour
 
     public void StopMovement(InputAction.CallbackContext context)
     {
-        StopMovement();
+        if (context.performed && !trackTransition.IsTransitioning())
+        {
+            StopMovement();
+        }
     }
 
     public void StopMovement()
@@ -215,7 +218,7 @@ public class Move : MonoBehaviour
         if (collision.contacts.Length > 0)
         {
             ContactPoint contact = collision.contacts[0];
-            if (Vector3.Dot(contact.normal, Vector3.up) > 0.5)
+            if (Vector3.Dot(contact.normal, Vector3.up) > 0.5 && !trackTransition.IsTransitioning() && !isGrounded)
             {
                 //collision was from below
 

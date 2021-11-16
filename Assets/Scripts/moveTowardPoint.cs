@@ -25,4 +25,22 @@ public class moveTowardPoint : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, destination, step);
         }
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && collision.contacts.Length > 0)
+        {
+            collision.gameObject.transform.parent = transform;
+            GameObject.Find("TrackManager").GetComponent<TrackTransition>().Disable(true);
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.transform.parent = null;
+            GameObject.Find("TrackManager").GetComponent<TrackTransition>().Disable(false);
+        }
+    }
 }

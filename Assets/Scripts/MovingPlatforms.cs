@@ -27,14 +27,12 @@ public class MovingPlatforms : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && collision.contacts.Length > 0)
         {
             ContactPoint contact = collision.contacts[0];
-            Debug.Log(Vector3.Dot(contact.normal, Vector3.down));
             if (Vector3.Dot(contact.normal, Vector3.down) > 0.5)
             {
                 collision.gameObject.transform.parent = transform;
-            } else if (Vector3.Dot(contact.normal, Vector3.up) > 0.5)
+            } else if (GameObject.Find("TrackManager").GetComponent<TrackTransition>().IsTransitioning() && (Vector3.Dot(contact.normal, Vector3.back) > 0.5 || Vector3.Dot(contact.normal, Vector3.forward) > 0.5))
             {
-                Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>(), true);
-                StartCoroutine(TurnOnCollision(collision.gameObject.GetComponent<Collider>(), gameObject.GetComponent<Collider>()));
+                collision.gameObject.transform.parent = transform;
             }
         }
     }
@@ -45,11 +43,5 @@ public class MovingPlatforms : MonoBehaviour
         {
             collision.gameObject.transform.parent = null;
         }
-    }
-
-    IEnumerator TurnOnCollision(Collider collider1, Collider collider2)
-    {
-        yield return new WaitForSeconds(hitFromBelowDelay);
-        Physics.IgnoreCollision(collider1, collider2, false);
     }
 }
