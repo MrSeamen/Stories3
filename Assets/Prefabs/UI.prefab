@@ -609,6 +609,7 @@ GameObject:
   - component: {fileID: 354088958818751491}
   - component: {fileID: 791948059117485340}
   - component: {fileID: 2373458465948940654}
+  - component: {fileID: 8927830278883474255}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -736,6 +737,19 @@ MonoBehaviour:
   musicslider: {fileID: 1985352874026165871}
   sfxslider: {fileID: 912209968271999381}
   click: {fileID: 0}
+--- !u!114 &8927830278883474255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354088958818751488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a936d2a11665442852e5750a2059b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimap: {fileID: 4337488261219884667}
 --- !u!1 &354088959240272017
 GameObject:
   m_ObjectHideFlags: 0
