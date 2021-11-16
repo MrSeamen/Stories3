@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae232d6763785e4fa82e392d2b4ba6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 10
+  delay: 2.5
   nextScene: Level 1
 --- !u!4 &1498211958
 Transform:

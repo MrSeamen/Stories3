@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadAfterTime : MonoBehaviour
 {
-    [SerializeField] private float delay = 10f;
+    [SerializeField] private float delay = 2f;
     [SerializeField] private string nextScene;
     private float timeElapsed;
 
