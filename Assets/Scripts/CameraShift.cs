@@ -75,6 +75,34 @@ public class CameraShift : MonoBehaviour
         }
     }
 
+    public void ForcedShift()
+    {
+        if (GameObject.Find("Player").GetComponent<Move>().OnGround() && !GameObject.Find("Player").GetComponent<Move>().getLock())
+        {
+            orthoOn = !orthoOn;
+            scroller = !scroller;
+            if (orthoOn)
+            {
+                liftedVC.Priority = 0;
+                scrollingVC.Priority = 1;
+                blender.BlendToMatrix(ortho, 1f);
+
+                audioSource.clip = shift2;
+                audioSource.Play();
+            }
+            else
+            {
+                GameObject.Find("Player").GetComponent<Move>().StopMovement();
+                liftedVC.Priority = 1;
+                scrollingVC.Priority = 0;
+                blender.BlendToMatrix(perspective, 1f);
+
+                audioSource.clip = shift1;
+                audioSource.Play();
+            }
+        }
+    }
+
     public static bool getScroller()
     {
         return scroller;

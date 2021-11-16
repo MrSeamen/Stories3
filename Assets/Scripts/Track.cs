@@ -21,7 +21,14 @@ public class Track : MonoBehaviour
     {
         foreach (SpriteRenderer r in children.Keys)
         {
-            r.color = shadeColor;
+            try
+            {
+                r.color = shadeColor;
+            }
+            catch
+            {
+
+            }
         }
     }
 
@@ -29,10 +36,17 @@ public class Track : MonoBehaviour
     {
         foreach (SpriteRenderer r in children.Keys)
         {
-            Color originalColor;
-            if (children.TryGetValue(r, out originalColor))
+            try
             {
-                r.color = originalColor;
+                Color originalColor;
+                if (children.TryGetValue(r, out originalColor))
+                {
+                    r.color = originalColor;
+                }
+            }
+            catch
+            {
+
             }
         }
     }
