@@ -213,6 +213,19 @@ public class Move : MonoBehaviour
         }
     }
 
+    public void ForcedCameraShift(InputAction.CallbackContext context)
+    {
+        Vector2 _inputVector = context.ReadValue<Vector2>();
+        if(CameraShift.getScroller() && _inputVector.y != 0)
+        {
+            GameObject.Find("Main Camera").GetComponent<CameraShift>().ForcedShift();
+        } 
+        else if(!CameraShift.getScroller() && _inputVector.x != 0)
+        {
+            GameObject.Find("Main Camera").GetComponent<CameraShift>().ForcedShift();
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.contacts.Length > 0)
