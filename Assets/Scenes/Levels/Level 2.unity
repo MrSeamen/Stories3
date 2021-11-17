@@ -8511,8 +8511,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 45207ca36538d7347823fedf119800c8, type: 3}
     - {fileID: 8300000, guid: 1dd4aada4ebcde14aac3affaab9e1338, type: 3}
     dialogueEvents:
-    - sentence: "Ciao there little one, thanks for bringing my boy home. I don\u2019t
-        have a reward for you, but I'm glad he's home."
+    - sentence: Ciao there little one, thanks for bringing my boy home.
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - sentence: As a token of my appreciation, I will pass on a Wolf-Be-Gone from
+        my possession to yours.
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -9248,7 +9252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.079851
+      value: 8.26
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9256,19 +9260,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9819564
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.18910751
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.000000008447955
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421184, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0000000016269276
       objectReference: {fileID: 0}
     - target: {fileID: 2979244711584421186, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: fade
@@ -11168,6 +11172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3dff91d0845be444b2b98ca044b248d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousScene: Level 1
 --- !u!4 &1442842557
 Transform:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class TransitionDoor : MonoBehaviour
 
     public void Show()
     {
+        gameObject.SetActive(true);
         color = Color.white;
         color.a = 0;
         StartCoroutine(SpawnDoor());
@@ -82,10 +83,15 @@ public class TransitionDoor : MonoBehaviour
     {
         if (trigger && gameObject.CompareTag("Door1"))
         {
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
             fadeOut.Trigger("Level 2");
         } else if (trigger && gameObject.CompareTag("Door2"))
         {
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 2";
             fadeOut.Trigger("Level 1");
+        } else if (trigger)
+        {
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "";
         }
     }
 
