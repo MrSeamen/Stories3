@@ -106,7 +106,9 @@ public class TrackTransition : MonoBehaviour
         bool goingBack = false;
         while (t < endTVal)
         {
-            if(continouslyTrackBlocks && CheckBlocked(z, isAwayFromCamera, distanceModifier))
+            currentPos.y = transform.position.y;
+            targetPos.y = transform.position.y;
+            if (continouslyTrackBlocks && CheckBlocked(z, isAwayFromCamera, distanceModifier))
             {
                 goingBack = !goingBack;
             }

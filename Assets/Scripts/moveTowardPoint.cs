@@ -37,7 +37,6 @@ public class moveTowardPoint : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && collision.contacts.Length > 0)
         {
             collision.gameObject.transform.parent = transform;
-            GameObject.Find("TrackManager").GetComponent<TrackTransition>().Disable(true);
         }
     }
 
@@ -46,7 +45,6 @@ public class moveTowardPoint : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.transform.parent = null;
-            GameObject.Find("TrackManager").GetComponent<TrackTransition>().Disable(false);
         }
     }
 }

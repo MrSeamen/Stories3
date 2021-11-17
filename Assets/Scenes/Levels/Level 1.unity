@@ -39583,7 +39583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentence
@@ -39602,21 +39602,24 @@ PrefabInstance:
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[3].sentence
       value: "You\u2019ve been trapped in this cube full of previous apprentices
-        who have all been turned to animal characters and now are forced to reenact
-        stories until the end of time!"
+        who have all been turned to animal characters..."
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[4].sentence
+      value: ... and now are forced to reenact stories until the end of time!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentence
       value: "But spending eternity here isn\u2019t all that bad! Prepare thine eyes
         and gaze upon this trick!"
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
-      propertyPath: dialogue.dialogueEvents.Array.data[5].sentence
+      propertyPath: dialogue.dialogueEvents.Array.data[6].sentence
       value: "Press Q to change perspective. Thou can\u2019t move left or right,
         but thou can move between three planes forward and backwards."
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
-      propertyPath: dialogue.dialogueEvents.Array.data[6].sentence
+      propertyPath: dialogue.dialogueEvents.Array.data[7].sentence
       value: You should speek to Grandma off to the east if you want to find out
         more.
       objectReference: {fileID: 0}
@@ -40992,11 +40995,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0000003472278
+      value: -0.00000038003117
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000110093744
+      value: -0.00000012049453
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249947, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_Follow

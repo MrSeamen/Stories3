@@ -793,6 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709ba711e8cad6e43b2bfc4dbb5609fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 1
   fade: {fileID: 2833702950287350682}
   cam: {fileID: 0}
 --- !u!114 &264098469
@@ -5261,7 +5262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -160, y: -30}
+  m_AnchoredPosition: {x: -180, y: -60}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025580491
