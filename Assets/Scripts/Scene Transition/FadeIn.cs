@@ -17,12 +17,15 @@ public class FadeIn : MonoBehaviour
     {
         color = Color.black;
         color.a = 1.0f;
-        fade.GetComponent<Renderer>().material.color = color;
+        fade.GetComponent<SpriteRenderer>().color = color;
         fade.SetActive(true);
 
         correctZoom = 10;
         zoom = correctZoom + 10;
-        cam.m_Lens.OrthographicSize = zoom; 
+        if(cam)
+        {
+            cam.m_Lens.OrthographicSize = zoom;
+        }
     }
 
     // Update is called once per frame
@@ -31,10 +34,10 @@ public class FadeIn : MonoBehaviour
         if(color.a > 0)
         {
             color.a -= Time.deltaTime;
-            fade.GetComponent<Renderer>().material.color = color;
+            fade.GetComponent<SpriteRenderer>().color = color;
         }
         
-        if(true)
+        if(cam)
         {
             zoom -= 0.15f;
             zoom = Mathf.Clamp(zoom, correctZoom, zoom);

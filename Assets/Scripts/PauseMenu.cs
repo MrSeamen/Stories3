@@ -13,6 +13,12 @@ public class PauseMenu : MonoBehaviour
         active = false;
     }
 
+    public void ReloadScene()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void LoadMenu(){
         SceneManager.LoadScene("TitleScreen");
     }
@@ -29,7 +35,13 @@ public class PauseMenu : MonoBehaviour
     {
         active = !active;
         menu.SetActive(active);
-        GameObject.Find("Player").GetComponent<Move>().LockMovement(active);
+        try
+        {
+            GameObject.Find("Player").GetComponent<Move>().LockMovement(active);
+        } catch
+        {
+
+        }
     }
 
 }

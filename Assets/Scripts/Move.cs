@@ -27,6 +27,7 @@ public class Move : MonoBehaviour
     public AudioClip jumping;
     public AudioClip landing;
     public float fallingThreshold;
+    public bool startFalling;
     //private Coroutine fallTimerInstance;
 
     private bool onRock;
@@ -39,6 +40,10 @@ public class Move : MonoBehaviour
         movementLocked = false;
         TogglePinocchio(false);
         onRock = false;
+        if(startFalling)
+        {
+            animator.SetBool("IsFalling", true);
+        }
     }
 
     void Update()
