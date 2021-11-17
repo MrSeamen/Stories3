@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractTrigger : MonoBehaviour
 {
@@ -9,14 +10,26 @@ public class InteractTrigger : MonoBehaviour
     public GameObject FloatingTextPrefab;
     public Vector3 offsetPos;
     public Vector3 scale;
+    public string lockedMessage = "Locked";
     private GameObject FloatingTextInstance;
 
     public void ShowFloatingText()
     {
         Debug.Log("Show Pick Up Text");
         Vector3 pos = offsetPos + transform.position;
-        FloatingTextInstance = Instantiate(FloatingTextPrefab, new Vector3(pos.x, pos.y, pos.z), Quaternion.identity, transform);
+        FloatingTextInstance = Instantiate(FloatingTextPrefab, transform);
+        FloatingTextInstance.transform.localPosition = offsetPos;
         FloatingTextInstance.transform.localScale = scale;
+        try
+        {
+            if (!GetComponent<TransitionDoor>().IsUnlocked())
+            {
+                FloatingTextInstance.GetComponentInChildren<Text>().text = lockedMessage;
+            }
+        } catch
+        {
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)
