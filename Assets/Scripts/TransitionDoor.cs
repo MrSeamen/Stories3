@@ -7,28 +7,44 @@ using Cinemachine;
 
 public class TransitionDoor : MonoBehaviour
 {
+    [SerializeField] private float spawnTime = 1.0f;
+    [SerializeField] private Key.KeyType keyType;
+    [SerializeField] private bool unlocked = false;
+    public FadeOut fadeOut;
     private bool trigger = false;
-
-    private GameObject fade;
     private Color color;
-    private bool fadeActivate = false;
 
-    void Start()
+    public void Show()
     {
-        color = Color.black;
-        color.a = 0.0f;
-        fade = GameObject.Find("/UI/Fade");
-        fade.GetComponent<Renderer>().material.color = color;
-        fade.SetActive(true);
+        gameObject.SetActive(true);
+        color = Color.white;
+        color.a = 0;
+        StartCoroutine(SpawnDoor());
     }
 
-    void Update()
+    IEnumerator SpawnDoor()
     {
-        if (fadeActivate)
+        while (color.a < 1)
         {
-            color.a += Time.deltaTime * 3;
-            fade.GetComponent<Renderer>().material.color = color;
+            color.a += Time.deltaTime / spawnTime;
+            gameObject.GetComponent<SpriteRenderer>().color = color;
+            yield return new WaitForEndOfFrame();
         }
+    }
+
+    public Key.KeyType GetKeyType()
+    {
+        return keyType;
+    }
+
+    public void SetLock(bool shouldLock)
+    {
+        unlocked = !shouldLock;
+    }
+
+    public bool IsUnlocked()
+    {
+        return unlocked;
     }
 
     private void OnTriggerStay(Collider collider)
@@ -49,21 +65,33 @@ public class TransitionDoor : MonoBehaviour
 
     public void UseDoor(InputAction.CallbackContext context)
     {
-        StartCoroutine(Transition());
+        if (context.performed)
+        {
+            UseDoor();
+        }
     }
 
-    public IEnumerator Transition()
+    public void UseDoor()
+    {
+        if (unlocked)
+        {
+            Transition();
+        }
+    }
+
+    private void Transition()
     {
         if (trigger && gameObject.CompareTag("Door1"))
         {
-            fadeActivate = true;
-            yield return new WaitForSeconds(0.5f);
-            SceneManager.LoadScene("Level 2");
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
+            fadeOut.Trigger("Level 2");
         } else if (trigger && gameObject.CompareTag("Door2"))
         {
-            fadeActivate = true;
-            yield return new WaitForSeconds(0.5f);
-            SceneManager.LoadScene("Level 1");
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 2";
+            fadeOut.Trigger("Level 1");
+        } else if (trigger)
+        {
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "";
         }
     }
 

@@ -41,6 +41,7 @@ public class InventoryTrigger : MonoBehaviour
         }
 
         KeyDoor keyDoor = other.GetComponent<KeyDoor>();
+        TransitionDoor transitionDoor = other.GetComponent<TransitionDoor>();
         FragmentDoor fragDoor = other.GetComponent<FragmentDoor>();
 
         if (keyDoor != null)
@@ -52,6 +53,17 @@ public class InventoryTrigger : MonoBehaviour
                 keyDoor.OpenDoor();
             }
         }
+
+        if (transitionDoor != null)
+        {
+            if (keyHolder.ContainsKey(transitionDoor.GetKeyType()))
+            {
+                // Currently holding key to open this door
+                keyHolder.RemoveKey(transitionDoor.GetKeyType());
+                transitionDoor.SetLock(false);
+            }
+        }
+
         if (fragDoor != null)
         {
             if (keyHolder.ContainsKey(fragDoor.GetKeyType1()) && keyHolder.ContainsKey(fragDoor.GetKeyType2()) && keyHolder.ContainsKey(fragDoor.GetKeyType3()))

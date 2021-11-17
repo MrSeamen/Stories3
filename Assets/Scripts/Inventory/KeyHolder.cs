@@ -7,6 +7,7 @@ public class KeyHolder : MonoBehaviour
 {
     private Dictionary<Key.KeyType, Sprite> keyList;
     private InventoryDialog inventoryDialog;
+    public string previousScene;
 
     private void Awake()
     {
