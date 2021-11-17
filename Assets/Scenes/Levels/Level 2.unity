@@ -758,19 +758,7 @@ MonoBehaviour:
         you say around him.
       sentenceEvent:
         m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 271411238}
-            m_TargetAssemblyTypeName: SetPinocchio, Assembly-CSharp
-            m_MethodName: SetAnim
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 1
-            m_CallState: 2
+          m_Calls: []
     - sentence: "Please take him home before he causes a world ending disaster, I\u2019ve
         grown quite fond of existence here in this cube."
       sentenceEvent:
@@ -787,6 +775,18 @@ MonoBehaviour:
               m_FloatArgument: 0
               m_StringArgument: 
               m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 271411238}
+            m_TargetAssemblyTypeName: SetPinocchio, Assembly-CSharp
+            m_MethodName: SetAnim
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
             m_CallState: 2
   triggered: 0
 --- !u!135 &108828556
@@ -3350,8 +3350,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3a1b1b72e885d8342bfe6d132b57c505, type: 3}
     dialogueEvents:
     - sentence: "Hello friend! I hear you\u2019re looking for some of those weird
-        paper pieces with strange writing. I\u2019ve got one at my house on the left,
-        I\u2019ll trade it to you."
+        paper pieces with strange writing."
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - sentence: "I\u2019ve got one at my house on the left, I\u2019ll trade it to
+        you."
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -17707,6 +17711,7 @@ Transform:
   - {fileID: 1074943184}
   - {fileID: 615750986}
   - {fileID: 1383650562}
+  - {fileID: 1646140519}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18332,7 +18337,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3a1b1b72e885d8342bfe6d132b57c505, type: 3}
     dialogueEvents:
     - sentence: "We\u2019re home! It\u2019s locked. And this is the one door I need
-        a key to open. I have a spare further to the left if you keep walking that
+        a key to open. I have a spare further to the left if you keep walking this
         way.\r"
       sentenceEvent:
         m_PersistentCalls:
@@ -18448,6 +18453,104 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!1 &1646140518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1646140519}
+  - component: {fileID: 1646140522}
+  - component: {fileID: 1646140521}
+  - component: {fileID: 1646140520}
+  m_Layer: 0
+  m_Name: Tree Dialogue Player (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1646140519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646140518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.95, y: 0.82, z: 0}
+  m_LocalScale: {x: 2.0750837, y: 2.0750837, z: 2.0750837}
+  m_Children: []
+  m_Father: {fileID: 1586218922}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1646140520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646140518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c27d7e36195d740a94b623f7b3c6e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1646140521}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1646140521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646140518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    headImg: {fileID: 8264568858548796570, guid: 9b97f7fbb9b32e249b8363a5330980f8, type: 3}
+    name: Player
+    audio:
+    - {fileID: 8300000, guid: 8802fccdcc332244e90f402c595d58b5, type: 3}
+    - {fileID: 8300000, guid: 05e3377372fcde34292b2bf50161ae4d, type: 3}
+    dialogueEvents:
+    - sentence: What are we going to do about this tree?
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
+  triggered: 0
+--- !u!136 &1646140522
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646140518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1653078843
 GameObject:
   m_ObjectHideFlags: 0

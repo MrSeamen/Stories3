@@ -11437,7 +11437,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 13496e2bbab806348858577bf6cc812f, type: 3}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentence
@@ -11446,6 +11446,16 @@ PrefabInstance:
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[1].sentence
       value: Oh? You brought me a gift?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[2].sentence
+      value: An IOU? Why, this should allow me to get something useful and deter
+        that pesky wolf!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentence
+      value: "As promised dear, here\u2019s the Spell Fragment. I do hope you\u2019ll
+        come back and help this old lady out from time to time."
       objectReference: {fileID: 0}
     - target: {fileID: 8772036227401066648, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.name
@@ -15652,8 +15662,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
     - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     dialogueEvents:
-    - sentence: "Look at you go! You\u2019re wondering why I was stuck in that tree?
-        Hold on, there was something I wanted to tell you about first. What was it\u2026?"
+    - sentence: Hastily, the young one ventures!
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - sentence: "Thou'st wondering why I haveth been trapped in that tree? First,
+        an important detail I must bestow upon thou. What was it\u2026?"
       sentenceEvent:
         m_PersistentCalls:
           m_Calls:
@@ -39569,12 +39583,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentence
-      value: "Thank you! That\u2019s much better. It seems you're new here, allow
-        myself, Goondalf the Morally Grey, to explain your situation."
+      value: Many thanks, one cloaketh in red. It seemseth you're new here, allow
+        myself, Goondalf the Morally Grey, to explaineth your situation.
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[1].sentence
@@ -39583,21 +39597,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[2].sentence
-      value: Who have all been turned to animal characters and now are forced to
-        reenact stories until the end of time!
+      value: Bamboozled, hath thou been!
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[3].sentence
-      value: "But spending eternity here isn\u2019t all that bad! Let me show you
-        a fun trick I found..."
+      value: "You\u2019ve been trapped in this cube full of previous apprentices
+        who have all been turned to animal characters and now are forced to reenact
+        stories until the end of time!"
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[4].sentence
-      value: "Press Q to change perspective. In this mode, you can\u2019t move left
-        or right, but you can move between three planes forward and backwards."
+      value: "But spending eternity here isn\u2019t all that bad! Prepare thine eyes
+        and gaze upon this trick!"
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[5].sentence
+      value: "Press Q to change perspective. Thou can\u2019t move left or right,
+        but thou can move between three planes forward and backwards."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[6].sentence
       value: You should speek to Grandma off to the east if you want to find out
         more.
       objectReference: {fileID: 0}
@@ -39725,12 +39744,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentence
-      value: "\u201CHey there Little Red! I have made a miscalculation, can you climb
-        the tree? I don\u2019t know how much more my feet can take!\u201D"
+      value: Alas, Little Red hath made an appearance! I hath madeth a miscalculation,
+        would thou climb the tree?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentence
+      value: "I don\u2019t know how much more my feet can take!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1820554667, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
@@ -40957,11 +40992,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000038003117
+      value: -0.0000003472278
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000012049453
+      value: -0.000000110093744
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249947, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_Follow
@@ -58924,7 +58959,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 13496e2bbab806348858577bf6cc812f, type: 3}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentence
@@ -58932,16 +58967,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[1].sentence
-      value: "You\u2019re looking for a spell fragment? I have something of the sort,
-        but would you be so kind as to help me deal with the wolf first?"
+      value: It appears a spell fragment is on your head
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[2].sentence
-      value: "Here\u2019s the key to the door out back. Come back with something
-        to help, and it\u2019s yours."
+      value: It may be yours, to escape this dread
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentence
+      value: First provide me with tools to pronounce that wolf dead!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentence
+      value: Before you leave, take this key,
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentence
+      value: Take a peek through the door and tell me what you see!
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[2].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
@@ -58949,7 +59006,39 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[2].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134298560}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134298560}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2134298560}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2134298560}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
@@ -58957,7 +59046,39 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[2].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Show
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Show
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Show
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Show
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
@@ -58965,7 +59086,39 @@ PrefabInstance:
       value: TransitionDoor, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TransitionDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TransitionDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[2].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5884100326112958039, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8772036227401066648, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
@@ -58986,12 +59139,15 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 13496e2bbab806348858577bf6cc812f, type: 3}
     - target: {fileID: 8772036227401066648, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772036227401066648, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentence
-      value: The Spell is all yours if you can take care of the wolf. Head for the
-        door when you are ready! Stop by for pie anytime!
+      value: 'The Spell is all yours if you can take care of the wolf. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8772036227401066648, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentence
+      value: Head for the door when you are ready! Stop by for pie anytime!
       objectReference: {fileID: 0}
     - target: {fileID: 8924343711196451255, guid: 7d8ab12ec49c3a74fa1d6e516f1e0fb0, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -61856,9 +62012,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
     - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     dialogueEvents:
-    - sentence: I remembered! I climbed the tree because I was running away from
-        the wolf. I was supposed to tell you not to go too far into the forest because
-        of the wolf!
+    - sentence: I remembered! In these woods lurks a vicious beast, who hath been
+        hunting the people.
       sentenceEvent:
         m_PersistentCalls:
           m_Calls:
@@ -72854,6 +73009,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 867177618, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 867177620, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_SortingOrder
       value: 1001
@@ -76096,9 +76255,12 @@ MonoBehaviour:
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
-    - sentence: "You can try to get a spell fragment out of her, but until she gets
-        out of the cube, she\u2019ll remain convinced she\u2019s a fluffy storybook
-        character like all the others."
+    - sentence: Thou can try to get a spell fragment out of her...
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - sentence: "... but until she gets out of the cube, she\u2019ll remain convinced
+        she\u2019s a fluffy storybook character like all the others."
       sentenceEvent:
         m_PersistentCalls:
           m_Calls:
@@ -78824,8 +78986,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
     - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     dialogueEvents:
-    - sentence: "There\u2019s no reason to try and hurry off and escape, you\u2019d
-        have to get all 6 spell fragments."
+    - sentence: "If thou must proceed on thou\u2019s journey, know it is a challenge.
+        One must haveth 6 spell fragments to escape"
       sentenceEvent:
         m_PersistentCalls:
           m_Calls:

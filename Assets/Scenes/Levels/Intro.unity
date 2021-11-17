@@ -323,13 +323,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    headImg: {fileID: 21300000, guid: b69aad59e7c76e64cb5c10c50d04f611, type: 3}
-    name: Goondalf
+    headImg: {fileID: 711673257991724939, guid: 9b97f7fbb9b32e249b8363a5330980f8, type: 3}
+    name: ...
     audio:
-    - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
-    - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
+    - {fileID: 8300000, guid: 8802fccdcc332244e90f402c595d58b5, type: 3}
+    - {fileID: 8300000, guid: 05e3377372fcde34292b2bf50161ae4d, type: 3}
     dialogueEvents:
-    - sentence: Placeholder
+    - sentence: Once upon a time, there was a young apprentice given a cube by his
+        mentor wizard...
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - sentence: But before he could understand what it was, it sucked him in!
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - sentence: This is the story how he escaped...
       sentenceEvent:
         m_PersistentCalls:
           m_Calls:
