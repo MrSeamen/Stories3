@@ -8,6 +8,7 @@ public class moveTowardPoint : MonoBehaviour
     public Vector3 destination = new Vector3(0f, 3f, 0f);
     private Vector3 currentPosition;
     private bool activate = false;
+    public AudioSource audio;
 
     public void moveTowards()
     {
@@ -21,8 +22,13 @@ public class moveTowardPoint : MonoBehaviour
         if (activate)
         {
             float step = speed * Time.deltaTime;
+            audio.Play();
             //transform.position = Vector3.Lerp(currentPosition, destination, Time.deltaTime*speed);
             transform.position = Vector3.MoveTowards(transform.position, destination, step);
+        }
+        if(transform.position == destination)
+        {
+            audio.Stop();
         }
     }
 

@@ -5,6 +5,8 @@ using UnityEngine;
 public class GoondalfEvents : MonoBehaviour
 {
     public GameObject goondalf;
+    public Color shadeColor;
+
     private float time;
     private float time2;
     private float time3;
@@ -13,7 +15,10 @@ public class GoondalfEvents : MonoBehaviour
     private bool e2 = false;
     private bool e3 = false;
     private bool e4 = false;
-    public Color shadeColor;
+    private bool e1done = false;
+    private bool e2done = false;
+    private bool e3done = false;
+    private bool e4done = false;
 
     void Start()
     {
@@ -23,11 +28,12 @@ public class GoondalfEvents : MonoBehaviour
     void Update()
     {
         //Event 1
-        if(e1 && time > 0)
+        if (e1 && time > 0)
         {
             goondalf.transform.position += new Vector3(0f, Time.deltaTime * 1.0f, 0f);
             time -= Time.deltaTime;
-        } else if (!e1 && time > 0)
+        }
+        else if (!e1 && time > 0)
         {
             goondalf.transform.position -= new Vector3(0f, Time.deltaTime * 1.0f, 0f);
             time -= Time.deltaTime;
@@ -83,7 +89,9 @@ public class GoondalfEvents : MonoBehaviour
         {
             e1 = false;
             time = 1.0f;
-        } else
+            e1done = true;
+        }
+        else if (!e1done)
         {
             goondalf.SetActive(true);
             e1 = true;
@@ -101,8 +109,9 @@ public class GoondalfEvents : MonoBehaviour
         {
             e2 = false;
             time2 = 1.0f;
+            e2done = true;
         }
-        else
+        else if (!e2done)
         {
             goondalf.SetActive(true);
             e2 = true;
@@ -120,8 +129,9 @@ public class GoondalfEvents : MonoBehaviour
         {
             e3 = false;
             time3 = 1.0f;
+            e3done = true;
         }
-        else
+        else if (!e3done)
         {
             goondalf.SetActive(true);
             e3 = true;
@@ -139,8 +149,9 @@ public class GoondalfEvents : MonoBehaviour
         {
             e4 = false;
             time4 = 1.0f;
+            e4done = true;
         }
-        else
+        else if (!e4done)
         {
             goondalf.SetActive(true);
             e4 = true;

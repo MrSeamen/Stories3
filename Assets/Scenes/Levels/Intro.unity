@@ -1226,7 +1226,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1832533034, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
 --- !u!82 &1978738443 stripped
 AudioSource:

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3772,6 +3772,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6239743591034572231, guid: 23df4c289256ceb4296909e418e6b0dc, type: 3}
   m_PrefabInstance: {fileID: 244924253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &248377150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248377151}
+  - component: {fileID: 248377152}
+  - component: {fileID: 248377153}
+  m_Layer: 0
+  m_Name: Forest Audio Activator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &248377151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248377150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.48, y: 0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1810077287}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &248377152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248377150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.4301205, z: 6.5868664}
+  m_Center: {x: 0, y: 0.91077656, z: -0.018628597}
+--- !u!114 &248377153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248377150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2bb332e09095d45b3c5646c1c13a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 596521512}
 --- !u!1001 &248762838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15530,7 +15588,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584850439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.1, y: 0.52, z: 0}
+  m_LocalPosition: {x: -25.97, y: 0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1650308061}
@@ -15765,6 +15823,133 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3048902844929037566, guid: 587f9976cdc183449971b9862694a3aa, type: 3}
   m_PrefabInstance: {fileID: 591680901}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &596521510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596521511}
+  - component: {fileID: 596521512}
+  m_Layer: 0
+  m_Name: Forest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596521511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596521510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1692465093}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &596521512
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596521510}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -5839217065963593899, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9e6421612e23d3c4181e9061acb25d81, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &596570910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16355,6 +16540,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1387226280069211978, guid: fed5df10825186c44b35a10d00232b49, type: 3}
   m_PrefabInstance: {fileID: 433041112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &637055105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 637055106}
+  - component: {fileID: 637055108}
+  - component: {fileID: 637055107}
+  m_Layer: 0
+  m_Name: Forest Audio Deactivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &637055106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637055105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 84.4, y: 0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1810077287}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &637055107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637055105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdb457bf870a0249a2420de0720e9b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 596521512}
+--- !u!65 &637055108
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637055105}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.4301205, z: 6.5868664}
+  m_Center: {x: 0, y: 0.91077656, z: -0.018628597}
 --- !u!1001 &641818159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20355,7 +20598,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -34305,7 +34548,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -39325,7 +39568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentence
@@ -39335,21 +39578,25 @@ PrefabInstance:
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[1].sentence
       value: "Your mentor has tricked you. You\u2019ve been trapped in this cube
-        full of previous apprentices who have all been turned to animal characters
-        and now are forced to reenact stories until the end of time!"
+        full of previous apprentices..."
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[2].sentence
+      value: Who have all been turned to animal characters and now are forced to
+        reenact stories until the end of time!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[3].sentence
       value: "But spending eternity here isn\u2019t all that bad! Let me show you
         a fun trick I found..."
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
-      propertyPath: dialogue.dialogueEvents.Array.data[3].sentence
+      propertyPath: dialogue.dialogueEvents.Array.data[4].sentence
       value: "Press Q to change perspective. In this mode, you can\u2019t move left
         or right, but you can move between three planes forward and backwards."
       objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
-      propertyPath: dialogue.dialogueEvents.Array.data[4].sentence
+      propertyPath: dialogue.dialogueEvents.Array.data[5].sentence
       value: You should speek to Grandma off to the east if you want to find out
         more.
       objectReference: {fileID: 0}
@@ -39401,7 +39648,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2031634072, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: m_Radius
-      value: 1.01
+      value: 2.4807174
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031634072, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: m_Center.x
+      value: -0.65832067
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031634072, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: m_Center.y
+      value: 0.812397
       objectReference: {fileID: 0}
     - target: {fileID: 5641278884044705236, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: OnTrigger.m_PersistentCalls.m_Calls.Array.size
@@ -42898,7 +43153,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -47873,7 +48128,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -59938,7 +60193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514961374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.34915, y: 0.7162123, z: 0}
+  m_LocalPosition: {x: 37.487, y: -0.204, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1797697131}
@@ -63832,6 +64087,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5145439474066410729, guid: cc50bc4833d29c640ad976038dd548a2, type: 3}
   m_PrefabInstance: {fileID: 1684049810}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1692465092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1692465093}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1692465093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692465092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -45.6025, y: 13.84718, z: -104.84514}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1875432241}
+  - {fileID: 596521511}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1698757829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72123,6 +72410,8 @@ Transform:
   - {fileID: 1255903384}
   - {fileID: 671545585}
   - {fileID: 1054608610}
+  - {fileID: 248377151}
+  - {fileID: 637055106}
   m_Father: {fileID: 405523328}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -72617,6 +72906,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 627571419503736328, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 627571420467642402, guid: 9a250df9bc2d115468b84cd69557947b, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -73987,6 +74280,133 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2127703224128194904, guid: d5f21554fc85233419bad189c3da00ea, type: 3}
   m_PrefabInstance: {fileID: 1874907240}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1875432240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875432241}
+  - component: {fileID: 1875432242}
+  m_Layer: 0
+  m_Name: Click
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1875432241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875432240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1692465093}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1875432242
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875432240}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -5839217065963593899, guid: 701b7055a362f954c9972c33d8dcdaa9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5e7be59be9706134aab126d2a37940f9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1884278173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75676,9 +76096,13 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 3c5c76151dd849f4bbe3762452432149, type: 3}
     - {fileID: 8300000, guid: 0e48e85d77b7c894e92f5481e2f0ea1b, type: 3}
     dialogueEvents:
-    - sentence: "You\u2019re almost to Grandma\u2019s house. You can try to get a
-        spell fragment out of her, but until she gets out of the cube, she\u2019ll
-        remain convinced she\u2019s a fluffy storybook character like all the others."
+    - sentence: "You\u2019re almost to Grandma\u2019s house!"
+      sentenceEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - sentence: "You can try to get a spell fragment out of her, but until she gets
+        out of the cube, she\u2019ll remain convinced she\u2019s a fluffy storybook
+        character like all the others."
       sentenceEvent:
         m_PersistentCalls:
           m_Calls:
@@ -79454,7 +79878,7 @@ PrefabInstance:
     - target: {fileID: 2373458465948940654, guid: 266f2cddac8c58949b9e589edcc4f92a, type: 3}
       propertyPath: click
       value: 
-      objectReference: {fileID: 1832533033}
+      objectReference: {fileID: 1875432242}
     - target: {fileID: 2375993705846057961, guid: 266f2cddac8c58949b9e589edcc4f92a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.39994
