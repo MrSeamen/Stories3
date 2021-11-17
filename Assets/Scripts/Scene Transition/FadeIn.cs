@@ -5,6 +5,7 @@ using Cinemachine;
 
 public class FadeIn : MonoBehaviour
 {
+    [SerializeField] float time = 1.0f;
     [SerializeField] private GameObject fade;
     private Color color;
 
@@ -33,7 +34,7 @@ public class FadeIn : MonoBehaviour
     {
         if(color.a > 0)
         {
-            color.a -= Time.deltaTime;
+            color.a -= Time.deltaTime / time;
             fade.GetComponent<SpriteRenderer>().color = color;
         }
         
