@@ -8728,8 +8728,8 @@ MonoBehaviour:
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
-    - sentence: As a token of my appreciation, I will pass on a Wolf-Be-Gone from
-        my possession to yours.
+    - sentence: As a token of my appreciation, I will grant you one transferable
+        "I Owe You".
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
