@@ -15,7 +15,6 @@ public class InteractTrigger : MonoBehaviour
 
     public void ShowFloatingText()
     {
-        Debug.Log("Show Pick Up Text");
         Vector3 pos = offsetPos + transform.position;
         FloatingTextInstance = Instantiate(FloatingTextPrefab, transform);
         FloatingTextInstance.transform.localPosition = offsetPos;

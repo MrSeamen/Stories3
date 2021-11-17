@@ -17,6 +17,7 @@ public class DialogueUIPanel : MonoBehaviour
 
     private Coroutine runningRoutine;
     private AudioClip[] audioClips;
+    private string previousText = null;
 
     public void UpdateView(Sprite headImg, string name, AudioClip[] audioClipsIn)
     {
@@ -25,12 +26,33 @@ public class DialogueUIPanel : MonoBehaviour
         audioClips = audioClipsIn;
     }
 
+    public bool IsWritting()
+    {
+        return (previousText != null);
+    }
+
+    public void SkipWritting()
+    {
+        if (previousText != null)
+        {
+            if (runningRoutine != null)
+            {
+                StopCoroutine(runningRoutine);
+            }
+            textBox.text = previousText;
+            continueBox.gameObject.SetActive(true);
+
+            previousText = null;
+        }
+    }
+
     public void UpdateSentence(string text)
     {
         if (runningRoutine != null)
         {
             StopCoroutine(runningRoutine);
         }
+        previousText = text;
         continueBox.gameObject.SetActive(false);
         runningRoutine = StartCoroutine(TypeText(text));
     }
@@ -47,6 +69,7 @@ public class DialogueUIPanel : MonoBehaviour
             }
             yield return new WaitForSeconds(dialogSpeed);
         }
+        previousText = null;
         yield return new WaitForSeconds(continueDelay);
         continueBox.gameObject.SetActive(true);
     }

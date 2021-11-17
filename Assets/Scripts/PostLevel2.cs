@@ -8,6 +8,7 @@ public class PostLevel2 : MonoBehaviour
     public Move player;
     public GameObject fallenTree1;
     public GameObject fallenTree2;
+    public GameObject goondalf;
     // Start is called before the first frame update
     void Awake()
     {
@@ -17,6 +18,7 @@ public class PostLevel2 : MonoBehaviour
             player.gameObject.transform.position = newSpawn;
             fallenTree1.SetActive(false);
             fallenTree2.SetActive(true);
+            goondalf.SetActive(false);
         }
     }
 

@@ -68,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ReplayDialog",
+                    "type": "Button",
+                    "id": "905abe54-d398-4de0-8bfa-75d9db2a2e18",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -327,11 +335,33 @@
                 {
                     "name": "",
                     "id": "c7402608-f481-4595-a0f4-8b0274bed477",
-                    "path": "<XInputController>/select",
+                    "path": "<XInputController>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Map",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7609f99e-6521-46ea-860c-e18c2c8da104",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReplayDialog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "129dd332-0b43-48d0-989b-1df3dbc65248",
+                    "path": "<XInputController>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReplayDialog",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

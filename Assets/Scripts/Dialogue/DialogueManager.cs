@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private Queue<OnSentenceEvent> onSentenceEvents;
     private OnSentenceEvent nextEvent = null;
+    private Dialogue lastDialogueConfiguration = null;
 
     void Start()
     {
@@ -33,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        lastDialogueConfiguration = dialogue;
         dialogueUIPanel.UpdateView(dialogue.headImg, dialogue.name, dialogue.audio);
         animator.SetBool("IsOpen", true);
 
@@ -52,6 +54,12 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        if(dialogueUIPanel.IsWritting())
+        {
+            dialogueUIPanel.SkipWritting();
+            return;
+        }
+
         if (nextEvent != null)
         {
             nextEvent.Invoke();
@@ -74,6 +82,14 @@ public class DialogueManager : MonoBehaviour
         if (context.performed)
         {
             DisplayNextSentence();
+        }
+    }
+
+    public void RestartDialogue(InputAction.CallbackContext context)
+    {
+        if (context.performed && lastDialogueConfiguration != null)
+        {
+            StartDialogue(lastDialogueConfiguration);
         }
     }
 
