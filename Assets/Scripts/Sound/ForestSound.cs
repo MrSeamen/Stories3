@@ -17,7 +17,7 @@ public class ForestSound : MonoBehaviour
             }
             else
             {
-                StartCoroutine(StartFade(audio, 2.0f, 0.5f));
+                StartCoroutine(StartFade(audio, 2.0f, 0.6f));
                 MusicL1.SetForest(true);
             }
         }
@@ -34,5 +34,10 @@ public class ForestSound : MonoBehaviour
             yield return null;
         }
         yield break;
+    }
+
+    public void TurnOff()
+    {
+        StartCoroutine(StartFade(audio, 2.0f, 0.0f));
     }
 }
