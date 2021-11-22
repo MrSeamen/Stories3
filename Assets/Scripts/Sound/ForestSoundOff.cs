@@ -12,7 +12,7 @@ public class ForestSoundOff : MonoBehaviour
         {
             if (collider.gameObject.GetComponent<Move>().DirectionX() < 0)
             {
-                StartCoroutine(StartFade(audio, 2.0f, 0.5f));
+                StartCoroutine(StartFade(audio, 2.0f, 0.6f));
                 MusicL1.SetForest(true);
             }
             else

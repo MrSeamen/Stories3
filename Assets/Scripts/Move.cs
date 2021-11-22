@@ -325,4 +325,9 @@ public class Move : MonoBehaviour
         return onRock;
     }
 
+    public void WolfAttack()
+    {
+        transform.position = new Vector3(6.91f, 1f, 0f);
+    }
+
 }
