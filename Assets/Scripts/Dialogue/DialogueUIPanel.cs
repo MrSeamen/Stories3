@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DialogueUIPanel : MonoBehaviour
@@ -14,10 +15,17 @@ public class DialogueUIPanel : MonoBehaviour
     [SerializeField] AudioSource audioSource;
 
     public Animator animator;
+    public string continueTextBoxTemplate = "Press <BUTTON> to continue...";
 
     private Coroutine runningRoutine;
     private AudioClip[] audioClips;
     private string previousText = null;
+
+    void Start()
+    {
+        PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+        UpdateContinueText(playerInput);
+    }
 
     public void UpdateView(Sprite headImg, string name, AudioClip[] audioClipsIn)
     {
@@ -72,5 +80,20 @@ public class DialogueUIPanel : MonoBehaviour
         previousText = null;
         yield return new WaitForSeconds(continueDelay);
         continueBox.gameObject.SetActive(true);
+    }
+
+    public void UpdateContinueText(PlayerInput playerInput)
+    {
+        string scheme = playerInput.currentControlScheme;
+        switch(scheme)
+        {
+            case "Gamepad":
+                continueBox.text = continueTextBoxTemplate.Replace("<BUTTON>", "A");
+                break;
+            case "Keyboard&Mouse":
+            default:
+                continueBox.text = continueTextBoxTemplate.Replace("<BUTTON>", "space");
+                break;
+        }
     }
 }
