@@ -82,10 +82,20 @@ public class DialogueUIPanel : MonoBehaviour
         continueBox.gameObject.SetActive(true);
     }
 
+    private void Update()
+    {
+        PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+        if (playerInput.currentControlScheme != PlayerPrefs.GetString("currentSchema"))
+        {
+            UpdateContinueText(playerInput);
+        }
+    }
+
     public void UpdateContinueText(PlayerInput playerInput)
     {
         string scheme = playerInput.currentControlScheme;
-        switch(scheme)
+        PlayerPrefs.SetString("currentSchema", scheme);
+        switch (scheme)
         {
             case "Gamepad":
                 continueBox.text = continueTextBoxTemplate.Replace("<BUTTON>", "A");

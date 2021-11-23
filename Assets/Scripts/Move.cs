@@ -33,6 +33,15 @@ public class Move : MonoBehaviour
 
     private bool onRock;
 
+    private void Awake()
+    {
+        if(PlayerPrefs.HasKey("currentSchema"))
+        {
+            PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+            playerInput.SwitchCurrentControlScheme(PlayerPrefs.GetString("currentSchema"));
+        }    
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -49,7 +58,7 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        if((rb.velocity.y < fallingThreshold) && CameraShift.getScroller())
+        if ((rb.velocity.y < fallingThreshold) && CameraShift.getScroller())
         {
             isFalling = true;
             isGrounded = false;
