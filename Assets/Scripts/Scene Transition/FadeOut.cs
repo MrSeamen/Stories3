@@ -32,4 +32,34 @@ public class FadeOut : MonoBehaviour
         }
         SceneManager.LoadScene(nextScene);
     }
+
+    public void DeathFade()
+    {
+        StartCoroutine(DeathFadeOut());
+    }
+
+    IEnumerator DeathFadeOut()
+    {
+        fade.SetActive(true);
+        while (color.a < 1)
+        {
+            color.a += Time.deltaTime / (time/2);
+            fade.GetComponent<SpriteRenderer>().color = color;
+            yield return new WaitForEndOfFrame();
+        }
+        StartCoroutine(DeathFadeIn());
+    }
+
+    IEnumerator DeathFadeIn()
+    {
+        GameObject.Find("Player").GetComponent<Move>().WolfAttack();
+        yield return new WaitForSeconds(1.0f);
+        while (color.a > 0)
+        {
+            color.a -= Time.deltaTime / time;
+            fade.GetComponent<SpriteRenderer>().color = color;
+            yield return new WaitForEndOfFrame();
+        }
+        fade.SetActive(false);
+    }
 }
