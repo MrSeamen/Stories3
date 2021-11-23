@@ -20,6 +20,12 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void LoadMenu(){
+        KeyHolder[] objs = FindObjectsOfType<KeyHolder>();
+
+        foreach(KeyHolder holder in objs)
+        {
+            Destroy(holder.gameObject);
+        }
         SceneManager.LoadScene("TitleScreen");
     }
 

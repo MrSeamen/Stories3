@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,15 @@ public class Move : MonoBehaviour
 
     private bool onRock;
 
+    private void Awake()
+    {
+        if(PlayerPrefs.HasKey("currentSchema"))
+        {
+            PlayerInput playerInput = FindObjectOfType<PlayerInput>();
+            playerInput.SwitchCurrentControlScheme(PlayerPrefs.GetString("currentSchema"));
+        }    
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -48,7 +58,7 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        if((rb.velocity.y < fallingThreshold) && CameraShift.getScroller())
+        if ((rb.velocity.y < fallingThreshold) && CameraShift.getScroller())
         {
             isFalling = true;
             isGrounded = false;
@@ -207,11 +217,11 @@ public class Move : MonoBehaviour
             _direction = new Vector3(_inputVector.x, 0, 0);
             if (_direction != Vector3.zero || trackTransition.IsTransitioning())
             {
-                sprite.flipX = (_inputVector.x < 0);
+                sprite.flipX = _inputVector.x < 0;
             }
         } else
         {
-            if (context.performed && _inputVector.y != 0 && !movementLocked)
+            if (context.performed && Math.Abs(_inputVector.y) > 0.5 && !movementLocked)
             {
                 trackTransition.AttemptTransition(_inputVector.y > 0, animator, audioSource, walking);
             }
@@ -221,11 +231,11 @@ public class Move : MonoBehaviour
     public void ForcedCameraShift(InputAction.CallbackContext context)
     {
         Vector2 _inputVector = context.ReadValue<Vector2>();
-        if(CameraShift.getScroller() && _inputVector.y != 0)
+        if(CameraShift.getScroller() && Math.Abs(_inputVector.y) > 0.5)
         {
             GameObject.Find("Main Camera").GetComponent<CameraShift>().ForcedShift();
         } 
-        else if(!CameraShift.getScroller() && _inputVector.x != 0)
+        else if(!CameraShift.getScroller() && Math.Abs(_inputVector.x) > 0.5)
         {
             GameObject.Find("Main Camera").GetComponent<CameraShift>().ForcedShift();
         }

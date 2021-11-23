@@ -543,46 +543,6 @@ MonoBehaviour:
     m_ActionId: 73ab9bf1-e9e8-4823-aa42-c339a30ea68f
     m_ActionName: Player/Interact
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 879e3e5e-2f4e-4581-9732-666cf096c4ca
-    m_ActionName: UI/Navigate
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 438ed0d6-258c-4b38-be0b-4960a20b6688
-    m_ActionName: UI/Submit
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 214c7d67-f7f7-4023-bbaf-cb7841619aa0
-    m_ActionName: UI/Cancel
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 01b45e39-3c41-4d63-9569-bd6b42579b1d
-    m_ActionName: UI/Point
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3a993c03-c755-415f-bd5a-5876905414b0
-    m_ActionName: UI/Click
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8c0f0261-bfd8-4c24-95cc-40450cf20446
-    m_ActionName: UI/ScrollWheel
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e0a11fe5-c50f-4e1b-8d17-8f156b8fb8ee
-    m_ActionName: UI/MiddleClick
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6e585018-347a-47f1-8dbd-2fff2ff42945
-    m_ActionName: UI/RightClick
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3a473392-c4f6-4496-86e7-24039d95300f
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7453d351-53c0-4038-8974-59e2a3c4de5e
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CameraShift, Assembly-CSharp
@@ -610,26 +570,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 98cc3815-9a31-4855-a630-641f244e3807
     m_ActionName: Player/CamShift[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ef4e49b5-0c31-4113-82c1-e75fd2cda1c7
-    m_ActionName: SceneTransition/Rotate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 003190cf-32c5-464a-80fa-d790b987e871
-    m_ActionName: SceneTransition/Enter[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 891faa2a-5c5e-4e01-b93c-1e2452088a59
-    m_ActionName: SceneTransition/Select1[/Keyboard/a,/Keyboard/leftArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f3ec94d9-7a0d-42c1-ab77-2fc3b62767b2
-    m_ActionName: SceneTransition/Select2[/Keyboard/w,/Keyboard/upArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 80c5eb6f-31c9-4849-8199-4d224d907e83
-    m_ActionName: SceneTransition/Select3[/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
