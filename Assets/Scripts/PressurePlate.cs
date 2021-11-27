@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class PressurePlate : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PressurePlate : MonoBehaviour
     public bool pressed;
 
     public Transform door;
+    private GameObject doorObj;
     Vector3 door_pos;
     Vector3 door_start;
     Vector3 door_end;
@@ -20,9 +22,12 @@ public class PressurePlate : MonoBehaviour
     public AudioClip up;
 
     public AudioSource doorAudio;
+    private Light2D doorLight;
 
     void Start()
     {
+        doorLight = door.Find("Point Light 2D").GetComponent<Light2D>();
+        doorLight.enabled = true;
         this.starting_pos = transform.position;
         this.pos = starting_pos;
         this.ending_pos = starting_pos - new Vector3(0f, 0.06f, 0f);
@@ -35,6 +40,11 @@ public class PressurePlate : MonoBehaviour
 
     void Update()
     {
+        if (this.pressed == false)
+            doorLight.enabled = true;
+        else
+            doorLight.enabled = false;
+
         this.pos = transform.position;
         if ((this.pressed == false) && (this.pos.y < this.starting_pos.y))
         {
