@@ -963,11 +963,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 215
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -999,13 +999,17 @@ MonoBehaviour:
     Dialogue Skip
 
 
-    Level
-    Select
+    Replay
+    Dialogue
 
 
     Cursor
 
-'
+
+    Map
+
+
+    Menu Select'
 --- !u!222 &390034534
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2307,7 +2311,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2343,10 +2347,16 @@ MonoBehaviour:
     A
 
 
-    A
+    D-Pad Down
 
 
-    Right Stick'
+    Right Stick
+
+
+    Left Bumper
+
+
+    A'
 --- !u!222 &717982706
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3060,7 +3070,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3095,12 +3105,16 @@ MonoBehaviour:
     Space
 
 
-    Space
+    R
 
 
     Mouse
 
-'
+
+    M
+
+
+    Enter'
 --- !u!222 &896570771
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -780,6 +780,7 @@ GameObject:
   - component: {fileID: 354088959240272021}
   - component: {fileID: 354088959240272018}
   - component: {fileID: 544773324}
+  - component: {fileID: 7799197870189564154}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -886,6 +887,18 @@ MonoBehaviour:
   isClicked: 0
   distanceApart: 20
   spriteTemplate: {fileID: 775673285014522105, guid: cd93b7b42e62db04e9cebcae97587f0d, type: 3}
+--- !u!114 &7799197870189564154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354088959240272017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddcc4c3278ab1cd4e9c247ca964a2bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &354088959438363404
 GameObject:
   m_ObjectHideFlags: 0

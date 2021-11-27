@@ -338,7 +338,7 @@ MonoBehaviour:
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
-    - sentence: This is the story how he escaped...
+    - sentence: This is the story of how he escaped...
       sentenceEvent:
         m_PersistentCalls:
           m_Calls:
