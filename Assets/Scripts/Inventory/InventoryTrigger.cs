@@ -61,6 +61,7 @@ public class InventoryTrigger : MonoBehaviour
                 // Currently holding key to open this door
                 keyHolder.RemoveKey(transitionDoor.GetKeyType());
                 transitionDoor.SetLock(false);
+                transitionDoor.UnlockAudio();
             }
         }
 

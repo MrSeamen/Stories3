@@ -81,17 +81,17 @@ public class GoondalfEvents : MonoBehaviour
         //Event 5
         if (e5 && time5 > 0)
         {
-            goondalf.transform.position += new Vector3(0f, Time.deltaTime * 0.75f, 0f);
+            goondalf.transform.position += new Vector3(0f, Time.deltaTime * 1.5f, 0f);
             time5 -= Time.deltaTime;
         }
         else if (!e5 && time5 > 0)
         {
-            goondalf.transform.position -= new Vector3(0f, Time.deltaTime * 0.75f, 0f);
+            goondalf.transform.position -= new Vector3(0f, Time.deltaTime * 1.5f, 0f);
             time5 -= Time.deltaTime;
         }
 
         //Turn off Goondalf
-        if (!e1 && !e2 && !e3 && !e4 && time <= 0 && time2 <= 0 && time3 <= 0 && time4 <= 0)
+        if (!e1 && !e2 && !e3 && !e4 && !e5 && time <= 0 && time2 <= 0 && time3 <= 0 && time4 <= 0 && time5 <= 0)
         {
             goondalf.SetActive(false);
         }
@@ -190,8 +190,8 @@ public class GoondalfEvents : MonoBehaviour
         {
             goondalf.SetActive(true);
             e5 = true;
-            goondalf.transform.position = new Vector3(-113.69f, 1.1f, 0f);
-            goondalf.transform.rotation = Quaternion.Euler(0f, 0f, -45f);
+            goondalf.transform.position = new Vector3(-113.69f, -0.55f, 0f);
+            goondalf.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             time5 = 1.0f;
             goondalf.transform.GetChild(0).GetComponent<SpriteRenderer>().color = shadeColor;
         }
