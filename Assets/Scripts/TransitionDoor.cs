@@ -89,7 +89,13 @@ public class TransitionDoor : MonoBehaviour
         {
             GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 2";
             fadeOut.Trigger("Level 1");
-        } else if (trigger)
+        } else if (trigger && gameObject.CompareTag("DoorEnd"))
+        {
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
+            fadeOut.Trigger("End");
+        } 
+
+        else if (trigger)
         {
             GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "";
         }

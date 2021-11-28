@@ -25,6 +25,7 @@ TagManager:
   - Key L1Door
   - Door1
   - Non-Jumpable
+  - DoorEnd
   layers:
   - Default
   - TransparentFX

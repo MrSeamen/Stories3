@@ -68,6 +68,14 @@ public class KeyHolder : MonoBehaviour
         }
     }
 
+    public void RemoveIOU()
+    {
+        if (this.ContainsKey(Key.KeyType.IOU))
+        {
+            this.RemoveKey(Key.KeyType.IOU);
+        }
+    }
+
 
     public bool ContainsKey(Key.KeyType keyType)
     {
