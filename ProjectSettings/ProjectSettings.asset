@@ -74,7 +74,7 @@ PlayerSettings:
   androidMinimumWindowWidth: 400
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
-  defaultIsNativeResolution: 1
+  defaultIsNativeResolution: 0
   macRetinaSupport: 1
   runInBackground: 0
   captureSingleScreen: 0
@@ -135,7 +135,6 @@ PlayerSettings:
     Others: 1
   bundleVersion: 0.1
   preloadedAssets:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -269,7 +268,14 @@ PlayerSettings:
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: d962f32cc0a694f5ba3aeca87fa035ae, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsJobs:
