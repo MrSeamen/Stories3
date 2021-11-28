@@ -13,6 +13,12 @@ public class TransitionDoor : MonoBehaviour
     public FadeOut fadeOut;
     private bool trigger = false;
     private Color color;
+    private AudioSource audio;
+
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
     public void Show()
     {
@@ -99,6 +105,11 @@ public class TransitionDoor : MonoBehaviour
         {
             GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "";
         }
+    }
+
+    public void UnlockAudio()
+    {
+        audio.Play();
     }
 
 }
