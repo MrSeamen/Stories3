@@ -4976,13 +4976,48 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Developer Team:\r\nDevelopment Lead: Austin Wilson\r\nDeveloper: Simon
-    Wang\r\nDeveloper: Morris Lee\r\nDeveloper & Lead Music/Sound Designer: Oliver
-    Traben\r\nDeveloper: Paige Biggs\r\nDeveloper: Lizzie Waters\r\n\r\nArtist Team:\r\nNPC
-    Character Design & The Floor: Sadie Baker\r\nArt Leads: Jen Cerny, Caterina Price\r\nLevel
-    Design & Level Asset Lead: Caterina Price\r\nPlayer Character & UI: Sam Hattersley\r\nAsset
-    and Background Artist: Aidan Hoffner\r\n\r\nCitations:\r\nStorybook Font: Prata
-    font is licensed under an Open Font License\r"
+  m_Text: 'Developer Team:
+
+    Development Lead: Austin Wilson
+
+    Developer:
+    Simon Wang
+
+    Developer: Morris Lee
+
+    Developer & Lead Music/Sound Designer:
+    Oliver Traben
+
+    Developer: Paige Biggs
+
+    Developer: Lizzie Waters
+
+    
+
+    Artist
+    Team:
+
+    NPC Character Design & The Floor: Sadie Baker
+
+    Art Leads: Jen
+    Cerny, Caterina Price
+
+    Level Design & Level Asset Lead: Caterina Price
+
+    Player
+    Character & UI: Sam Hattersley
+
+    Asset and Background Artist: Aidan Hoffner
+
+    
+
+    Citations:
+
+    Storybook
+    Font: Prata font is licensed under an Open Font License
+
+    Better Minimal
+    WebGL Template: https://seansleblanc.itch.io/better-minimal-webgl-template'
 --- !u!222 &1622142689
 CanvasRenderer:
   m_ObjectHideFlags: 0

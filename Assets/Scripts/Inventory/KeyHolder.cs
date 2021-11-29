@@ -15,15 +15,29 @@ public class KeyHolder : MonoBehaviour
 
         if (objs.Length > 1)
         {
-            objs[0].ResetLevelKeys();
-            objs[0].RefreshUI();
+            foreach(KeyHolder kh in objs)
+            {
+                if(kh.IsInit())
+                {
+                    kh.ResetLevelKeys();
+                    kh.RefreshUI();
+                }
+            }
             Destroy(this.gameObject);
-        } else
-        {
-            keyList = new Dictionary<Key.KeyType, Sprite>();
         }
 
         DontDestroyOnLoad(this.gameObject);
+        keyList = new Dictionary<Key.KeyType, Sprite>();
+        levelKeyList = new List<Key.KeyType>();
+    }
+
+    public bool IsInit()
+    {
+        return (levelKeyList != null && keyList != null);
+    }
+
+    public void ClearLevelKeys()
+    {
         levelKeyList = new List<Key.KeyType>();
     }
 
