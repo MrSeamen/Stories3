@@ -598,6 +598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   sky: {fileID: 2100000, guid: 180c2c35041639641aa4719c3f90597e, type: 2}
+  isVertical: 1
 --- !u!1 &1311168792
 GameObject:
   m_ObjectHideFlags: 0

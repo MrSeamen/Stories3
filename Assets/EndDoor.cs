@@ -5,20 +5,20 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 
-public class TransitionDoor : MonoBehaviour
+public class EndDoor: MonoBehaviour
 {
     [SerializeField] private float spawnTime = 1.0f;
-    [SerializeField] private Key.KeyType keyType;
-    [SerializeField] private bool unlocked = false;
+    [SerializeField] private bool unlocked = true;
     public FadeOut fadeOut;
     private bool trigger = false;
     private Color color;
-    private AudioSource audio;
+  //  private AudioSource audio;
 
+    /**
     void Start()
     {
         audio = GetComponent<AudioSource>();
-    }
+    } **/
 
     public void Show()
     {
@@ -38,10 +38,12 @@ public class TransitionDoor : MonoBehaviour
         }
     }
 
+    /**
+
     public Key.KeyType GetKeyType()
     {
         return keyType;
-    }
+    } **/
 
     public void SetLock(bool shouldLock)
     {
@@ -55,7 +57,7 @@ public class TransitionDoor : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
-        if(collider.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             trigger = true;
         }
@@ -87,31 +89,17 @@ public class TransitionDoor : MonoBehaviour
 
     private void Transition()
     {
-        if (trigger && gameObject.CompareTag("Door1"))
-        {
-            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
-            fadeOut.Trigger("Level 2");
-        } else if (trigger && gameObject.CompareTag("Door2"))
-        {
-            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 2";
-            fadeOut.Trigger("Level 1");
-        } else if (trigger && gameObject.CompareTag("DoorEnd"))
-        {
-            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
-            fadeOut.Trigger("End");
-        } 
 
-        else if (trigger)
-        {
-            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "";
-            fadeOut.Trigger("End");
-        }
+       GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
+       fadeOut.Trigger("End");
+        
     }
-    
 
+
+    /**
     public void UnlockAudio()
     {
         audio.Play();
-    } 
-
+    }
+     **/
 }
