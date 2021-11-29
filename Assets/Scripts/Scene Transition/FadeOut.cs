@@ -52,6 +52,7 @@ public class FadeOut : MonoBehaviour
 
     IEnumerator DeathFadeIn()
     {
+        GameObject.Find("Wolf").GetComponent<Wolf>().vfx.SetActive(false);
         GameObject.Find("Player").GetComponent<Move>().WolfAttack();
         yield return new WaitForSeconds(1.0f);
         while (color.a > 0)
@@ -61,5 +62,7 @@ public class FadeOut : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         fade.SetActive(false);
+        GameObject.Find("Wolf").GetComponent<Wolf>().Goondalf();
+        GameObject.Find("Wolf").GetComponent<Wolf>().WolfReset();
     }
 }

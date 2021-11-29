@@ -50,13 +50,13 @@ public class InventoryDialog : MonoBehaviour {
         }
     }
 
-    public void HideInventory(InputAction.CallbackContext context)
+    public void HideInventory()
     {
         isClicked = true;
-        if(isClicked == true)
+        if (isClicked)
         {
-            transform.Translate(Vector3.right * ((clicked%2==0)?10000:-10000));
-            isClicked = !isClicked;
+            transform.Translate(Vector3.right * ((clicked % 2 == 0) ? 10000 : -10000));
+            isClicked = false;
             clicked++;
         }
     }

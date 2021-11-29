@@ -337,7 +337,15 @@ public class Move : MonoBehaviour
 
     public void WolfAttack()
     {
-        transform.position = new Vector3(6.91f, 1f, 0f);
+        transform.position = new Vector3(6.91f, 2f, 0f);
+        animator.SetBool("IsFalling", true);
+        StartCoroutine(GetUp());
+    }
+
+    public IEnumerator GetUp()
+    {
+        yield return new WaitForSeconds(0.8f);
+        animator.SetBool("IsFalling", false);
     }
 
 }

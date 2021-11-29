@@ -7,11 +7,16 @@ using UnityEngine.UI;
 
 public class UIInputWatcher : MonoBehaviour
 {
+    public GameObject quitButton;
     public GameObject defaultSelected;
     private GameObject shouldSelect;
 
     private void Start()
     {
+        if(Application.platform == RuntimePlatform.WebGLPlayer) {
+            quitButton.SetActive(false);
+        }
+
         shouldSelect = defaultSelected;
         PlayerInput playerInput = FindObjectOfType<PlayerInput>();
         UpdateSelect(playerInput);
