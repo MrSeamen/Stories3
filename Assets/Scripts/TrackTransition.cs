@@ -156,6 +156,7 @@ public class TrackTransition : MonoBehaviour
         {
             currentTrackIdx = nextIdx;
             trackIndicator.text = "Track " + (currentTrackIdx + 1) + "/" + tracks.Length;
+            player.GetComponentInChildren<SpriteRenderer>().sortingOrder = tracks[currentTrackIdx].startLayer + 1;
 
             currentTrack.AddShade();
             nextTrack.RemoveShade();

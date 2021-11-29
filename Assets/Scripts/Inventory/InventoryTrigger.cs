@@ -44,8 +44,8 @@ public class InventoryTrigger : MonoBehaviour
         TransitionDoor transitionDoor = other.GetComponent<TransitionDoor>();
         FragmentDoor fragDoor = other.GetComponent<FragmentDoor>();
 
-        if (keyDoor != null)
-        {
+        if (keyDoor != null) { 
+        
             if (keyHolder.ContainsKey(keyDoor.GetKeyType()))
             {
                 // Currently holding key to open this door
@@ -61,7 +61,7 @@ public class InventoryTrigger : MonoBehaviour
                 // Currently holding key to open this door
                 keyHolder.RemoveKey(transitionDoor.GetKeyType());
                 transitionDoor.SetLock(false);
-                transitionDoor.UnlockAudio();
+                //transitionDoor.UnlockAudio();
             }
         }
 
