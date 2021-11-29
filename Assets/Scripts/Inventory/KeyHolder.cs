@@ -18,11 +18,12 @@ public class KeyHolder : MonoBehaviour
             objs[0].ResetLevelKeys();
             objs[0].RefreshUI();
             Destroy(this.gameObject);
+        } else
+        {
+            keyList = new Dictionary<Key.KeyType, Sprite>();
         }
 
         DontDestroyOnLoad(this.gameObject);
-
-        keyList = new Dictionary<Key.KeyType, Sprite>();
         levelKeyList = new List<Key.KeyType>();
     }
 
