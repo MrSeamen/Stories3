@@ -5127,7 +5127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 10, y: 249}
   m_SizeDelta: {x: 500, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1622142688
@@ -5160,10 +5160,16 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: This is where the credits go
+  m_Text: "Developer Team:\r\nDevelopment Lead: Austin Wilson\r\nDeveloper: Simon
+    Wang\r\nDeveloper: Morris Lee\r\nDeveloper & Lead Music/Sound Designer: Oliver
+    Traben\r\nDeveloper: Paige Biggs\r\nDeveloper: Lizzie Waters\r\n\r\nArtist Team:\r\nNPC
+    Character Design & The Floor: Sadie Baker\r\nArt Leads: Jen Cerny, Caterina Price\r\nLevel
+    Design & Level Asset Lead: Caterina Price\r\nPlayer Character & UI: Sam Hattersley\r\nAsset
+    and Background Artist: Aidan Hoffner\r\n\r\nCitations:\r\nStorybook Font: Prata
+    font is licensed under an Open Font License\r"
 --- !u!222 &1622142689
 CanvasRenderer:
   m_ObjectHideFlags: 0
