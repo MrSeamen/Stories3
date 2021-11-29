@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class Wolf : MonoBehaviour
 {
     public GameObject wolf;
     public Color shadeColor;
+    public GameObject vfx;
+    public GameObject hint;
 
     private bool flip = false;
     private bool set = false;
@@ -27,6 +30,8 @@ public class Wolf : MonoBehaviour
     {
         wolf.SetActive(false);
         audio = GetComponent<AudioSource>();
+        vfx.SetActive(false);
+        hint.SetActive(false);
     }
 
     void Update()
@@ -36,6 +41,10 @@ public class Wolf : MonoBehaviour
         {
             flip = false;
             transform.position += new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
+            time1 -= Time.deltaTime;
+        }
+        else if (time1 > 4)
+        {
             time1 -= Time.deltaTime;
         }
         else if (time1 > 1 && !set)
@@ -55,6 +64,7 @@ public class Wolf : MonoBehaviour
             flip = true;
             transform.position -= new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
             time1 -= Time.deltaTime;
+            vfx.SetActive(false);
         }
 
         //Event 2
@@ -62,6 +72,10 @@ public class Wolf : MonoBehaviour
         {
             flip = true;
             transform.position -= new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
+            time2 -= Time.deltaTime;
+        }
+        else if (time2 > 4)
+        {
             time2 -= Time.deltaTime;
         }
         else if (time2 > 1 && !set)
@@ -81,6 +95,7 @@ public class Wolf : MonoBehaviour
             flip = false;
             transform.position += new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
             time2 -= Time.deltaTime;
+            vfx.SetActive(false);
         }
 
         //Event 3
@@ -88,6 +103,10 @@ public class Wolf : MonoBehaviour
         {
             flip = false;
             transform.position += new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
+            time3 -= Time.deltaTime;
+        }
+        else if (time3 > 4)
+        {
             time3 -= Time.deltaTime;
         }
         else if (time3 > 1 && !set)
@@ -107,6 +126,7 @@ public class Wolf : MonoBehaviour
             flip = true;
             transform.position -= new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
             time3 -= Time.deltaTime;
+            vfx.SetActive(false);
         }
 
         //Flip
@@ -134,6 +154,7 @@ public class Wolf : MonoBehaviour
     {
         if (!triggered1)
         {
+            vfx.SetActive(true);
             set = false;
             triggered1 = true;
             audio.clip = prep;
@@ -149,6 +170,7 @@ public class Wolf : MonoBehaviour
     {
         if (!triggered2)
         {
+            vfx.SetActive(true);
             set = false;
             triggered2 = true;
             audio.clip = prep;
@@ -164,6 +186,7 @@ public class Wolf : MonoBehaviour
     {
         if (!triggered3)
         {
+            vfx.SetActive(true);
             set = false;
             triggered3 = true;
             audio.clip = prep;
@@ -179,6 +202,10 @@ public class Wolf : MonoBehaviour
     {
         if(e1 || e2 || e3)
         {
+            if (!CameraShift.getScroller())
+            {
+                GameObject.Find("Main Camera").GetComponent<CameraShift>().ForcedShift();
+            }
             e1 = false;
             e2 = false;
             e3 = false;
@@ -187,9 +214,18 @@ public class Wolf : MonoBehaviour
             audio.Play();
             GameObject.Find("Main Camera").GetComponent<FadeOut>().DeathFade();
             GameObject.Find("Forest Audio Activator").GetComponent<ForestSound>().TurnOff();
-            triggered1 = false;
-            triggered2 = false;
-            triggered3 = false;
         }
+    }
+
+    public void Goondalf()
+    {
+        hint.SetActive(true);
+    }
+
+    public void WolfReset()
+    {
+        triggered1 = false;
+        triggered2 = false;
+        triggered3 = false;
     }
 }
