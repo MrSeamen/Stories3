@@ -46293,11 +46293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000019821643
+      value: -0.00000016541306
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249946, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000006284747
+      value: -0.000000052446673
       objectReference: {fileID: 0}
     - target: {fileID: 2979244710506249947, guid: d609e628e414e244fa7d999f5e09ec40, type: 3}
       propertyPath: m_Follow
@@ -47404,7 +47404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3dff91d0845be444b2b98ca044b248d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousScene: 
+  previousScene: Level 2
 --- !u!4 &1115028912
 Transform:
   m_ObjectHideFlags: 0
@@ -71271,6 +71271,7 @@ MonoBehaviour:
   fallenTree2: {fileID: 916856639}
   goondalf: {fileID: 1945844060}
   transitionDoor: {fileID: 4615816164270311230}
+  pushingRock1: {fileID: 756334180}
 --- !u!1 &1756302822
 GameObject:
   m_ObjectHideFlags: 0
