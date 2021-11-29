@@ -81,6 +81,7 @@ public class TransitionDoor : MonoBehaviour
     {
         if (unlocked)
         {
+            UnlockAudio();
             Transition();
         }
     }
@@ -98,12 +99,6 @@ public class TransitionDoor : MonoBehaviour
         } else if (trigger && gameObject.CompareTag("DoorEnd"))
         {
             GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
-            fadeOut.Trigger("End");
-        } 
-
-        else if (trigger)
-        {
-            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "";
             fadeOut.Trigger("End");
         }
     }
