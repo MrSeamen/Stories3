@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: CWRU
   productName: ECSE390-S2021-Team4
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: bc9016f196c1c7f4e84bd69dd27ce38a, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
-  defaultScreenWidthWeb: 960
-  defaultScreenHeightWeb: 600
+  defaultScreenWidthWeb: 1280
+  defaultScreenHeightWeb: 720
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   m_MTRendering: 1
@@ -75,7 +75,7 @@ PlayerSettings:
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
   defaultIsNativeResolution: 0
-  macRetinaSupport: 1
+  macRetinaSupport: 0
   runInBackground: 0
   captureSingleScreen: 0
   muteOtherAudioSources: 0
@@ -272,7 +272,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: d962f32cc0a694f5ba3aeca87fa035ae, type: 3}
+      m_Icon: {fileID: 2800000, guid: 641723f2f4f36074f959cecdd61d2626, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -318,7 +318,8 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
   m_TemplateCustomTags:
-    BACKGROUND: '#0f0813'
+    BACKGROUND: '#000000'
+    DEVICE_PIXEL_RATIO: 1
     OPTIMIZE_FOR_PIXEL_ART: true
     SCALE_TO_FIT: true
   mobileMTRendering:
