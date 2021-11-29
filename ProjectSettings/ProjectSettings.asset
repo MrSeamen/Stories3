@@ -138,7 +138,6 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -320,7 +319,6 @@ PlayerSettings:
   openGLRequireES32: 0
   m_TemplateCustomTags:
     BACKGROUND: '#000000'
-    DEVICE_PIXEL_RATIO: 1
     OPTIMIZE_FOR_PIXEL_ART: true
     SCALE_TO_FIT: true
   mobileMTRendering:
