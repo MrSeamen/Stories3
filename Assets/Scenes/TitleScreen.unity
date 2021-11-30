@@ -2457,6 +2457,7 @@ GameObject:
   - component: {fileID: 718589935}
   - component: {fileID: 718589934}
   - component: {fileID: 718589938}
+  - component: {fileID: 718589939}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2565,6 +2566,18 @@ MonoBehaviour:
   settingsPanel: {fileID: 1667399755}
   controlsPanel: {fileID: 506762269}
   creditsPanel: {fileID: 1097559903}
+--- !u!114 &718589939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718589933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7c6ce971f0c4c8aa9b5b659d14521a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &747299857
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,19 +4993,19 @@ MonoBehaviour:
 
     Development Lead: Austin Wilson
 
-    Developer:
-    Simon Wang
+    Developer: Simon
+    Wang
 
     Developer: Morris Lee
 
-    Developer & Lead Music/Sound Designer:
-    Oliver Traben
+    Developer & Lead Music/Sound Designer: Oliver
+    Traben
 
     Developer: Paige Biggs
 
     Developer: Lizzie Waters
 
-    
+
 
     Artist
     Team:
@@ -5009,15 +5022,15 @@ MonoBehaviour:
 
     Asset and Background Artist: Aidan Hoffner
 
-    
+
 
     Citations:
 
     Storybook
     Font: Prata font is licensed under an Open Font License
 
-    Better Minimal
-    WebGL Template: https://seansleblanc.itch.io/better-minimal-webgl-template'
+    Better Minimal WebGL
+    Template: https://seansleblanc.itch.io/better-minimal-webgl-template'
 --- !u!222 &1622142689
 CanvasRenderer:
   m_ObjectHideFlags: 0

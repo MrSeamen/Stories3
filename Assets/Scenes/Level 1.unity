@@ -32835,7 +32835,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
   m_PrefabInstance: {fileID: 1027927965}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1494996041}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b37fca462b6d6340a1a6eff0af004d9, type: 3}
@@ -46536,6 +46536,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 405523328}
     m_Modifications:
+    - target: {fileID: 1793596625, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1793596627, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.size
       value: 8
@@ -46734,12 +46738,44 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1494996041}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
       propertyPath: dialogue.dialogueEvents.Array.data[0].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216446008539490920, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+      propertyPath: dialogue.dialogueEvents.Array.data[1].sentenceEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1820554667, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
@@ -73060,6 +73096,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2622479425451100260, guid: 14c673174c852f5409bded480b76eb39, type: 3}
   m_PrefabInstance: {fileID: 1491907868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1494996041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1793596625, guid: 7d3d006693e23da4cadd60e76626f670, type: 3}
+  m_PrefabInstance: {fileID: 1027927965}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1495713087
 PrefabInstance:

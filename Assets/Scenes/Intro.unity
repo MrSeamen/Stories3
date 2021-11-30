@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 1261567045}
   - component: {fileID: 1261567044}
   - component: {fileID: 1261567048}
+  - component: {fileID: 1261567049}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -599,6 +600,18 @@ MonoBehaviour:
   speed: 0.5
   sky: {fileID: 2100000, guid: 180c2c35041639641aa4719c3f90597e, type: 2}
   isVertical: 1
+--- !u!114 &1261567049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261567043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7c6ce971f0c4c8aa9b5b659d14521a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1311168792
 GameObject:
   m_ObjectHideFlags: 0
