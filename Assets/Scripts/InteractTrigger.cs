@@ -23,7 +23,7 @@ public class InteractTrigger : MonoBehaviour
         FloatingTextInstance.transform.localScale = scale;
         try
         {
-            if (!GetComponent<TransitionDoor>().IsUnlocked())
+            if (GetComponent<TransitionDoor>() && !GetComponent<TransitionDoor>().IsUnlocked())
             {
                 FloatingTextInstance.GetComponentInChildren<Text>().text = lockedMessage;
             } else

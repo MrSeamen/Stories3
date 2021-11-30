@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -721,14 +721,12 @@ MonoBehaviour:
           m_Calls: []
     - sentence: 'Win the favor of the frog prince,
 
-        or win the favor of the
-        frog prince?'
+        or assist a witch and
+        two gingerbread children,'
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
-    - sentence: 'Assist a witch and two gingerbread children,
-
-        or most importantly...'
+    - sentence: Or most importantly...
       sentenceEvent:
         m_PersistentCalls:
           m_Calls: []
