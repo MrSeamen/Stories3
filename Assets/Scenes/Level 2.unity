@@ -7662,6 +7662,7 @@ Transform:
   - {fileID: 1208398099}
   - {fileID: 3064191552755243568}
   - {fileID: 445720401}
+  - {fileID: 1807362611}
   m_Father: {fileID: 271411237}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7817,7 +7818,6 @@ Transform:
   - {fileID: 1347619188}
   - {fileID: 796397794}
   - {fileID: 617412181}
-  - {fileID: 1807362611}
   m_Father: {fileID: 271411237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31046,13 +31046,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807362610}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.46, y: 0.76, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.04, y: 0.76, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children:
   - {fileID: 175234293}
-  m_Father: {fileID: 329809624}
-  m_RootOrder: 14
+  m_Father: {fileID: 319064409}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1807362612
 MonoBehaviour:
@@ -31067,7 +31067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyType: 7
-  icon: {fileID: 21300000, guid: b03bcac69a7d6a149ba98ede2b6146ce, type: 3}
+  icon: {fileID: 21300000, guid: aedacba48f118174ba00e962cb0f7894, type: 3}
 --- !u!135 &1807362613
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -31121,7 +31121,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: b03bcac69a7d6a149ba98ede2b6146ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aedacba48f118174ba00e962cb0f7894, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
