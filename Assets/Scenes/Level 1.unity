@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964124, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12531,7 +12531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 1
   keyType: 9
-  unlocked: 0
+  unlocked: 1
   fadeOut: {fileID: 1335393448}
 --- !u!212 &414881717
 SpriteRenderer:
