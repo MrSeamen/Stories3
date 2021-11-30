@@ -18,7 +18,12 @@ public class TrackTransition : MonoBehaviour
 
     void Start()
     {
-        currentTrackIdx = startTrackIdx;
+        ManuallySetTrack(startTrackIdx);
+    }
+
+    public void ManuallySetTrack(int trackToSet)
+    {
+        currentTrackIdx = trackToSet;
         foreach (Track track in tracks)
         {
             track.AddShade();
