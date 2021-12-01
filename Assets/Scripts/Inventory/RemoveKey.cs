@@ -7,11 +7,7 @@ public class RemoveKey : MonoBehaviour
     public Key.KeyType keyType;
     public void RemoveKeyStatic()
     {
-        KeyHolder[] objs = FindObjectsOfType<KeyHolder>();
-
-        if (objs.Length > 0)
-        {
-            objs[0].RemoveKey(keyType);
-        }
+        KeyHolder kh = GameObject.Find("InventoryManager").GetComponent<KeyHolder>();
+        kh.RemoveKey(keyType);
     }
 }
