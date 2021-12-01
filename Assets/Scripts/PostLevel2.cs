@@ -9,6 +9,8 @@ public class PostLevel2 : MonoBehaviour
     public GameObject fallenTree1;
     public GameObject fallenTree2;
     public GameObject goondalf;
+    public GameObject transitionDoor;
+    public GameObject pushingRock1;
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,6 +21,8 @@ public class PostLevel2 : MonoBehaviour
             fallenTree1.SetActive(false);
             fallenTree2.SetActive(true);
             goondalf.SetActive(false);
+            transitionDoor.SetActive(false);
+            pushingRock1.SetActive(false);
         }
     }
 

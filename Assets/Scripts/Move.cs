@@ -92,7 +92,6 @@ public class Move : MonoBehaviour
         {
             isPushing = push;
             animator.SetBool("IsPushing", push);
-            Debug.Log(push);
             if (push)
             {
                 TogglePull(false);
@@ -337,7 +336,17 @@ public class Move : MonoBehaviour
 
     public void WolfAttack()
     {
-        transform.position = new Vector3(6.91f, 1f, 0f);
+        transform.position = new Vector3(6.91f, 2f, 0f);
+        GameObject.Find("TrackManager").GetComponent<TrackTransition>().ManuallySetTrack(2);
+        GameObject.Find("Main Camera").GetComponent<CameraShift>().ToggleShift(true);
+        animator.SetBool("IsFalling", true);
+        StartCoroutine(GetUp());
+    }
+
+    public IEnumerator GetUp()
+    {
+        yield return new WaitForSeconds(0.8f);
+        animator.SetBool("IsFalling", false);
     }
 
 }

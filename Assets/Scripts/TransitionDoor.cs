@@ -90,20 +90,31 @@ public class TransitionDoor : MonoBehaviour
         if (trigger && gameObject.CompareTag("Door1"))
         {
             GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().ClearLevelKeys();
+            UnlockAudio();
             fadeOut.Trigger("Level 2");
         } else if (trigger && gameObject.CompareTag("Door2"))
         {
             GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 2";
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().ClearLevelKeys();
+            UnlockAudio();
             fadeOut.Trigger("Level 1");
-        } else if (trigger)
+        } else if (trigger && gameObject.CompareTag("DoorEnd"))
         {
-            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "";
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().previousScene = "Level 1";
+            GameObject.Find("InventoryManager").GetComponent<KeyHolder>().ClearLevelKeys();
+            UnlockAudio();
+            fadeOut.Trigger("End");
         }
     }
+    
 
     public void UnlockAudio()
     {
-        audio.Play();
-    }
+        if(audio)
+        {
+            audio.Play();
+        }
+    } 
 
 }

@@ -107,14 +107,14 @@ public class MovableBlock : MonoBehaviour
         else if (trigger && !hold && (!player.GetComponent<Move>().isMoving() || (direction != player.GetComponent<Move>().DirectionX())))
         {
             player.GetComponent<Move>().TogglePush(false);
-        } 
-        
+        }
+
         //Animations: when to pause while holding
         if (hold && player.GetComponent<Move>().isMoving())
         {
             player.GetComponent<Move>().PauseAnimation(false);
         } 
-        else if (hold && !player.GetComponent<Move>().isMoving())
+        else if (hold)
         {
             player.GetComponent<Move>().PauseAnimation(true);
         } 
@@ -140,6 +140,7 @@ public class MovableBlock : MonoBehaviour
         {
             if (hold)
             {
+                GameObject.Find("Main Camera").GetComponent<CameraShift>().ToggleShift(true);
                 this.transform.parent = parent.transform;
                 hold = false;
                 col.enabled = true;
@@ -149,6 +150,7 @@ public class MovableBlock : MonoBehaviour
             }
             else if (trigger && !player.GetComponent<Move>().OnRock())
             {
+                GameObject.Find("Main Camera").GetComponent<CameraShift>().ToggleShift(false);
                 this.transform.parent = player.transform;
                 hold = true;
                 col.enabled = false;
