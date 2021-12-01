@@ -83,11 +83,6 @@ public class KeyHolder : MonoBehaviour
         }
     }
 
-    public void RemoveIOU()
-    {
-        RemoveKey(Key.KeyType.IOU);
-    }
-
 
     public bool ContainsKey(Key.KeyType keyType)
     {
