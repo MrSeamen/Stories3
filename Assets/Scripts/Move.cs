@@ -260,11 +260,16 @@ public class Move : MonoBehaviour
                 if(collision.gameObject.CompareTag("Rock"))
                 {
                     onRock = true;
-                } else
-                {
-                    onRock = false;
                 }
             }
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Rock"))
+        {
+            onRock = false;
         }
     }
 

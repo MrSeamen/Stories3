@@ -118,7 +118,7 @@ public class MovableBlock : MonoBehaviour
         {
             player.GetComponent<Move>().PauseAnimation(true);
         } 
-        else if (!hold)
+        else if (!hold && pastHold)
         {
             player.GetComponent<Move>().PauseAnimation(false);
             if(flipped)
