@@ -63,7 +63,7 @@ public class CameraShift : MonoBehaviour
                 blender.BlendToMatrix(ortho, 1f);
 
                 audioSource.clip = shift2;
-                audioSource.Play();
+                audioSource.PlayOneShot(shift2);
             }
             else
             {
@@ -72,8 +72,7 @@ public class CameraShift : MonoBehaviour
                 scrollingVC.Priority = 0;
                 blender.BlendToMatrix(perspective, 1f);
 
-                audioSource.clip = shift1;
-                audioSource.Play();
+                audioSource.PlayOneShot(shift1);
             }
         }
     }
