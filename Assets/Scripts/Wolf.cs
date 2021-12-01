@@ -43,7 +43,7 @@ public class Wolf : MonoBehaviour
             transform.position += new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
             time1 -= Time.deltaTime;
         }
-        else if (time1 > 4)
+        else if (time1 > 4.5)
         {
             time1 -= Time.deltaTime;
         }
@@ -74,7 +74,7 @@ public class Wolf : MonoBehaviour
             transform.position -= new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
             time2 -= Time.deltaTime;
         }
-        else if (time2 > 4)
+        else if (time2 > 4.5)
         {
             time2 -= Time.deltaTime;
         }
@@ -105,7 +105,7 @@ public class Wolf : MonoBehaviour
             transform.position += new Vector3(Time.deltaTime * 6.0f, 0f, 0f);
             time3 -= Time.deltaTime;
         }
-        else if (time3 > 4)
+        else if (time3 > 4.5)
         {
             time3 -= Time.deltaTime;
         }
@@ -206,6 +206,7 @@ public class Wolf : MonoBehaviour
             {
                 GameObject.Find("Main Camera").GetComponent<CameraShift>().ForcedShift();
             }
+            GameObject.Find("Main Camera").GetComponent<CameraShift>().ToggleShift(false);
             e1 = false;
             e2 = false;
             e3 = false;
