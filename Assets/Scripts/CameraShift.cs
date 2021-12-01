@@ -33,6 +33,8 @@ public class CameraShift : MonoBehaviour
     private static bool scroller;
     public bool showText = false;
 
+    private bool shift;
+
     void Awake()
     {
         liftedVC.Priority = 0;
@@ -45,11 +47,12 @@ public class CameraShift : MonoBehaviour
         orthoOn = true;
         blender = (MatrixBlender)GetComponent(typeof(MatrixBlender));
         scroller = true;
+        shift = true;
     }
 
     public void Shift(InputAction.CallbackContext context)
     {
-        if(context.performed && GameObject.Find("Player").GetComponent<Move>().OnGround() && !GameObject.Find("Player").GetComponent<Move>().getLock())
+        if(context.performed && shift && GameObject.Find("Player").GetComponent<Move>().OnGround() && !GameObject.Find("Player").GetComponent<Move>().getLock())
         {
             orthoOn = !orthoOn;
             scroller = !scroller;
@@ -77,7 +80,7 @@ public class CameraShift : MonoBehaviour
 
     public void ForcedShift()
     {
-        if (GameObject.Find("Player").GetComponent<Move>().OnGround() && !GameObject.Find("Player").GetComponent<Move>().getLock())
+        if (GameObject.Find("Player").GetComponent<Move>().OnGround() && shift && !GameObject.Find("Player").GetComponent<Move>().getLock())
         {
             orthoOn = !orthoOn;
             scroller = !scroller;
@@ -116,6 +119,11 @@ public class CameraShift : MonoBehaviour
             GUI.skin.label.fontSize = 20;
             GUI.Label(new Rect(0, 0, 100, 50), "3D Mode");
         }
+    }
+
+    public void ToggleShift(bool toggle)
+    {
+        shift = toggle;
     }
 
 }
