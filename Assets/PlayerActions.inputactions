@@ -76,6 +76,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "TeleportLevel1a",
+                    "type": "Button",
+                    "id": "46577c82-1fe5-4bf1-a54d-8a429b6edb44",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "TeleportLevel1b",
+                    "type": "Button",
+                    "id": "dfa7885a-7388-4def-a067-135a25375ce5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -362,6 +378,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "ReplayDialog",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2426d58e-4b96-43ba-843d-303ad8a42077",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TeleportLevel1a",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "716bf9fd-2e9c-4569-bf27-00261f96420d",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TeleportLevel1b",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
