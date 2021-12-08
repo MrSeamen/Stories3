@@ -25,6 +25,8 @@ TagManager:
   - Key L1Door
   - Door1
   - Non-Jumpable
+  - DoorEnd
+  - SpellFragment2
   layers:
   - Default
   - TransparentFX

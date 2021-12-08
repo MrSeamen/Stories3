@@ -18,7 +18,12 @@ public class TrackTransition : MonoBehaviour
 
     void Start()
     {
-        currentTrackIdx = startTrackIdx;
+        ManuallySetTrack(startTrackIdx);
+    }
+
+    public void ManuallySetTrack(int trackToSet)
+    {
+        currentTrackIdx = trackToSet;
         foreach (Track track in tracks)
         {
             track.AddShade();
@@ -156,6 +161,7 @@ public class TrackTransition : MonoBehaviour
         {
             currentTrackIdx = nextIdx;
             trackIndicator.text = "Track " + (currentTrackIdx + 1) + "/" + tracks.Length;
+            player.GetComponentInChildren<SpriteRenderer>().sortingOrder = tracks[currentTrackIdx].startLayer + 1;
 
             currentTrack.AddShade();
             nextTrack.RemoveShade();

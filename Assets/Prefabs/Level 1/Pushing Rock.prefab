@@ -60,7 +60,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,7 +107,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!65 &5693793445273105778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119,8 +119,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.689331, y: 2.2739077, z: 0.4}
-  m_Center: {x: 0.06657918, y: -0.61304766, z: 0}
+  m_Size: {x: 3.51, y: 2.18, z: 0.4}
+  m_Center: {x: 0.06657918, y: -0.7, z: 0}
 --- !u!114 &4611158830395616700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,8 +261,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FloatingTextPrefab: {fileID: 1869942634220107155, guid: fca57cbd7b1ca384e9a6b8478cd931b8, type: 3}
-  offsetPos: {x: 0, y: 0.75, z: 0}
+  offsetPos: {x: 0, y: 2.5, z: 0}
   scale: {x: 0.02, y: 0.02, z: 0.02}
+  lockedMessage: Locked
+  defaultMessage: (<BUTTON>) Interact
 --- !u!136 &3964977345737177295
 CapsuleCollider:
   m_ObjectHideFlags: 0

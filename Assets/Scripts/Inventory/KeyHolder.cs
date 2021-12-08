@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class KeyHolder : MonoBehaviour
 {
+    private List<Key.KeyType> levelKeyList;
     private Dictionary<Key.KeyType, Sprite> keyList;
     public string previousScene;
 
@@ -14,23 +15,51 @@ public class KeyHolder : MonoBehaviour
 
         if (objs.Length > 1)
         {
-            objs[0].RefreshUI();
+            foreach(KeyHolder kh in objs)
+            {
+                if(kh.IsInit())
+                {
+                    kh.ResetLevelKeys();
+                    kh.RefreshUI();
+                }
+            }
             Destroy(this.gameObject);
         }
 
         DontDestroyOnLoad(this.gameObject);
-
         keyList = new Dictionary<Key.KeyType, Sprite>();
+        levelKeyList = new List<Key.KeyType>();
+    }
+
+    public bool IsInit()
+    {
+        return (levelKeyList != null && keyList != null);
+    }
+
+    public void ClearLevelKeys()
+    {
+        levelKeyList = new List<Key.KeyType>();
     }
 
     public void AddKey(Key.KeyType keyType, Key key)
     {
         Debug.Log("You have acquired: " + keyType + "!");
         keyList.Add(keyType, key.icon);
+        levelKeyList.Add(keyType);
         Debug.Log("add to inventory");
 
         InventoryDialog inventoryDialog = GameObject.Find("UI/Inventory").GetComponent<InventoryDialog>();
         inventoryDialog.ShowKey(key.icon);
+    }
+
+    public void ResetLevelKeys()
+    {
+        foreach (Key.KeyType keyType in levelKeyList)
+        {
+            RemoveKey(keyType);
+        }
+
+        levelKeyList = new List<Key.KeyType>();
     }
 
     public void RefreshUI()

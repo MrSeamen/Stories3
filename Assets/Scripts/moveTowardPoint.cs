@@ -22,7 +22,10 @@ public class moveTowardPoint : MonoBehaviour
         if (activate)
         {
             float step = speed * Time.deltaTime;
-            audio.Play();
+            if(!audio.isPlaying)
+            {
+                audio.Play();
+            }
             //transform.position = Vector3.Lerp(currentPosition, destination, Time.deltaTime*speed);
             transform.position = Vector3.MoveTowards(transform.position, destination, step);
         }

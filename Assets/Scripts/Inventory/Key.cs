@@ -15,7 +15,10 @@ public class Key : MonoBehaviour
         L1End,
         L2First,
         L2Second,
-        L2End
+        L2End,
+        IOU,
+        SpellFragment1,
+        SpellFragment2
     }
 
     public KeyType GetKeyType()
