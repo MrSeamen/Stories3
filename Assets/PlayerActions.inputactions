@@ -78,17 +78,9 @@
                     "interactions": ""
                 },
                 {
-                    "name": "TeleportLevel1a",
-                    "type": "Button",
+                    "name": "Teleport",
+                    "type": "Value",
                     "id": "46577c82-1fe5-4bf1-a54d-8a429b6edb44",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "TeleportLevel1b",
-                    "type": "Button",
-                    "id": "dfa7885a-7388-4def-a067-135a25375ce5",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -386,20 +378,108 @@
                     "id": "2426d58e-4b96-43ba-843d-303ad8a42077",
                     "path": "<Keyboard>/1",
                     "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TeleportLevel1a",
+                    "processors": "Scale",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "716bf9fd-2e9c-4569-bf27-00261f96420d",
+                    "id": "f00e8b39-d2e1-4d69-a367-6a64c2530981",
                     "path": "<Keyboard>/2",
                     "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TeleportLevel1b",
+                    "processors": "Scale(factor=2)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "570fdb26-6a76-4dd2-89c5-a29b64589c1a",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "Scale(factor=3)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6e95d5b3-b231-465d-82bb-75b5e31cb647",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "Scale(factor=4)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6216945c-55f3-407d-9aaa-7af648203fe4",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "Scale(factor=5)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32abadb6-ee95-41a4-903e-077c263d835f",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "Scale(factor=6)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec00d975-37b6-461f-8bc7-84862928d69e",
+                    "path": "<Keyboard>/7",
+                    "interactions": "",
+                    "processors": "Scale(factor=7)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59c7f58a-6457-4e77-89a9-a0648e3dbb44",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "Scale(factor=8)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "13c22d0a-302b-4afc-a6c0-9c304062fe9a",
+                    "path": "<Keyboard>/9",
+                    "interactions": "",
+                    "processors": "Scale(factor=9)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "513ea6eb-cabc-4712-91ad-1fd3e49f5db3",
+                    "path": "<Keyboard>/0",
+                    "interactions": "",
+                    "processors": "Scale(factor=10)",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Teleport",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

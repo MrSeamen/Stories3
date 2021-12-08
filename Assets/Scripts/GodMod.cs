@@ -6,22 +6,23 @@ using UnityEngine.InputSystem;
 
 public class GodMod : MonoBehaviour
 {
-
     public bool godActivated = false;
-    public Transform teleportOne;
-    public Transform teleportTwo;
+    public GameObject[] checkPoints;
 
-    //press 1 to teleport to the middle of Level 1
-    public void TeleportOne(InputAction.CallbackContext context){
-        if (godActivated == true) {
-            GetComponent<Rigidbody>().position = teleportOne.transform.position; 
+    public void Teleport(InputAction.CallbackContext context){
+        if (godActivated == true && context.performed) {
+            int checkPoint = (int)context.ReadValue<float>() - 1;
+
+            try
+            {
+                GameObject checkPointObject = checkPoints[checkPoint];
+
+                transform.position = checkPointObject.transform.position;
+                GameObject.Find("TrackManager").GetComponent<TrackTransition>().ManuallySetTrack(1);
+            } catch
+            {
+                Debug.Log("No such position...");
+            }
         }
     }
-
-    //press 2 to teleport to the end of Level 1
-     public void TeleportTwo(InputAction.CallbackContext context){
-        if (godActivated == true) {
-            GetComponent<Rigidbody>().position = teleportTwo.transform.position; 
-        }
-    } 
 }
