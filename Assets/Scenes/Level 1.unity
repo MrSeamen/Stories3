@@ -27145,7 +27145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1832533031}
-  godActivated: 1
+  godActivated: 0
   checkPoints:
   - {fileID: 764159803}
   - {fileID: 1722995126}
@@ -71300,7 +71300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1832533031}
-  godActivated: 1
+  godActivated: 0
   checkPoints:
   - {fileID: 1879939778}
   - {fileID: 762644454}

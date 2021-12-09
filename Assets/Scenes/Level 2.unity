@@ -21412,7 +21412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 207017324}
-  godActivated: 1
+  godActivated: 0
   checkPoints:
   - {fileID: 1911954000}
   - {fileID: 257045760}
