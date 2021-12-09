@@ -38,7 +38,17 @@ public class UIInputWatcher : MonoBehaviour
     {
         string scheme = playerInput.currentControlScheme;
         PlayerPrefs.SetString("currentSchema", scheme);
-        if(shouldSelect)
+        switch (scheme)
+        {
+            case "Gamepad":
+                Cursor.visible = false;
+                break;
+            case "Keyboard&Mouse":
+            default:
+                Cursor.visible = true;
+                break;
+        }
+        if (shouldSelect)
         {
             switch (scheme)
             {
@@ -47,6 +57,7 @@ public class UIInputWatcher : MonoBehaviour
                     break;
                 case "Keyboard&Mouse":
                 default:
+                    GetComponent<EventSystem>().SetSelectedGameObject(null);
                     break;
             }
         }
