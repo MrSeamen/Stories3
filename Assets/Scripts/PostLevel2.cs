@@ -11,6 +11,8 @@ public class PostLevel2 : MonoBehaviour
     public GameObject goondalf;
     public GameObject transitionDoor;
     public GameObject pushingRock1;
+    public GodMod godMod1;
+    public GodMod godMod2;
     // Start is called before the first frame update
     void Awake()
     {
@@ -23,6 +25,8 @@ public class PostLevel2 : MonoBehaviour
             goondalf.SetActive(false);
             transitionDoor.SetActive(false);
             pushingRock1.SetActive(false);
+            godMod1.gameObject.SetActive(false);
+            godMod2.gameObject.SetActive(true);
         }
     }
 
