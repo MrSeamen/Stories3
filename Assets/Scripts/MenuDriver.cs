@@ -10,6 +10,14 @@ public class MenuDriver : MonoBehaviour
     public GameObject controlsPanel;
     public GameObject creditsPanel;
 
+    public UIInputWatcher uiInputWatcher;
+    public GameObject defaultSelected;
+
+    void Start()
+    {
+        uiInputWatcher.UpdateShouldSelect(defaultSelected);
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(1);

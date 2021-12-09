@@ -7,7 +7,7 @@ public class UIWakeUp : MonoBehaviour
     public GameObject defaultSelected;
     public UIInputWatcher uiInputWatcher;
 
-    void OnEnable()
+    void Start()
     {
         uiInputWatcher.UpdateShouldSelect(defaultSelected);
     }

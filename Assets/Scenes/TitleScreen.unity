@@ -2566,6 +2566,8 @@ MonoBehaviour:
   settingsPanel: {fileID: 1667399755}
   controlsPanel: {fileID: 506762269}
   creditsPanel: {fileID: 1097559903}
+  uiInputWatcher: {fileID: 1930791800}
+  defaultSelected: {fileID: 1038222151}
 --- !u!114 &718589939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5974,7 +5976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1038222151}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!114 &1930791800
