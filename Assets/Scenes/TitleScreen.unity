@@ -426,10 +426,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 1188552318}
+    m_SelectOnDown: {fileID: 515133150}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 3
@@ -2568,6 +2568,9 @@ MonoBehaviour:
   creditsPanel: {fileID: 1097559903}
   uiInputWatcher: {fileID: 1930791800}
   defaultSelected: {fileID: 1038222151}
+  defaultSelectedSettings: {fileID: 117181506}
+  defaultSelectedControls: {fileID: 2122959490}
+  defaultSelectedCredits: {fileID: 1524437703}
 --- !u!114 &718589939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5932,6 +5935,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9783e7a7-5e90-4146-a8d3-259d0415827f
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 46577c82-1fe5-4bf1-a54d-8a429b6edb44
+    m_ActionName: Player/Teleport[/Keyboard/1,/Keyboard/2,/Keyboard/3,/Keyboard/4,/Keyboard/5,/Keyboard/6,/Keyboard/7,/Keyboard/8,/Keyboard/9,/Keyboard/0,/XInputControllerWindows/dpad/right,/XInputControllerWindows/dpad/left]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9bf5fbb9-37e1-4482-92f1-73efca5a1948
+    m_ActionName: Dialogue/Pause[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: UI
@@ -5951,6 +5962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}

@@ -12,6 +12,9 @@ public class MenuDriver : MonoBehaviour
 
     public UIInputWatcher uiInputWatcher;
     public GameObject defaultSelected;
+    public GameObject defaultSelectedSettings;
+    public GameObject defaultSelectedControls;
+    public GameObject defaultSelectedCredits;
 
     void Start()
     {
@@ -34,6 +37,7 @@ public class MenuDriver : MonoBehaviour
         settingsPanel.SetActive(false);
         controlsPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        uiInputWatcher.UpdateShouldSelect(defaultSelected);
     }
 
     public void ShowSettings()
@@ -42,6 +46,7 @@ public class MenuDriver : MonoBehaviour
         settingsPanel.SetActive(true);
         controlsPanel.SetActive(false);
         creditsPanel.SetActive(false);
+        uiInputWatcher.UpdateShouldSelect(defaultSelectedSettings);
     }
 
     public void ShowCredits()
@@ -50,6 +55,7 @@ public class MenuDriver : MonoBehaviour
         settingsPanel.SetActive(false);
         controlsPanel.SetActive(false);
         creditsPanel.SetActive(true);
+        uiInputWatcher.UpdateShouldSelect(defaultSelectedCredits);
     }
 
     public void ShowControls()
@@ -58,5 +64,6 @@ public class MenuDriver : MonoBehaviour
         settingsPanel.SetActive(false);
         controlsPanel.SetActive(true);
         creditsPanel.SetActive(false);
+        uiInputWatcher.UpdateShouldSelect(defaultSelectedControls);
     }
 }
